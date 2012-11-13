@@ -1,0 +1,13 @@
+<div id="footer">
+	<p>免责声明：一起搜所刊载的所有信息、资料及图片均来自互联网，本网站不声明或保证其内容之正确性或可靠性。</p>
+    <p class="t_line">
+		<a href="http://www.yiqisoo.com/aboutus.html?anl=shy_aboutus" target="_blank">关于我们</a>&nbsp;&nbsp;&nbsp; 
+		<a href="http://www.yiqisoo.com/mianzeshengming.html?anl=shy_shengming" target="_blank">免责声明</a>&nbsp;&nbsp;&nbsp; 
+		<a href="http://www.yiqisoo.com/zhaopin.html?anl=shy_zhaopin" target="_blank">招聘信息</a>&nbsp;&nbsp;&nbsp; 
+		<a href="http://www.yiqisoo.com/index.php?action=shop&anl=shy_map" target="_blank">网站地图</a>&nbsp;&nbsp;&nbsp; 
+		<a onclick="addBookmark();" href="javascript:void(1);">加入收藏夹</a>&nbsp;&nbsp;&nbsp; 
+		<a onclick="SetHome(this);" href="javascript:void(1);">设为首页</a>&nbsp;&nbsp;&nbsp; 
+		<br>
+		2012 <span class="en"><a style="color:#9D9D9D" href="http://www.yiqisoo.com/zhishichanquan.html" target="_blank">&copy;</a></span> 一起搜 京ICP备12023412号-1
+	</p>
+</div>

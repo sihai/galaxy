@@ -1,0 +1,83 @@
+<div class="main-wrap">
+    <div class="attr-group">
+		<div class="crumbs" bk="crumbs">
+			<p class="total">搜索到${resultModel.totalItem}个商品</p>
+			<ul class="clearfix">
+				<li><a class="outer" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort="><span class="inner">品牌：三星<span class="close"></span></span></a></li>
+				<li><a class="outer" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort="><span class="inner">操作系统：安卓Android</span></a></li>
+				<li><a class="outer" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort="><span class="inner">屏幕尺寸：2.8-3.4英寸</span></a></li>
+				<li><a class="outer" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort="><span class="inner">网络模式：联通3G</span></a></li>
+				<li><a class="outer" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort="><span class="inner">操控：电容屏触屏</span></a></li>
+			</ul>
+		</div>
+		
+		<div class="attr-content">
+			<div bk="category" class="item-wrap category cont_cate_tree" >
+                <div class="item">
+					<h3>
+						<span class="icon"></span>
+						<a href="?tag=1&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=">手机数码</a>
+					</h3>
+					<div class="cont">
+						<ul class="clearfix">
+							<li><a href="?tag=48&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=">手机<span class="numb">(72)</span></a></li>
+                        </ul>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div>
+	
+    <div class="guess-words" bk="guess-words">
+		<p>你是不是想找：</p>
+		<a href="?query=%E4%B8%89%E6%98%9F%E6%89%8B%E6%9C%BA&aname=">三星手机</a>
+		<a href="?query=%E4%B8%89%E6%98%9F9100&aname=">三星9100</a>
+		<a href="?query=%E4%B8%89%E6%98%9Fi9000&aname=">三星i9000</a>
+		<a href="?query=9300%E4%B8%89%E6%98%9F&aname=">9300三星</a>
+		<a href="?query=%E4%B8%89%E6%98%9Fi9220&aname=">三星i9220</a>
+		<a href="?query=htc&aname=">htc</a>
+	</div>
+	
+    <div class="filter-group" id="float_cnt" bk="筛选">
+	<div class="cnt" >
+		<div id="allProduct" class="product">
+			<div class="inner">
+				<span class="icon"></span>
+				<ul>
+                    <li><a href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=">全部商品</a></li>
+                    <li><a href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=1&event=&through=1&pricemin=0&pricemax=0&sort="><span class="icon_new"></span>新品</a></li>
+                    <li><a href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=2&event=&through=1&pricemin=0&pricemax=0&sort="><span class="icon_sale"></span>特价</a></li>
+                    <li><a href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=4&event=&through=1&pricemin=0&pricemax=0&sort="><span class="icon_hot"></span>热卖</a></li>
+                    <li><a href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=8&event=&through=1&pricemin=0&pricemax=0&sort="><span class="icon_tuan"></span>团购</a></li>
+                </ul>
+			</div>
+		</div>
+		<div class="sequence">
+			<ul>
+				<li class="current"><a href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=">默认</a></li>
+				<li><a class="volume down" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=new">热门<i class="icon"></i></a></li>
+				<li><a class="comment down" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=comment">评论量<i class="icon"></i></a></li>
+				<li><a class="price up" href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=priceup">价格<i class="icon"></i></a></li>
+			</ul>
+		</div>
+		<div class="interval">
+			<input class="txt" type="text" value="最低价" name="" id="pricemin" /><span class="divide">-</span><input class="txt" type="text" value="最高价" name="" id="pricemax" /><button type="button" class="btn" onclick="window.location='?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin='+$('#pricemin').val()+'&pricemax='+$('#pricemax').val()+'&sort=';"><span>确定</span></button>
+		</div>
+		<div class="tag">
+			<div class="box" id="box_search">
+				<span class="divide"><input type="checkbox" name="" id="yizhantong" onclick="window.location='?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=1&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=';" /><label for="yizhantong">一站通</label></span>
+				<span class="divide"><input type="checkbox" name="" id="pay"  onclick="window.location='?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=1&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=';" /><label for="pay">货到付款</label></span>
+				<span class="divide"><input type="checkbox" name="" id="return"  onclick="window.location='?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=1&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=';" /><label for="return">无理由退换货</label></span>
+				<a class="open" href="#">更多</a>
+				<a class="close" href="#">收起</a>
+			</div>
+		</div>
+		<div class="pagination-mini">
+			<span class="current">1/2</span><a  class="disabled" onclick="return false;"  href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=&start=-48" title="上一页">&lsaquo;</a><a  href="?tag=0&query=%E4%B8%89%E6%98%9F&brand=&bid=0&label=17773_13850_17784_18504&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=&start=48" title="下一页">&rsaquo;</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	Qtool.follow({selector:'#float_cnt',style:{zIndex:360,width:808}});
+</script>

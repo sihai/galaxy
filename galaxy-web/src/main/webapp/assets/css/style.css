@@ -1,0 +1,2724 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+}
+:focus {
+	outline:0;
+}
+table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+a img, iframe {
+	border:none;
+}
+ol, ul {
+	list-style:none;
+}
+input, textarea, select, button {
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:middle;
+}
+select {
+	margin:inherit;
+}
+ol {
+	margin-left:2em;
+}
+em {
+	font-style:normal;
+}
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+	display:inline-block;
+}
+* html .clearfix {
+	height:1%;
+}
+.clearfix {
+	display:block;
+}
+a {
+	color:#000;
+	text-decoration:none;
+}
+a:hover {
+	color:#fc2b02;
+	text-decoration:underline;
+}
+.under_line {
+	text-decoration:underline;
+}
+a.blue, .blue {
+	color:#4197ac;
+}
+a.blue2, .blue2 {
+	color:#44a2de;
+}
+a.blue:hover, a.blue2:hover {
+	color:#fc2b02;
+}
+body {
+	font-size:12px;
+	font-family:宋体, Arial, Helvetica, sans-serif;
+	background:#FFF url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/bg.jpg?5975) repeat-x;
+}
+body.bg2 {
+	background:#FFF url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/bg.jpg?5975) repeat-x;
+}
+.en {
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.fn {
+	font-weight:normal;
+}
+.fb {
+	font-weight:bold;
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.tc {
+	text-align:center;
+}
+.tl {
+	text-align:left;
+}
+.tr {
+	text-align:right;
+}
+.vam {
+	vertical-align:middle;
+}
+.ml50 {
+	margin-left:50px;
+}
+a.gray, .gray {
+	color:#818181;
+}
+a.gray:hover {
+	color:#fc2b02;
+}
+.gray2 {
+	color:#636363;
+}
+.red {
+	color:#fc2b02;
+}
+.red2 {
+	color:#fc2b02;
+}
+.green {
+	color:#498f48;
+}
+.orange {
+	color:#fc2b02;
+}
+.orange2 {
+	color:#fc2b02;
+}
+.yellow {
+	color:#ff8041;
+}
+.yellow2 {
+	color:#ff9a38;
+}
+.black {
+	color:#000;
+}
+.f12 {
+	font-size:12px;
+}
+.pl6 {
+	padding-left:6px;
+!important;
+}
+.p10-18 {
+	padding:10px 18px;
+}
+.pl20 {
+	padding-left:20px;
+}
+.p10-24 {
+	padding:10px 24px 0 0;
+}
+.m5 {
+	margin:5px 32px 5px 0;
+}
+.mt10 {
+	margin-top:10px;
+}
+.lh30 {
+	line-height:30px;
+}
+.lh14 {
+	line-height:14px;
+}
+.lh20 {
+	line-height:20px;
+}
+.lh22 {
+	line-height:22px;
+}
+.lh24 {
+	line-height:24px;
+}
+.pb5 {
+	padding-bottom:5px;
+}
+.ptb12 {
+	padding:0 12px;
+}
+.t_indent {
+	text-indent:25px;
+}
+.plr24 {
+	padding:12px 24px;
+}
+.f14 {
+	font-size:14px;
+}
+.f16 {
+	font-size:16px;
+}
+.pr8 {
+	padding-right:8px;
+}
+.line {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/line.png?5975);
+	height:1px;
+	overflow:hidden;
+	margin:0 10px;
+}
+.ico01, .ico02, .tsearch-panel_f, .tsearch-panel button {
+	vertical-align:middle;
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img01.png?5978);
+}
+.ico01 {
+	width:11px;
+	height:6px;
+	background-position:-356px -34px;
+}
+.ico02 {
+	width:21px;
+	height:9px;
+	position:absolute;
+	top:-8px;
+	right:0;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/hot.png?5975) 0 0 no-repeat;
+	text-indent:-99999px;
+	z-index:100;
+	display:block;
+}
+.ico03 {
+	width:7px;
+	height:7px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -743px -72px no-repeat;
+}
+.ico04 {
+	width:15px;
+	height:15px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) 0 -43px no-repeat;
+	text-indent:-9999px;
+	display:block;
+	margin-left:16px;
+	margin-top:2px;
+}
+.ico05 {
+	width:16px;
+	height:15px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -24px -43px no-repeat;
+	text-indent:-9999px;
+	display:block;
+	margin-left:8px;
+	margin-top:2px;
+}
+.ico06 {
+	width:12px;
+	height:12px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -586px -86px no-repeat;
+	display:inline-block;
+	overflow:hidden;
+	text-decoration:none;
+	float:left;
+	margin:6px 4px 0 0;
+}
+.ico06 b {
+	display:none;
+}
+.icntop {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -612px -71px no-repeat;
+	padding-left:15px;
+	color:#4197ac;
+	text-decoration:none;
+	margin-left:8px;
+}
+.ico07 {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -742px -124px no-repeat;
+	padding-left:10px;
+	color:#4197ac;
+	text-decoration:none;
+}
+.ico08 {
+	display:inline-block;
+	padding-left:19px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -612px -94px no-repeat;
+	color:#4197ac;
+	height:16px;
+	line-height:18px;
+	margin-bottom:4px;
+}
+.ico09 {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -676px -149px no-repeat;
+	width:18px;
+	height:17px;
+	vertical-align:middle;
+}
+.ico10, .ico11, .ico12, .ico13, .ico14 {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -395px -252px no-repeat;
+	padding-left:27px;
+}
+.ico11 {
+	background-position:-669px -252px;
+}
+.ico12 {
+	background-position:-735px -152px;
+}
+.ico13 {
+	background-position:-730px -296px;
+}
+.ico14 {
+	background-position:-730px -326px;
+}
+.arrow1, .arrow2 {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -252px -49px no-repeat;
+	width:5px;
+	height:9px;
+}
+.arrow2 {
+	background-position:-309px -49px;
+}
+.ico_tel {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/telBg.png?5975) no-repeat -193px 0;
+	height:40px;
+	display:inline-block;
+	vertical-align:middle;
+	padding:5px 0 5px 28px;
+	font-size:16px;
+	color:#757575;
+	line-height:40px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.ico_tel img {
+	vertical-align:middle;
+	line-height:40px;
+	margin-top:10px;
+}
+.ico_tel2 {
+	width:314px;
+	height:36px;
+	vertical-align:middle;
+	padding-left:57px;
+	font-size:20px;
+	color:#f26100;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:35px;
+	display:inline-block;
+	overflow:hidden;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -126px -213px;
+}
+.ico_tel3 {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/telBg.png?5975) no-repeat -193px 0;
+	width:140px;
+	height:40px;
+	display:inline-block;
+	vertical-align:middle;
+	padding:5px 0 5px 30px;
+	font-size:20px;
+	color:#757575;
+	line-height:30px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#wrap {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/bg_r.jpg?5975) right top no-repeat;
+}
+#top {
+	height:36px;
+	clear:both;
+	border-bottom:1px solid #739DC3;
+}
+#top h1 {
+	float:left;
+	margin:11px 0 0 50px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img01.png?5978) -136px -34px no-repeat;
+	width:214px;
+	height:19px;
+	display:inline;
+	text-indent:-99999px;
+}
+#top .login_info {
+	float:right;
+	color:#4197ac;
+	padding:16px 52px 0 0;
+	height:30px;
+	display:block; 
+}
+.show_free_popup {
+	position:relative;
+	z-index:99999;
+}
+.show_free_popup a {
+	cursor:pointer;
+}
+.login_info a:hover {
+	text-decoration:none;
+}
+.show_free_popup .free_popup {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/free_popup.png?5975);
+	padding:8px 1px 0 1px;
+	width:108px;
+	height:52px;
+	line-height:25px;
+	overflow:hidden;
+	position:absolute;
+	top:15px;
+	left:0;
+	text-align:left;
+}
+.show_free_popup .free_popup a {
+	color:#4197ac; display:block; padding-left:10px;
+}
+.show_free_popup .free_popup a:hover {
+	color:#fff;
+	background:#54bbcf; padding-left:10px;text-decoration:none;
+}
+#top2 {
+	height:34px;
+	clear:both;
+	text-align:right;
+	color:#4197ac;
+	line-height:34px;
+}
+#top2 a:hover{text-decoration:none;}
+#logo_main {
+	width:380px;
+	margin:0 auto;
+	padding:124px 0 28px 0;
+}
+#logo_main2 {
+	width:360px;
+	margin:0 auto;
+	padding:62px 0 28px 0;
+}
+.logo .logoImg {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/logogaiban.png?5975) no-repeat left top;
+	width:292px;
+	height:84px;
+	_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.yiqisoo.com/yiqisoo/dandelion/images/logogaiban.png?5975');
+}
+.logo .logoImg span {
+	display:none;
+}
+.logo, .logo2 {
+	position:relative;
+	z-index:9999;
+}
+.logo2 img,.logo img{width:177px; height:80px; margin-left:20px;}
+.logo2 .city {
+	padding:0;
+	right:10px;
+}
+.logo2 .area {
+	left:300px;
+}
+.city {
+	padding-left:8px;
+	text-align:left;
+	position:absolute;
+	top:48px;
+	right:-10px;
+}
+.city a {
+	text-decoration:none;
+	color:#000;
+}
+.area {
+	width:246px;
+	height:183px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/city_popup.png?5975);
+	padding:20px 10px 0;
+	position:absolute;
+	top:70px;
+	left:290px;
+	z-index:9999;
+}
+.area a {
+	float:left;
+	width:44px;
+	padding-left:15px;
+	text-align:left;
+	height:18px;
+	line-height:18px;
+}
+#main {
+	width:960px;
+	margin:0 auto;
+}
+#footer {
+	text-align:center;
+	color:#9d9d9d;
+	line-height:28px;
+	padding-top:50px;
+	clear:both;
+	overflow:hidden;
+}
+#footer p {
+	width:572px;
+	margin:0 auto;
+	padding-top:7px;
+}
+#footer p.t_line {
+	border-top:1px solid #cdcdcd;
+}
+#footer p a {
+	color:#4197ac;
+}
+#footer p a:hover {
+	color:#fc2b02; text-decoration: none;
+}
+.index_bottom_links {
+	width:578px;
+	margin:0 auto 0 auto;
+	padding:40px 0 0 0;
+	line-height:24px;
+	color:#9e9e9e;
+	text-align:left;
+}
+.index_bottom_links a {
+	color:#9e9e9e!important;
+}
+.index_bottom_links a:hover {
+	color:#fc2b02!important;
+}
+.index_bottom_links h4 {
+	font-size:12px;
+	padding-bottom:5px;
+}
+.HSpace01 {
+	clear:both;
+	height:6px;
+	overflow:hidden;
+}
+.block-icon {
+	display:inline-block;
+	display:-moz-inline-stack;
+*display:inline;
+	zoom:1;
+	vertical-align:middle;
+	overflow:hidden;
+}
+.tsearch {
+	width:572px;
+	margin:0 auto;
+}
+.tsearch p.s_hot {
+	padding-top:10px;
+	color:#828282;
+	margin-bottom:8px;
+}
+.tsearch p.s_hot a {
+	color:#397bb8;
+}
+.tsearch p.s_hot a:hover {
+	color:#fc2b02;
+	text-decoration:underline;
+}
+.tsearch p.s_hot a.c8 {
+	color:#828282;
+}
+.tsearch p.s_hot a.c8:hover {
+	color:#fc2b02;
+	text-decoration:underline;
+}
+ul.tsearch_tab {
+	padding-left:30px;
+}
+ul.tsearch_tab li {
+	padding:0 10px;
+	font-size:14px;
+	color:#4197ac;
+	line-height:26px;
+	float:left;
+	color:#4197ac;
+	position:relative;
+	z-index:10;
+}
+ul.tsearch_tab li a {
+	color:#4197ac;
+	text-decoration:none;
+}
+ul.tsearch_tab li a:hover {
+	color:#fc2b02;
+	text-decoration:underline;
+}
+ul.tsearch_tab li a.selected {
+	color:#000;
+	font-weight:bold;
+}
+ul.tsearch_tab li a.selected:hover {
+	text-decoration:none;
+}
+.tsearch-panel {
+	padding-top:2px;
+	padding-left:2px;
+	padding-right:2px;
+	border:1px solid #d0d0d0;
+	background-color:#efefef;
+	height:34px;
+	clear:both;
+	position:relative;
+}
+.tsearch-panel form {
+	padding:0;
+}
+.tsearch-panel .tsearch-panel_f {
+	width:436px;
+	height:30px;
+	background-position:0 0;
+	border:1px solid #9b9f9f;
+	border-right:none;
+}
+.tsearch-panel .tsearch-panel_f .s {
+	height:18px;
+	_height:16px;
+	font-size:14px;
+	line-height:20px;
+	padding:6px 4px;
+	border:0;
+	color:#333;
+	font-family:verdana, tahoma, arial, \5b8b\4f53;
+	width:428px;
+}
+.tsearch-panel button {
+	width:130px;
+	height:32px;
+	background-position:0 -34px;
+	text-indent:-99999px;
+	cursor:pointer;
+	position:absolute;
+	right:2px;
+	top:2px;
+	border:0;
+	padding:0;
+}
+.p_left {
+	width:750px;
+	float:left;
+}
+.p_right {
+	width:204px;
+	float:right;
+}
+.page {
+	height:22px;
+	line-height:22px;
+	padding:25px;
+	color:#4197ac;
+}
+.page a {
+	padding:2px 6px 2px 6px;
+	border:1px solid #afb0b1;
+	background:#fff;
+	color:#afb0b1;
+}
+.page a:hover {
+	border:1px solid #fc2b02;
+	color:#fc2b02;
+	text-decoration:none;
+}
+.page a.special {
+	padding:2px 6px 2px 6px;
+}
+.page .current {
+	border:1px solid #4197ac;
+	color:#4197ac;
+	font-weight:700;
+	background-color:#e1ebf4;
+}
+.page .prev, .page .next, .page .prev2 {
+	border:1px solid #a6cadc;
+	background-color:#fff;
+	color:#3da4d9;
+}
+.page .prev {
+	padding:2px 3px 2px 15px;
+	background:#FFF url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -246px -45px;
+}
+.page .prev:hover {
+	background-position:-246px -253px;
+}
+.page .next {
+	padding:2px 15px 2px 3px;
+	background:#FFF url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -266px -45px;
+}
+.page .next:hover {
+	background-position:-266px -253px;
+}
+.page .prev2 {
+	padding:2px;
+	background:#FFF url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -250px -45px;
+}
+.page .prev2:hover {
+	background-position:-250px -253px;
+}
+.page .next2 {
+	padding:2px;
+	background:#FFF url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) -306px -45px;
+}
+.page .next2:hover {
+	background-position:-306px -253px;
+}
+.pic a img {
+	vertical-align:middle;
+	border:1px solid #b1b1b1;
+	padding:1px;
+}
+.s104 {
+	width:104px;
+	height:80px;
+}
+.s104 img {
+	width:100px;
+	height:76px;
+}
+.s64 {
+	width:64px;
+	height:50px;
+}
+.s64 img {
+	width:60px;
+	height:44px;
+}
+.s406 {
+	width:406px;
+	height:306px;
+}
+.s406 img {
+	width:402px;
+	height:302px;
+}
+.s478 {
+	width:478px;
+}
+h2.ti {
+	width:204px;
+	height:29px;
+	font-size:12px;
+	text-indent:20px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975) 0 -71px no-repeat;
+	line-height:29px;
+}
+h2.ti2 {
+	height:27px;
+	clear:both;
+	overflow:hidden;
+}
+h2.ti2 .bg {
+	display:block;
+	border:1px solid #d7d7d7;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img02.png?5975?234) left bottom repeat-x;
+	height:25px;
+	line-height:25px;
+	padding-left:20px;
+}
+h2.ti2 .other {
+	font-weight:normal;
+	padding-left:56px;
+}
+h2.ti2 .other a {
+	padding-right:5px;
+}
+h2.ti2 cite {
+	font-weight:normal;
+	float:right;
+	padding-right:9px;
+	font-style:normal;
+}
+.blk01 {
+	border:1px solid #ccc;
+	background-color:#fff;
+	border-top:none;
+}
+.blk02 {
+	border:1px solid #dcdcdc;
+}
+.text_cut {
+	display:block;
+	overflow:hidden;
+	word-break:break-all;
+	word-wrap:break-word;
+	word-break:normal;
+}
+.rc-tp, .rc-bt, .rc-tp span, .rc-bt span {
+	display:block;
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img03.png?5975);
+	background-repeat:no-repeat;
+}
+.rc-tp, .rc-bt {
+	height:2px;
+	display:block;
+	position:relative;
+	clear:both;
+	overflow:hidden;
+}
+.rc-tp {
+	background-position:-748px -38px;
+	margin-bottom:-2px;
+}
+.rc-tp span {
+	float:right;
+	width:2px;
+	height:2px;
+	background-position:-746px -38px;
+}
+.rc-bt {
+	background-position:-748px -40px;
+	margin-top:-2px;
+}
+.rc-bt span {
+	float:right;
+	width:2px;
+	height:2px;
+	background-position:-746px -40px;
+}
+.appliance_index {
+	width:720px;
+	margin:0 auto;
+	padding-bottom:50px;
+}
+.appliance_index_classify {
+	float:left;
+	width:480px;
+	line-height:24px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/index_jd2.gif?5975) no-repeat right top;
+	height:160px;
+}
+.appliance_index_classify dt {
+	font-size:14px;
+	font-weight:700;
+	margin-bottom:10px;
+}
+.appliance_index_classify dd {
+	float:left;
+	width:120px;
+}
+.appliance_index_classify a {
+	color:#4197ac;
+}
+.appliance_index_classify a:hover {
+	color:#fc2b02;
+}
+.pinyin_recall {
+	float:right;
+	width:180px;
+	padding:0 20px 0 40px;
+}
+.pinyin_recall_t {
+	font-size:14px;
+	font-weight:700;
+	margin-bottom:10px;
+}
+.pinyin_recall_c {
+	padding:10px 0; background:#fff;
+}
+.pinyin_recall_c li {
+	float:left;
+	width:22px;
+	height:22px;
+	line-height:22px;
+}
+.pinyin_recall_c a {
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#4197ac;
+	text-decoration:none;
+}
+.pinyin_recall_c a:hover {
+	color:#fc2b02;
+	text-decoration:underline;
+}
+.home_appliance_popup {
+	width:291px;
+	position:absolute;
+	z-index:2; left:0px;
+}
+
+.home_appliance_popup_t, .home_appliance_popup_b,.home_appliance_popup_tico {
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/jiadian/home_appliance_popup.png?5975);background-position:0 -5px;
+	width:291px;
+	height:5px;
+	overflow:hidden;
+}
+.home_appliance_popup_tico{width:11px; height:6px; background-position:-590px 0px; position:absolute;top:-5px;}
+.home_appliance_popup_b {
+	background-position:0 -10px; height:10px;
+}
+.home_appliance_popup_c {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/jiadian/home_appliance_popup.png?5975) -291px 0 repeat-y;
+	padding:5px 15px;
+	line-height:24px;
+}
+.home_appliance_popup_c a {
+	color:#000;
+}
+.gf_tool {
+	padding:8px 10px;
+	text-align:left;
+}
+.gf_tool li {
+	line-height:24px;
+}
+.gf_tool li a {
+	color:#000;
+}
+.gf_tool li a:hover {
+	color:#fc2b02;
+}
+.site {
+	padding-top:34px;
+}
+.site h1 {
+	font-size:220%;
+	font-family:"Microsoft YaHei";
+	color:#55a1d4;
+	padding-bottom:10px;
+	border-bottom:1px solid #ddd;
+	padding-left:45px;
+	font-weight:500;
+	margin-bottom:34px;
+}
+.site h2 {
+	margin-bottom:24px;
+}
+.site .s1, .site .s2, .site .s3, .site .s4, .site .s5 {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/img04.png?5975) 0 0 no-repeat;
+	padding-left:24px;
+	font-size:14px;
+	color:#4197ac;
+	display:inline-block;
+	line-height:25px;
+}
+.site .s1 {
+	background-position:0 5px;
+}
+.site .s2 {
+	background-position:0 -26px;
+}
+.site .s3 {
+	background-position:0 -63px;
+}
+.site .s4 {
+	background-position:0 -104px;
+}
+.site .s5 {
+	background-position:0 -145px;
+}
+.site .tabel {
+	padding:0 0 24px 15px;
+}
+.site td {
+	height:24px;
+	line-height:24px;
+}
+.siteNav-link {
+	padding-left:25px;
+}
+.clearfix {
+	display:block;
+}
+.siteNav-link a {
+	color:#000;
+	display:inline-block;
+	line-height:24px;
+	margin-right:20px;
+}
+.pop_duibi_hd {
+	width:254px;
+	height:29px;
+	line-height:29px;
+	position:relative;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/reg_sprite.png?5975) no-repeat -260px -30px;
+	font-size:14px;
+	font-weight:700;
+	color:#4197ac;
+	text-indent:15px;
+}
+.pop_duibi_hd_mini {
+	width:138px;
+	height:29px;
+	line-height:29px;
+	position:relative;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/mini_bg.png?5975);
+	font-size:14px;
+	font-weight:700;
+	color:#4197ac;
+	text-indent:15px;
+}
+.pop_duibi_hd_btn1 {
+	position:absolute;
+	right:31px;
+	top:4px;
+	text-indent:0;
+}
+.pop_duibi_hd_btn2 {
+	position:absolute;
+	right:4px;
+	top:4px;
+	text-indent:0;
+}
+.pop_duibi_bd_t1 {
+	height:31px;
+	line-height:31px;
+	color:#818181;
+	text-indent:12px;
+	background:#f5faff;
+}
+.pop_duibi_bd_t2 {
+	height:31px;
+	line-height:31px;
+	font-size:14px;
+	text-align:center;
+	background:#e9f5ff;
+}
+.pop_duibi_bd {
+	width:252px;
+	border-left:1px solid #a6c5df;
+	border-right:1px solid #a6c5df;
+	border-bottom:1px solid #a6c5df;
+	background:#FFF;
+}
+.pop_duibi_bd ul {
+	width:239px;
+	margin:0 auto;
+	color:#323232;
+}
+.pop_duibi_bd ul li {
+	height:28px;
+	line-height:28px;
+	border-bottom:1px solid #e5e5e5;
+	float:left;
+}
+.pop_duibi_bd ul li span {
+	float:left;
+	text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.pop_duibi_bd ul li img {
+	float:left;
+	margin-top:10px;
+}
+.pop_duibi_bd ul li span.col1 {
+	width:84px;
+	margin:0 2px;
+}
+.pop_duibi_bd ul li span.col2 {
+	width:66px;
+	margin:0 2px;
+}
+.pop_duibi_bd ul li span.col3 {
+	width:64px;
+	margin:0 2px;
+}
+.pop_duibi_bd_t3 {
+	height:34px;
+	position:relative;
+	top:-2px;
+	background:#fff;
+	text-align:center;
+	padding-top:12px;
+}
+.pop_duibi_bd_t3 input {
+	width:80px;
+	height:30px;
+	border:0 none;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/reg_sprite.png?5975) no-repeat -260px -60px;
+	font-size:14px;
+	color:#55a1d4;
+	font-weight:700;
+}
+.poplayer_tip01 {
+	width:328px;
+	border:1px solid #f8d799;
+	position:absolute;
+}
+.poplayer_tip01_inner {
+	width:326px;
+	border:1px solid #fff;
+	background:#fdfae9;
+	line-height:normal;
+}
+.poplayer_tip01_hd {
+	width:308px;
+	margin:0 auto;
+	padding:10px 0;
+	border-bottom:1px solid #dfdfde;
+	position:relative;
+	color:#7e1f0b;
+	font-size:14px;
+	font-weight:700;
+	line-height:normal;
+}
+.poplayer_tip01_hd div {
+	width:286px;
+}
+.poplayer_closebtn12x11 {
+	position:absolute;
+	right:0;
+	top:50%;
+	margin-top:-6px;
+}
+.poplayer_tip01_bd {
+	line-height:18px;
+	color:#333;
+	padding:10px;
+}
+.pop_favorites {
+	width:314px;
+	height:141px;
+	background:#FFF;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-70px 0 0 -157px;
+	z-index:99999;
+}
+.pop_favorites .hd {
+	position:relative;
+	width:314px;
+	height:29px;
+	line-height:29px;
+	text-indent:15px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/reg_sprite.png?5975) no-repeat -260px -100px;
+	font-size:14px;
+	font-weight:700;
+	color:#4197ac;
+}
+.pop_favorites .bd {
+	height:111px;
+	border-left:1px solid #a6c5df;
+	border-right:1px solid #a6c5df;
+	border-bottom:1px solid #a6c5df;
+	text-align:center;
+}
+.pop_favorites .bd p {
+	font-size:14px;
+	font-weight:700;
+	padding:28px 0 18px 0;
+}
+.pop_favorites .bd input {
+	width:80px;
+	height:30px;
+	border:0 none;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/reg_sprite.png?5975) no-repeat -260px -60px;
+	font-size:14px;
+	color:#55a1d4;
+	font-weight:700;
+}
+.pop_closebtn {
+	position:absolute;
+	width:22px;
+	height:21px;
+	right:10px;
+	top:50%;
+	margin-top:-10px;
+	text-indent:0;
+}
+.pop_reg_p_hd {
+	height:45px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/reg_logintbg.png?5975) repeat-x;
+	color:#4197ac;
+	font:18px/45px '微软雅黑', '黑体';
+	text-indent:24px;
+	position:relative;
+}
+.pop_reg_tabbox {
+	width:100%;
+	height:39px;
+	border-bottom:1px solid #ccc;
+	position:relative;
+	background:#FDFEFE;
+}
+.pop_reg_tabbox ul {
+	height:27px;
+	padding-top:12px;
+	padding-left:28px;
+}
+.pop_reg_tabbox ul li {
+	font-size:12px;
+	font-weight:700;
+	float:left;
+	width:80px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/reg_sprite.png?5975) no-repeat -260px -140px;
+	position:relative;
+	bottom:-1px;
+}
+.pop_reg_tabbox ul li.current {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/liming/reg_sprite.png?5975) no-repeat -350px -140px;
+}
+.pop_reg_tabbox ul li a {
+	display:block;
+	width:80px;
+	height:27px;
+	color:#666;
+}
+.pop_reg_tabbox ul li.current a {
+	color:#4197ac;
+}
+.pop_reg_tabbox .tip {
+	position:absolute;
+	left:282px;
+	bottom:7px;
+	color:#666;
+}
+.pop_login {
+	position:absolute;
+	width:364px;
+	height:245px;
+	top:50%;
+	left:50%;
+	margin:-122px 0 0 -182px;
+	z-index:99999;
+}
+.pop_reg_p {
+	background:#E3F0FB;
+	position:absolute;
+	width:647px;
+	height:562px;
+	top:560px;
+	left:300px;
+}
+.pop_reg_p .reg_p, .pop_reg_j .reg_p {
+	padding-left:75px;
+}
+.pop_reg_j .reg_p {
+	padding-top:22px;
+}
+.pop_reg_p .pop_reg_p_in {
+	width:643px;
+	height:559px;
+	background:#fbfdff;
+	position:absolute;
+	top:-1px;
+	border:1px solid #A6C5DF;
+}
+.pop_reg_p .reg_p li, .pop_reg_j .reg_p li {
+	padding:12px 0;
+}
+.pop_reg_j {
+	width:647px;
+	height:783px;
+	position:absolute;
+	background:#E3F0FB;
+	top:1136px;
+	left:300px;
+}
+.pop_reg_j .pop_reg_j_in {
+	background:#fbfdff;
+	width:643px;
+	height:780px;
+	position:absolute;
+	top:-1px;
+	border:1px solid #A6C5DF;
+}
+.pop_tjsc {
+	width:464px;
+	height:282px;
+	position:absolute;
+	background:#E3F0FB;
+	left:50%;
+	top:50%;
+	margin:-141px 0 0 -232px;
+	z-index:99999;
+}
+.pop_tjsc_in {
+	width:460px;
+	height:278px;
+	background:#fbfdff;
+	position:absolute;
+	top:-1px;
+	border:1px solid #A6C5DF;
+}
+.pop_tjsc_in .borderfix {
+	background:#fff;
+	overflow:hidden;
+	height:6px;
+	position:relative;
+	bottom:-1px;
+}
+.pop_tjsc_in ul {
+	width:449px;
+	margin:0 auto;
+}
+.pop_tjsc_in ul li {
+	border-top:1px solid #cddfee;
+	height:12px;
+	overflow:hidden;
+	padding:12px 0;
+}
+.pop_tjsc_in ul li span {
+	float:left;
+	white-space:nowrap;
+	overflow:hidden;
+	padding-left:8px;
+}
+.pop_tjsc_in ul li .tit {
+	color:#4197ac;
+	font-weight:700;
+	width:66px;
+}
+.pop_tjsc_in ul li .col1 {
+	width:42px;
+}
+.pop_tjsc_in ul li .col2 {
+	width:52px;
+}
+.pop_tjsc_in ul li .col3 {
+	width:52px;
+}
+.pop_tjsc_in ul li .col4 {
+	width:42px;
+}
+.pop_tjsc_in ul li .col5 {
+	width:67px;
+}
+.reg_loginin {
+	margin:-125px 0 0 -182px;
+	top:50%;
+	left:50%;
+	height:265px;
+}
+.reg_loginin_shadow {
+	height:262px;
+}
+.error_notfound {
+	border-top:3px solid #3699D2;
+	padding:160px 0;
+	margin:15px 0;
+}
+.error_notfound h2 {
+	width:760px;
+	height:120px;
+	margin:0 auto;
+	text-align:center;
+	font:bold 16px/110px 宋体;
+	font-weight:700;
+	color:#888B8C;
+	background:url(images/error_bg.png?5975);
+}
+.error_repair {
+	padding:50px 0;
+	margin:15px 0;
+}
+.error_repair h2 {
+	width:760px;
+	height:120px;
+	margin:0 auto;
+	text-align:center;
+	font:normal 36px/110px 微软雅黑;
+	color:#888B8C;
+	background:url(images/error_bg.png?5975);
+}
+.new_hint {
+	width:278px;
+	height:39px;
+	padding:15px 0 0 8px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/hint.png?5975);
+	position:absolute;
+	left:30px;
+	top:35px;
+	z-index:1;
+	color:#9E9E9E;
+	line-height:18px;
+}
+.new_hint .close {
+	color:#9E9E9E;
+	text-decoration:underline;
+	position:absolute;
+	right:8px;
+	bottom:5px;
+}
+.pr30 {
+	padding:0 30px 0 0;
+}
+.mt-4 {
+	margin-top:-4px;
+}
+.mb3 {
+	margin-bottom:3px;
+}
+.mb3_s {
+	margin-bottom:4px;
+*margin-bottom:3px;
+}
+.mb5 {
+	margin-bottom:5px;
+}
+.mb7 {
+	margin-bottom:7px;
+}
+.mb10 {
+	margin-bottom:10px;
+}
+.mb20 {
+	margin-bottom:20px;
+}
+.pl10 {
+	padding-left:10px;
+}
+.pl05 {
+	padding-left:05px;
+}
+.lin30 {
+	line-height:30px;
+}
+.bg-f9-bor {
+	background:#f9f9f9;
+	border:solid 1px #f1f1f1;
+	padding:10px 20px;
+}
+.bg-f9 {
+	background:#f9f9f9;
+	padding:10px;
+}
+.bg-f9-hid {
+	background:#f9f9f9;
+	height:36px;
+	overflow:hidden;
+	padding:10px 0 0 10px;
+	width:738px;
+}
+.w150 {
+	width:150px;
+}
+.w230 {
+	width:236px;
+}
+.w280 {
+	width:280;
+}
+.w548 {
+	width:548px;
+}
+.w580 {
+	width:580px;
+}
+.a_666 a {
+	color:#666;
+	padding-right:20px;
+}
+.a_666 a:hover {
+	text-decoration:underline;
+	color:#4197ac;
+}
+.bor-E5 {
+	border:solid 1px #e5e5e5;
+}
+.a-blue-pr20 a {
+	padding:0 20px 0 0;
+}
+.a-blue-pr30 a {
+	padding:0 20px 0 0;
+	display:inline-block;
+	word-wrap:break-word;
+}
+.a-blue-125 a {
+	display:block;
+	width:114px;
+	padding-left:10px;
+	float:left;
+	overflow:hidden;
+	height:22px;
+}
+.a-blue-110 a {
+	display:block;
+	width:113px;
+	padding-left:10px;
+	float:left;
+	overflow:hidden;
+	height:22px;
+}
+.index_classify_title {
+	height:94px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/index_classify_line.gif?5975) repeat-x left 138px;
+	overflow:hidden;
+	width:730px;
+	margin:0 auto;
+	padding-top:45px;
+	text-align:center;
+}
+.index_classify_title ul {
+	height:94px;
+	padding:0 5px;
+	width:750px;
+	text-align:center;
+}
+.index_classify_title ul li {
+	width:90px;
+	height:94px;
+	display:inline;
+	overflow:hidden;
+}
+.index_classify_title ul li a {
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/index_classify_ico.gif?5975);
+	display:inline-block;
+	width:90px;
+	height:29px;
+	text-align:center;
+	padding-top:65px;
+	color:#4c4c4c;
+}
+.index_classify_title ul li a:hover, .index_classify_title ul li a.active {
+	color:#4197ac;
+	text-decoration:none;
+}
+.index_classify_title ul li.region a {
+	background-position:-5px 0;
+}
+.index_classify_title ul li.subway a {
+	background-position:-91px 0;
+}
+.index_classify_title ul li.bus a {
+	background-position:-181px 0;
+}
+.index_classify_title ul li.school a {
+	background-position:-271px 0;
+}
+.index_classify_title ul li.park a {
+	background-position:-354px 0;
+}
+.index_classify_title ul li.family a {
+	background-position:-443px 0;
+	padding-left:6px;
+}
+.index_classify_title ul li.price a {
+	background-position:-544px 0;
+}
+.index_classify_title ul li.tools a {
+	background-position:-634px 0;
+	text-align:left;
+	padding-left:15px;
+}
+.index_classify_title ul li.region a:hover, .index_classify_title ul li.region a.active {
+	background-position:-5px -100px;
+}
+.index_classify_title ul li.subway a:hover, .index_classify_title ul li.subway a.active {
+	background-position:-91px -100px;
+}
+.index_classify_title ul li.bus a:hover, .index_classify_title ul li.bus a.active {
+	background-position:-181px -100px;
+}
+.index_classify_title ul li.school a:hover, .index_classify_title ul li.school a.active {
+	background-position:-271px -100px;
+}
+.index_classify_title ul li.park a:hover, .index_classify_title ul li.park a.active {
+	background-position:-354px -100px;
+}
+.index_classify_title ul li.family a:hover, .index_classify_title ul li.family a.active {
+	background-position:-443px -100px;
+}
+.index_classify_title ul li.price a:hover, .index_classify_title ul li.price a.active {
+	background-position:-544px -100px;
+}
+.index_classify_title ul li.tools a:hover, .index_classify_title ul li.tools a.active {
+	background-position:-634px -100px;
+}
+.index_classify_con {
+	margin:0 auto;
+	width:750px;
+	padding-top:10px;
+}
+.index_classify_con a {
+	color:#397bb8;
+}
+.index_classify_con a:active {
+	color:#800080;
+}
+.index_classify_con a:visited {
+	color:#800080;
+}
+.index_classify_con a:hover {
+	color:#fc2b02;
+}
+.index_classify_dl {
+	margin-bottom:10px;
+}
+.index_classify_dl .list_li70 li, .index_classify_dl .list_li85 li, .index_classify_dl .list_li110 li {
+	background:#dfedf6 url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/a_bg_bor.gif?5975) repeat-x left top;
+	border:solid 1px #b8d6ee;
+	height:24px;
+	line-height:24px;
+	width:85px;
+	text-align:center;
+	margin-right:10px;
+	float:left;
+	display:block;
+}
+.index_classify_dl .list_li70 li {
+	width:70px;
+}
+.index_classify_dl .list_li110 li {
+	width:111px;
+	text-align:left;
+}
+.index_classify_dl .list_li110 li a {
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/index_classify_ico3.png?5975);
+	background-repeat:no-repeat;
+	display:inline-block;
+	height:22px;
+}
+.index_classify_dl .list_li110 li a.a1 {
+	background-position:5px 0;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a2 {
+	background-position:5px -21px;
+	padding-left:28px;
+}
+.index_classify_dl .list_li110 li a.a3 {
+	background-position:-2px -44px;
+	padding-left:22px;
+}
+.index_classify_dl .list_li110 li a.a4 {
+	background-position:3px -65px;
+	padding-left:25px;
+}
+.index_classify_dl .list_li110 li a.a5 {
+	background-position:3px -87px;
+	padding-left:28px;
+}
+.index_classify_dl .list_li110 li a.a6 {
+	background-position:5px -109px;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a7 {
+	background-position:5px -131px;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a8 {
+	background-position:5px -153px;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a9 {
+	background-position:5px -175px;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a10 {
+	background-position:5px -197px;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a11 {
+	background-position:5px -219px;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a12 {
+	background-position:5px -241px;
+	padding-left:30px;
+}
+.index_classify_dl .list_li110 li a.a13 {
+	background-position:5px -263px;
+	padding-left:30px;
+}
+.classify_search {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/search-bg.gif?5975) no-repeat left top;
+	height:31px;
+	overflow:hidden;
+	display:inline-block;
+}
+.classify_search_r {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/search-bg.gif?5975) no-repeat right bottom;
+	height:26px;
+	padding:5px 10px 0 40px;
+	display:inline-block;
+}
+.inp_borC_120 {
+	border:solid 1px #ccc;
+	background:#fff;
+	width:120px;
+	height:16px;
+	line-height:16px;
+}
+.inp_borC_60 {
+	border:solid 1px #ccc;
+	background:#fff;
+	width:60px;
+	height:16px;
+	line-height:16px;
+}
+.inp_borC_30 {
+	border:solid 1px #ccc;
+	background:#fff;
+	width:30px;
+	height:16px;
+	line-height:16px;
+}
+.btn_bg_2 {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/search-btn.gif?5975) no-repeat left top;
+	width:40px;
+	height:20px;
+	border:none;
+}
+.school_classify li {
+	float:left;
+	margin-right:15px;
+}
+.school_classify li a {
+	color:#4c4c4c;
+}
+.school_classify li a:active {
+	color:#4c4c4c;
+}
+.school_classify li a:visited {
+	color:#4c4c4c;
+}
+.school_classify li a:hover {
+	color:#fc2b02;
+}
+.school_classify li a.active {
+	color:#4197ac;
+}
+.school_classify li a.active:hover {
+	text-decoration:none;
+}
+.subway-line li {
+	width:50px;
+	display:block;
+	float:left;
+	height:22px;
+	overflow:hidden;
+}
+.subway-line li a:hover {
+	color:#4197ac;
+	text-decoration:none;
+}
+.region_List dl dd li {
+	display:block;
+	float:left;
+	height:24px;
+	line-height:24px;
+}
+.region_List dl dd li a {
+	font-size:14px;
+}
+.region_List dl dd li a {
+	color:#4197ac;
+}
+.region_List dl dd li a:active {
+	color:#800080;
+}
+.region_List dl dd li a:visited {
+	color:#800080;
+}
+.region_List dl dd li a:hover {
+	color:#fc2b02;
+}
+.region_List dl dd li span {
+	color:#7c7c7c;
+}
+.region_List .li180 li {
+	width:182px;
+}
+.region_List .li140 li {
+	width:137px;
+}
+a.more_ico {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/moreIco.gif?5975) no-repeat left center;
+	display:inline-block;
+	height:16px;
+	line-height:16px;
+	padding-left:18px;
+	margin-right:12px;
+}
+a.more_ico:active {
+	color:#4197ac;
+}
+a.more_ico:visited {
+	color:#4197ac;
+}
+a.more_ico:hover {
+	color:#fc2b02;
+}
+.subway_img_btn {
+	text-align:center;
+	width:26px;
+	position:absolute;
+	left:10px;
+	top:0;
+	padding-top:5px;
+}
+.fullscreen {
+	padding-right:10px;
+	margin-bottom:5px;
+	text-align:right;
+}
+.fullscreen a {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/fullscreen.gif?5975) no-repeat left center;
+	padding-left:20px;
+	font-size:14px;
+	font-weight:bold;
+}
+.fullscreen a:active {
+	color:#4197ac;
+}
+.fullscreen a:visited {
+	color:#4197ac;
+}
+.fullscreen a:hover {
+	color:#fc2b02;
+}
+.flash {
+	width:750px;
+	height:400px;
+	border:solid 1px #b9b9b9;
+}
+.applicationList {
+	padding:0 0 20px 15px;
+}
+.applicationList li {
+	float:left;
+	position:relative;
+	width:66px;
+	text-align:center;
+	margin-right:34px;
+	z-index:0;
+}
+.applicationList li em {
+	padding-left:4px;
+}
+.applicationList .tips {
+	color:#838383;
+	padding:5px;
+	line-height:20px;
+	position:absolute;
+	z-index:1;
+	left:57px;
+	top:-22px;
+	display:none;
+	text-align:left;
+}
+.tips .tbg {
+	background:#dfdfdf;
+	border-left:solid 1px #fff;
+	border-right:solid 1px #fff;
+	height:1px;
+	overflow:hidden;
+}
+.tips .cen {
+	background:#ffffd2;
+	border-left:solid 1px #dfdfdf;
+	border-right:solid 1px #dfdfdf;
+	padding:5px;
+}
+.applicationList li a, .applicationList li a:active, .applicationList li a:visited {
+	color:#4197ac;
+}
+.applicationList li.active a {
+	color:#000;
+	text-decoration:none;
+}
+.applicationList li.active a img {
+	border:solid 1px #7fc1f3;
+}
+.applicationList li img {
+	width:50px;
+	height:50px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/applicationList.png?5975?123456);
+	background-repeat:no-repeat;
+	display:block;
+	padding:3px;
+	border:solid 1px #fff;
+	margin:10px auto 10px auto;
+}
+.applicationList li img.appIco1 {
+	background-position:0 0;
+}
+.applicationList li img.appIco2 {
+	background-position:0 -60px;
+}
+.applicationList li img.appIco3 {
+	background-position:0 -120px;
+}
+.applicationList li img.appIco4 {
+	background-position:0 -180px;
+}
+.applicationList li img.appIco5 {
+	background-position:0 -240px;
+}
+.applicationList li img.appIco6 {
+	background-position:0 -300px;
+}
+.applicationList li img.appIco7 {
+	background-position:0 -360px;
+}
+#releaseMain {
+	width:800px;
+	margin:0 auto;
+	text-align:left;
+}
+#releaseMain #logo {
+	float:left;
+	margin-top:10px;
+	height:85px;
+	width:190px;
+}
+#releaseMain #logo a {
+	height:80px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/newLogo.png) no-repeat 0 0;
+	width:177px;
+	_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.yiqisoo.com/yiqisoo/dandelion/images/newLogo.png');
+	display:block;
+}
+#topTit {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975) no-repeat -122px 2px;
+	padding-left:15px;
+	line-height:30px;
+	float:left;
+	color:#545444;
+	margin-top:40px;
+	font-size:14px;
+	font-family:"微软雅黑";
+	font-weight:500;
+	height:30px;
+}
+.yqTips {
+	background:#ffffd2;
+	color:#838383;
+	height:25px;
+	line-height:25px;
+	padding:0 10px;
+	display:inline-block;
+	margin:5px 0 10px 0;
+}
+.bor_dc {
+	border:solid 1px #dcdcdc;
+	border-top:none;
+}
+.releaseTit, .releaseTit h2, .releaseTit h2 em, .reIco {
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975);
+}
+.releaseTit {
+	background-position:0 -220px;
+	background-repeat:repeat-x;
+	height:23px;
+	overflow:hidden;
+	line-height:23px;
+	border-top:solid 1px #dcdcdc;
+}
+.releaseTit h2 {
+	background-position:0 -160px;
+	background-repeat:no-repeat;
+	height:23px;
+	float:left;
+	color:#4197ac;
+	margin-right:10px;
+}
+.releaseTit h2 em {
+	display:block;
+	padding:0 10px;
+	background-position:right -190px;
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+.releaseTit h2 em .reIco {
+	float:left;
+	background-position:0 -20px;
+	width:9px;
+	height:5px;
+	margin-right:10px;
+	margin-top:8px;
+}
+.releaseTit p {
+	float:left;
+}
+.releaseTable {
+	padding:10px;
+}
+.releaseTable td {
+	padding:0 5px;
+	height:35px;
+}
+#tipsFloat {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975) no-repeat 0 0;
+	width:17px;
+	height:17px;
+	top:5px;
+	cursor:help;
+	position:relative;
+}
+.tipsFloat {
+	background:#fff9df;
+	border:solid 1px #f4de86;
+	width:330px;
+	padding:10px;
+	color:#404040;
+	display:none;
+	position:absolute;
+	left:16px;
+	top:-3px;
+	z-index:1;
+	line-height:23px;
+}
+.releaseTable .inputtext, .communityname {
+	border:solid 1px #bfd6e4;
+	background:#f8f8f8;
+	height:18px;
+	line-height:18px;
+	padding:0 5px;
+	color:#999;
+}
+.releaseTable .inputtext2 {
+	border:solid 1px #f4de86;
+	background:#fffcf1;
+	height:18px;
+	line-height:18px;
+	padding:0 5px;
+	color:#000;
+}
+.releaseTable .inputtext3 {
+	border:solid 1px #e40000;
+	background:#fdf8f8;
+	height:18px;
+	line-height:18px;
+	padding:0 5px;
+	color:#000;
+}
+.btn_tj {
+	border:none;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975) no-repeat 0 -40px;
+	height:27px;
+	width:123px;
+	cursor:pointer;
+}
+.btn_cz {
+	border:none;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975) no-repeat 0 -80px;
+	height:29px;
+	width:82px;
+	cursor:pointer;
+}
+.releaseTable .select {
+	border-color:#7F9DB9;
+	border-style:solid;
+	border-width:1px;
+	padding:2px;
+	line-height:16px;
+	height:22px;
+}
+.pt10 {
+	padding-top:10px;
+}
+.uploadImg {
+	position:relative;
+	z-index:2;
+}
+.uploadImg a.btn {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975) no-repeat 0 -120px;
+	width:98px;
+	height:23px;
+	line-height:23px;
+	text-align:center;
+	display:inline-block;
+	margin:10px 0;
+}
+.uploadImg .floatLayer {
+	position:absolute;
+	left:100px;
+	top:0;
+	padding:0;
+	margin:0;
+	display:none;
+}
+.uploadImg .floatLayer td {
+	padding:0;
+	margin:0;
+}
+#releaseShowMore {
+	position:absolute;
+	right:10px;
+	top:1px;
+	cursor:pointer;
+	width:40px;
+}
+#releaseShowMore em {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/area_box_more.gif?5975) no-repeat 0 -22px;
+	padding-left:15px;
+	display:block;
+	height:20px;
+}
+#releaseShowMore em.up {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/area_box_more.gif?5975) no-repeat 0 0;
+	padding-left:15px;
+}
+#basic-modal-content {
+	display:none;
+	width:410px;
+	height:393px;
+}
+#simplemodal-overlay {
+	background-color:#000;
+	cursor:wait;
+}
+#simplemodal-container {
+	color:#000;
+	text-align:center;
+}
+#simplemodal-container a.modalCloseImg {
+	width:12px;
+	height:12px;
+	z-index:3200;
+	position:absolute;
+	top:10px;
+	cursor:pointer;
+	display:block;
+	right:10px;
+}
+#simplemodal-container #basic-modal-content {
+	padding:5px;
+}
+.mBlogLayer .top_l, .mBlogLayer .top_r, .mBlogLayer .bottom_l, .mBlogLayer .bottom_r {
+	width:5px;
+	height:5px;
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/layer/f2.png?5975);
+	background-repeat:no-repeat;
+	_background-image:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/layer/f2.gif?5975);
+	_filter:alpha(opacity=50);
+}
+.mBlogLayer .top_l {
+	background-position:0 0;
+}
+.mBlogLayer .top_r {
+	background-position:-5px 0;
+}
+.mBlogLayer .bottom_l {
+	background-position:0 -5px;
+}
+.mBlogLayer .bottom_r {
+	background-position:-5px -5px;
+}
+.mBlogLayer .top_c, .mBlogLayer .bottom_c {
+	height:5px;
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/layer/f1.png?5975);
+	background-repeat:repeat-x;
+	_background-image:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/layer/f1.gif?5975);
+	_filter:alpha(opacity=50);
+}
+.mBlogLayer .mid_l, .mBlogLayer .mid_r {
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/layer/f1.png?5975);
+	background-repeat:repeat-y;
+	_background-image:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/layer/f1.gif?5975);
+	_filter:alpha(opacity=50);
+	width:5px;
+}
+.mBlogLayer .mid_c {
+	background:#fff;
+	border:solid 1px #ddd;
+}
+.mBlogLayer .close {
+	height:25px;
+	background:#eee;
+	color:#0082d0;
+	padding:0 10px;
+	line-height:25px;
+	text-align:left;
+	position:relative;
+	z-index:1;
+	float:none;
+}
+.mBlogLayer .close a {
+	float:right;
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#0082d0;
+}
+.mBlogLayer .close .t {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/layer/f3.gif?5975) no-repeat left top;
+	width:16px;
+	height:8px;
+	position:absolute;
+	z-index:1;
+	left:20px;
+	top:-8px;
+}
+.breadcrumb {
+	margin-bottom:10px;
+}
+#login_info {
+	text-align:right;
+	float:right;
+	width:220px;
+	height:35px;
+	padding-right:10px;
+	line-height:35px;
+	position:relative;
+	padding-right:50px;
+}
+#login_info a {
+	color:#4197ac;
+	text-decoration:none;
+}
+#login_info a:hover {
+	color:#fc2b02;
+	text-decoration:underline;
+}
+#login_info .area {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/city_bg.png?5975);
+    display: none;
+    height: 173px;
+    left: auto;
+    padding: 15px 0 0 10px;
+    position: absolute;
+    right: 125px;
+    top: 30px;
+    width: 252px;
+    z-index: 9999;
+}
+#login_info .area a {
+	float:left;
+	width:44px;
+	padding-left:5px;
+	text-align:left;
+	height:18px;
+	line-height:18px;
+	color:#2769BB;
+}
+#login_info .city {
+	position:absolute;
+	top:0;
+	right:124px;
+	margin:0;
+	display:inline-block;
+	color:#4197ac;
+	float:none;
+	width:120px;
+	text-align:right;
+	padding-right:6px;
+}
+#login_info .city strong {
+	font-weight:normal;
+}
+#login_info .city a.blue {
+	color:#4197ac;
+	text-decoration:none;
+}
+#login_info .city a.blue:hover {
+	color:#fc2b02;
+	text-decoration:underline;
+}
+#suggestIframe {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:-1;
+	display:none;
+	background-color:#fff;
+	width:190px;
+	height:230px;
+filter:alpha(opacity:0);
+	opacity:0;
+}
+#qyIframe {
+	position:absolute;
+	left:0;
+	top:22px;
+	z-index:-1;
+	display:none;
+	background-color:#fff;
+	width:320px;
+	height:68px;
+filter:alpha(opacity:0);
+	opacity:0;
+}
+#sqIframe {
+	position:absolute;
+	left:0;
+	top:22px;
+	z-index:-1;
+	display:none;
+	background-color:#fff;
+	width:520px;
+	height:250px;
+filter:alpha(opacity:0);
+	opacity:0;
+}
+#qys{border:solid 1px #f4de86; background:#fff9df; width:320px; padding:10px; position:absolute; left:0px; top:22px; z-index:1; line-height:23px; display:none; word-break:break-all;word-wrap: break-word; word-break: normal;}
+#qys a{display:inline-block;}
+#sqs{border:solid 1px #f4de86; background:#fff9df; width:520px; padding:10px; position:absolute; left:0px; top:22px; z-index:1; line-height:23px; display:none; word-break:break-all;word-wrap: break-word; word-break: normal;}
+#sqs a{display:inline-block;}
+.onFocus .fTip {
+	display:inline-block;
+	color:#000;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/verification-post.gif?5975) no-repeat left 0;
+	padding-left:40px;
+	line-height:25px;
+	line-height:25px;
+	display:inline-block;
+	height:25px;
+	display:none;
+}
+.onFocus .fTip em {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/verification-post.gif?5975) no-repeat right 0;
+	line-height:25px;
+	line-height:25px;
+	display:inline-block;
+	height:25px;
+	padding-right:10px;
+}
+.onError .fTip {
+	display:inline-block;
+	color:#000;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/verification-post.gif?5975) no-repeat left -40px;
+	padding-left:40px;
+	line-height:25px;
+	line-height:25px;
+	display:inline-block;
+	height:25px;
+	display:none;
+}
+.onError .fTip em {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/verification-post.gif?5975) no-repeat right -40px;
+	line-height:25px;
+	line-height:25px;
+	display:inline-block;
+	height:25px;
+	padding-right:10px;
+}
+.onSuccess .fTip {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/reg4.gif?5975) no-repeat;
+	padding-left:25px;
+	font-size:12px;
+	line-height:22px;
+	vertical-align:middle;
+	line-height:25px;
+	line-height:25px;
+	display:inline-block;
+	width:280px;
+	height:25px;
+}
+.onSuccess .fTip em {
+	background:none;
+}
+.resulat {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releasebg.gif?5975) no-repeat left top;
+	width:537px;
+	margin:50px auto;
+}
+.resulat .ft {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releasebg.gif?5975) no-repeat left -219px;
+	width:537px;
+	height:10px;
+	overflow:hidden;
+}
+.resulat h3 {
+	font-family:"微软雅黑";
+	font-size:18px;
+	font-weight:500;
+	color:#35a3d0;
+	padding-left:50px;
+	padding-bottom:5px;
+	padding-right:20px;
+	line-height:25px;
+	padding-bottom:20px;
+}
+.fbcg {
+	padding:0 0 10px 0;
+}
+.fbcg img {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975) no-repeat 0 -270px;
+	height:40px;
+	width:409px;
+}
+.xgcg {
+	padding:0 0 10px 0;
+}
+.xgcg img {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975?1223456) no-repeat 0 -380px;
+	height:40px;
+	width:210px;
+}
+.ylfy {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975) no-repeat -300px -100px;
+	width:83px;
+	height:27px;
+}
+.fbdel img {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975?34590) no-repeat 0 -320px;
+	height:40px;
+	width:409px;
+}
+.fxList {
+	display:inline-block;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975?34590) no-repeat -150px -100px;
+	width:40px;
+	height:29px;
+	text-align:center;
+	overflow:hidden;
+}
+.fxList img {
+	margin:5px auto;
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/releaseMain.gif?5975);
+	background-repeat:no-repeat;
+	height:16px;
+	width:16px;
+	display:block;
+}
+.sinaIco {
+	background-position:-150px -80px;
+}
+.qqIco {
+	background-position:-170px -80px;
+}
+.kxIco {
+	background-position:-190px -80px;
+}
+.rrIco {
+	background-position:-210px -80px;
+}
+#pictype_1 {
+	padding:0;
+	width:600px;
+	color:#535353;
+	line-height:20px;
+}
+#pictype_1 p.gray {
+	padding:0;
+	height:32px;
+	line-height:32px;
+}
+#pictype_1 .title_img {
+	display:inline;
+	float:left;
+	margin:10px 20px 0 20px;
+	width:112px;
+	text-align:center;
+	position:relative;
+}
+#pictype_1 .title_img .del {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/del.png?5975);
+	width:12px;
+	height:14px;
+	text-indent:-999px;
+	overflow:hidden;
+	position:absolute;
+	top:5px;
+	right:5px;
+}
+#pictype_1 .title_img div {
+	overflow:hidden;
+	width:112px;
+}
+#pictype_1 .title_img img {
+	border-right:#cacaca 1px solid;
+	padding-right:5px;
+	border-top:#cacaca 1px solid;
+	padding-left:5px;
+	background:#fff;
+	margin-bottom:5px;
+	padding-bottom:5px;
+	border-left:#cacaca 1px solid;
+	width:100px;
+	padding-top:5px;
+	border-bottom:#cacaca 1px solid;
+	height:76px;
+}
+.zxedit {
+	display:inline-block;
+	background:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/editanddel.gif?5975) no-repeat 0 0;
+	height:16px;
+	line-height:16px;
+	padding-left:20px;
+	padding-right:5px;
+}
+.zxdel {
+	display:inline-block;
+	background:url(http://img01.yiqisoo.com/yiqisoo/adminpanel/images/editanddel.gif?5975) no-repeat 0 -30px;
+	height:16px;
+	line-height:16px;
+	padding-left:20px;
+}
+.tagStyle1 {
+	background:#f9f9f9;
+	border:solid 1px #f1f1f1;
+	margin:0 12px;
+	padding:10px 0 10px 10px;
+}
+.tagStyle2 {
+	border-bottom:solid 1px #ddd;
+	padding:10px 0 10px 33px;
+}
+.tags a {
+	display:inline-block;
+	line-height:25px;
+	margin-right:20px;
+	color:#4197ac;
+}
+
+.tags a.f12 {
+	font-size:12px;
+}
+.tags a.fb12 {
+	font-size:12px;
+	font-weight:bold;
+}
+.tags a.f14 {
+	font-size:14px;
+}
+.tags a.fb14 {
+	font-size:14px;
+	font-weight:bold;
+}
+.tags a.f16 {
+	font-size:16px;
+}
+.tags a.fb16 {
+	font-size:16px;
+	font-weight:bold;
+}
+.tags a.f12s {
+	font-size:12px;
+	color:#48c2f0;
+}
+.tags a.fb12s {
+	font-size:12px;
+	font-weight:bold;
+	color:#48c2f0;
+}
+.tags a.f14s {
+	font-size:14px;
+	color:#48c2f0;
+}
+.tags a.fb14s {
+	font-size:14px;
+	font-weight:bold;
+	color:#48c2f0;
+}
+.tags a.f16s {
+	font-size:16px;
+	color:#48c2f0;
+}
+.tags a.fb16s {
+	font-size:16px;
+	font-weight:bold;
+	color:#48c2f0;
+}
+.tags a.f12:hover, .tags a.fb12:hover, .tags a.f12s:hover, .tags a.fb12s:hover, .tags a.f14:hover, .tags a.fb14:hover, .tags a.f14s:hover, .tags a.fb14s:hover, .tags a.f16:hover, .tags a.fb16:hover, .tags a.f16s:hover, .tags a.fb16s:hover {
+	color:#fc2b02;
+}
+.examples_body {width:794px;margin:50px auto 0 auto;clear:both;overflow:hidden;	position:relative; z-index:1;background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/index_jd.png?5975) no-repeat left top;height:330px;text-align:left;}
+.examples_body a.prev {width:27px;height:34px;position:absolute;top:103px;left:-40px;text-indent:-9999px;background:#000;opacity:0;filter:alpha(opacity:0);}
+.examples_body a.next {width:27px;height:34px;right:-40px;position:absolute;top:103px;text-indent:-9999px;background:#000;opacity:0;filter:alpha(opacity:0);}
+#hotsales {background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/index_jd3.png?5975) no-repeat left top;	_background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/index_jd3.gif?5975) no-repeat left top;width:147px;height:81px;position:absolute;z-index:2;right:27px;top:14px;}
+.wrap_list {width:710px;position:relative;left:42px;top:50px;height:235px;overflow:hidden;}
+#salesList {display:block;height:235px;width:9999px;}
+#salesList li {float:left;border-right:solid 1px #dcdcdc;height:235px;width:178px;display:block;line-height:20px;position:relative;z-index:1;}
+#salesList li .img {width:180px;height:120px;overflow:hidden;display:table-cell;vertical-align:middle;text-align:center;*display:block;*font-size:104px;*font-family:Arial;}
+#salesList li .img a img {vertical-align:middle;border:none;line-height:120px;height:120px;	width:140px;}
+#salesList li .img .qiang, #salesList li .img .jiang, #salesList li .img .zeng, #salesList li .img .jiangzeng, #salesList li .img .qiangzeng {width:35px;height:35px;display:block;position:absolute;z-index:3;right:10px;top:80px;background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/twitter/3c/sales/ico.png?5975);_background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/twitter/3c/sales/ico.gif?5975);background-repeat:no-repeat;overflow:hidden;}
+#salesList li .img .qiang {background-position:-35px 0;}
+#salesList li .img .jiang {background-position:0 0;}
+#salesList li .img .zeng {background-position:-70px 0;}
+#salesList li .img .qiangzeng {background-position:-105px 0;width:60px;}
+#salesList li .img .jiangzeng {background-position:-170px 0;width:60px;}
+#salesList li h3 {font-weight:normal;height:40px;overflow:hidden;display:block;overflow:hidden;	word-break:break-all;word-wrap:break-word;word-break:normal;width:160px;margin:5px 10px;}
+#salesList li .price {margin:0 20px;height:20px;position:relative;z-index:1;padding-top:20px;}
+#salesList li .price .gray {font-weight:normal;text-decoration:line-through;position:absolute;left:0;top:0;z-index:1;color:#9c9c9c;}
+#salesList li .price .yellow {color:#ff5502;font-weight:bold;}
+#salesList li .from {margin:0 20px;background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/twitter/3c/sales/car.gif?5975) no-repeat left center;padding-left:25px; color:#999;}
+.tagsList {
+	position:relative;
+	z-index:1;
+	height:22px;
+	overflow:hidden;
+	width:358px;
+	margin-bottom:5px;
+}
+.tagsList .tagsCon {
+	width:335px;
+	height:22px;
+	overflow:hidden;
+	float:left;
+	position:relative;
+	z-index:1;
+}
+.tagsList .tagsCon .box {
+	width:370px;
+	height:22px;
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.tagsList .tagsCon a {
+	display:inline-block;
+	height:20px;
+	border:solid 1px #cecece;
+	color:#44a2de;
+	width:63px;
+	text-align:center;
+	float:left;
+	margin-right:2px;
+	background:#fff;
+	float:left;
+	overflow:hidden;
+}
+.tagsList .tagsCon a:hover{color:#fc2b02;}
+.tagsList .tagsCon a.sel,.tagsList .tagsCon a.sel:hover {
+	color:#4197ac; background:#dff5ff; text-decoration:none;
+}
+.tagsList a.prev {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/bqbtn.gif?5975) no-repeat left center;
+	height:22px;
+	width:10px;
+	display:block;
+	float:left;
+	margin-right:2px;
+}
+.tagsList a.next {
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/bqbtn.gif?5975) no-repeat right center;
+	width:10px;
+	height:22px;
+	display:block;
+	float:left;
+}
+
+
+
+#salesList2 { width:774px; overflow:hidden; padding-bottom:10px;}
+#salesList2 ul{display:block; width:780px;overflow:hidden;}
+#salesList2 li {
+	float:left;padding:20px 28px 10px 28px;
+	width:202px;
+	display:block;
+	line-height:20px;
+	position:relative;
+	z-index:1; 
+}
+#salesList2 li .img {
+	width:200px;
+	height:200px;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	*display:block;
+	*font-size:170px;
+	*font-family:Arial; border:solid 1px #dcdcdc; background:#fff;
+}
+#salesList2 li .img a img {
+	vertical-align:middle;
+	border:none;
+	line-height:170px;
+	height:190px;
+	width:190px;
+}
+#salesList2 li .img .qiang, #salesList2 li .img .jiang, #salesList2 li .img .zeng, #salesList2 li .img .jiangzeng, #salesList2 li .img .qiangzeng {
+	width:35px;
+	height:35px;
+	display:block;
+	position:absolute;
+	z-index:3;
+	right:30px;
+	top:30px;
+	background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/twitter/3c/sales/ico.png?5975);
+	_background-image:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/twitter/3c/sales/ico.gif?5975);
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+#salesList2 li .img .qiang {
+	background-position:-35px 0;
+}
+#salesList2 li .img .jiang {
+	background-position:0 0;
+}
+#salesList2 li .img .zeng {
+	background-position:-70px 0;
+}
+#salesList2 li .img .qiangzeng {
+	background-position:-105px 0;
+	width:60px;
+}
+#salesList2 li .img .jiangzeng {
+	background-position:-170px 0;
+	width:60px;
+}
+#salesList2 li h3 {
+	font-weight:normal;
+	height:40px;
+	overflow:hidden;
+	display:block;
+	overflow:hidden;
+	word-break:break-all;
+	word-wrap:break-word;
+	word-break:normal;
+	width:192px;
+	margin:5px 0px; font-size:14px;
+}
+#salesList2 li h3 a{color:#4197ac;}
+#salesList2 li h3 a:hover{color:#fc2b02;}
+
+#salesList2 li .price {
+	margin:0 0px;
+	height:20px;
+	position:relative;
+	z-index:1;
+	padding-top:20px;
+}
+#salesList2 li .price .gray {
+	font-weight:normal;
+	text-decoration:line-through;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+	color:#9c9c9c;
+}
+#salesList2 li .price .yellow {
+	color:#ff5502;
+	font-weight:bold;
+}
+#salesList2 li .from {
+	margin:0 0px;
+	background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/twitter/3c/sales/car.gif?5975) no-repeat left center;
+	padding-left:25px; color:#999;
+}
+#salesSel{}
+#salesSel dl{margin:10px;}
+#salesSel dl dt{ float:left; display:block; width:110px; height:20px;}
+#salesSel dl dt.type{ background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/jiadian/jdIco.png?5975) no-repeat 0px -32px;}
+#salesSel dl dt.web{background:url(http://img01.yiqisoo.com/yiqisoo/dandelion/images/jiadian/jdIco.png?5975) no-repeat 0px -60px;}
+#salesSel dl dd{float:left; width:635px; line-height:20px;}
+#salesSel dl dd a{display:inline-block; padding-right:10px; padding-left:5px; border-right:solid 1px #e9e9e9; height:14px; line-height:14px; margin-top:3px; color:#515050;}
+#salesSel dl dd a:hover{text-decoration:none;color:#fe3d01;}
+#salesSel dl dd a.active{color:#fe3d01;}
+
+.backHome{background:url(http://img01.yiqisooimg.com/yiqisoo/dandelion/images/jiadian/jdIco.png?5975) no-repeat 0px 0px; text-align:center; line-height:29px; font-weight:bold; height:29px;}
+.backHome a{color:#4197ac;}
+.backHome a:hover{color:#fc2b02; text-decoration:none;}

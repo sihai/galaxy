@@ -1,0 +1,832 @@
+﻿#set(${JQUERY} = '$.')
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>网上购物，比的不止是价格_Galaxy，比较购物搜索引擎Galaxy</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta property="wb:webmaster" content="8254fc58a62c8973" />
+		<meta name="keywords" content="购物搜索,比较购物,网上购物,购物查价,商品比价,商品导购,购物比价,一起搜,垂直搜索" />
+		<meta name="description" content="一起搜是一个中立的、公正的电商导购平台，是一个开放的购物类垂直搜索引擎。提供各网上商城的商品评论、库存、运费、物流、价格等信息的比较，帮助消费者在网购前进行理性决策。" />
+
+		<link rel="stylesheet" type="text/css" href="/assets/css/index.css"/>
+
+		<script type="text/javascript" src="/assets/js/jquery-1.6.4.min.js"></script>
+		<script language="javascript">
+			var islife=1;
+			var cityname='bj';
+		</script>
+		<script type="text/javascript" src="assets/js/kws.js"></script>
+		<script type="text/javascript" src="/assets/js/ui.js"></script>
+	</head>
+
+	<body>
+		
+		#parse("topbar.vm")
+		#parse("header.vm")
+		
+        <script type="text/javascript">
+			var keyWord=$("#keyword1");
+			if(keyWord.val()!=''&&keyWord.val()!='请输入您要搜索的商品关键词')
+				{
+					keyWord.addClass('s2');
+				}
+			
+			keyWord.focus(function(){
+				if($(this).val()=='请输入您要搜索的商品关键词')
+				{
+					$(this).val('').addClass('s2').css({"color":"#000"});
+					
+				}
+			});	
+			keyWord.blur(function(){
+				if($(this).val()=='')
+				{
+					$(this).val('请输入您要搜索的商品关键词').removeClass('s2').css({"color":"#a4a4a4"});
+				}
+				else if($(this).val()!=''&&$(this).val()!='请输入您要搜索的商品关键词')
+				{
+					$(this).addClass('s2').css({"color":"#000"});
+				}
+			});	
+        </script>
+		
+		#parse("nav.vm")
+		
+		<div id="partA" class="part clearfix">
+			<div id="indexFoucs">
+				<ul id="bigImg">
+		      		<!-- 光棍节脱光大促 -->
+		      		<li style="z-index:5;"><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&utm_source=ad_home_jiaodian_JD1" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/focuspic/35.jpg" onload="loadNext()" width="750" height="330"/></a></li>
+		      		<!--  摆脱光棍节 -->
+		      		<li style="z-index:4;"><a href="http://www.yiqisoo.com/specials/2012/guanggun/index.html?utm_source=ad_home_jiaodian_JD2" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/focuspic/34.jpg" onload="loadNext()" width="750" height="330"/></a></li>
+		      		<!-- 腕表 -->
+		      		<li style="z-index:3;"><a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=110&utm_source=ad_home_jiaodian_JD3" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/focuspic/32.jpg" onload="loadNext()" width="750" height="330"/></a></li>
+					<!-- 立冬 -->
+		      		<li style="z-index:2;"><a href="http://www.yiqisoo.com/specials/2012/lidong/index.html?utm_source=ad_home_jiaodian_JD4" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/focuspic/36.jpg" onload="loadNext()" width="750" height="330"/></a></li>
+		      		<!-- 单反 -->
+		      		<li style="z-index:1;"><a href="http://www.yiqisoo.com/index.php?action=camera&t=2&utm_source=ad_home_jiaodian_JD5" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/focuspic/26.jpg" onload="loadNext()" width="750" height="330"/></a></li>
+		        </ul>
+		        <p id="number"></p>
+		    </div>
+		   
+		    <script language="javascript" type="text/javascript">
+					function loadNext()
+					{
+						$("#bigImg li").each(function(i){
+							try
+							{
+								var thisImg=$("#bigImg li").eq(i).find('img');
+								if(thisImg.attr('src')=='http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif')
+								{
+									thisImg.attr('src',thisImg.attr('_src'));
+								}
+							}catch(e){};
+						})
+					}
+					
+					function focusPic()
+					{
+						var oBigImg=$("#bigImg");
+						var aBigImgLi=$("#bigImg li");
+						var liLength=aBigImgLi.length;
+						var oNumber=$("#number");
+						var iZindex=liLength;
+						var iNow=0;
+						var timer=null;
+						var iSpeed=500;
+						for(var i=0; i<liLength; i++)
+						{
+							if(i==0)
+							{
+								oNumber.append($("<i class='active'>"+(i+1)+"</i>"));
+							}
+							else
+							{
+								oNumber.append($("<i>"+(i+1)+"</i>"));
+							}
+						}
+						oNumber.find("i").mouseover(function(){
+							iNow=oNumber.find("i").index($(this));
+							oNumber.find("i").eq(iNow).addClass("active").siblings().removeClass();
+							aBigImgLi.eq(iNow).fadeIn(iSpeed).siblings().hide();
+							var thisImg=aBigImgLi.eq(iNow).find('img');
+							thisImg.attr('src',thisImg.attr('_src'));
+						});
+						startScrolling();
+						function startScrolling()
+						{
+							timer=setInterval(function(){
+								iNow++;
+								if(iNow>liLength-1)
+								{
+									iNow=0;
+								}
+								oNumber.find("i").eq(iNow).addClass("active").siblings().removeClass();
+								aBigImgLi.eq(iNow).fadeIn(iSpeed).siblings().fadeOut(iSpeed);
+							},4000);
+						}
+						function stopScrolling()
+						{
+							clearInterval(timer);
+						}
+						$("#indexFoucs").hover(function(){
+							stopScrolling();
+						},function(){
+							startScrolling();
+						});
+					}
+					
+					focusPic();
+		    </script>
+		    
+		    <ul id="reList">
+		    	<li class="r1">
+		        	<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&anl=shy_JD_cuxiao">
+		                <h2>全网促销信息</h2>
+		                <p>过去1小时,更新了 852 件<br />促销商品</p>
+		            </a>
+		        </li>
+		    	<li class="r2">
+		        	<a href="http://www.yiqisoo.com/index.php?action=analytics&anl=shy_JD_analytics">
+		                <h2>分析</h2>
+		                <p>电商排行榜</p>
+		                <p>网上商城数据报告</p>
+		            </a>
+		        </li>
+		    	<li class="r3">
+		        	<a href="http://app.yiqisoo.com/jiadiango/?anl=shy_JD_jiadiango" target="_blank">
+		                <h2>微博</h2>
+		                <p>家电购应用 151697 人<br />正在使用</p>
+		            </a>
+		        </li>
+		        <li class="r4">
+		        	<a href="http://www.yiqisoo.com/index.php?action=shop&anl=shy_JD_shop">
+		                <h2>全部商品分类</h2>
+		                <p>共 156 个分类</p>
+		                <p>共 2571818 个商品</p>
+		            </a>
+		        </li>
+		    </ul>
+		</div><!--/partA-->
+
+		<div class="part"> 
+			<!--推荐 S-->
+			<h2 class="tit">
+				<span class="fl">热门推荐</span>
+				<!--
+				<a href="#" class="fr blue more">更多</a>
+				-->
+			</h2>
+			
+			<div id="partD">
+    			<ul class="topRecommendations">
+        			<!--One item S-->
+        			<li>
+        				
+        				<div class="clearfix top">
+                			<div class="imgTxt">
+                    			<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?utm_source=tj_01&anl=shy_tj_01_pic" >
+		                    		<span class="pic"><img src="http://img06.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/24/163//c24f02f7ea6f907792495bd42d14b904.jpg"/></span>
+ 									<div class="backg">
+                    					<span class="bg"></span>
+					                        <span class="text">
+					                        	<em class="price">¥4666 - 6300</em>
+												<em>最低价：易讯网</em>
+					                        </span>
+                        			</div>
+                    			</a>
+                			</div>
+                			<dl class="txt">
+                    			<dt>
+                    				<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?utm_source=tj_01&anl=shy_tj_01_title">苹果  iphone 4s(16G)  手机</a>
+                    			</dt>
+                    			<dd><span class="grays">最高差评率：</span><em class="en fb">17.84%</em>(一号店)</dd>
+                    			<dd><span class="grays">平均差评率：</span><em class="en fb">2.31%</em>(<em class="en">17290</em>条评论)</dd>
+                    			<dd class="cpCause grays">差评原因：</dd>
+                    			<dd class="cList">
+			                        <img src="/assets/images/transparent.gif" alt="质量" class="c4"/>
+			                        <img src="/assets/images/transparent.gif" alt="物流配送" class="c1"/>
+			                        <img src="/assets/images/transparent.gif" alt="价格" class="c5"/>
+			                        <img src="/assets/images/transparent.gif" alt="服务" class="c2"/>
+			                        <img src="/assets/images/transparent.gif" alt="其它" class="c6"/>
+                               	</dd>
+                			</dl>
+            			</div>
+           
+            			<div class="comment">
+            				<p class="clearfix t"><span class="grays">最新评论：</span><a target="_blank" href="http://3c.yiqisoo.com/14/4325467/comment/?utm_source=tj_01&anl=shy_tj_01_title">来自亚马逊</a></p>
+                			<p class="detail">虽然说4s现在和畅销，但你加价卖总是有趁火打劫的味道，有损亚马逊的品牌形象，而这种损失不是你...</p>
+            			</div>
+        			</li>
+        			<!--One item E-->
+  
+        			<li>
+			        	<div class="clearfix top">
+			            	<div class="imgTxt">
+			                    <a target="_blank" href="http://3c.yiqisoo.com/12/10339/overview/?utm_source=tj_02&anl=shy_tj_02_pic" >
+			                    	<span class="pic"><img src="http://img02.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/83/149/40e645477b431cf8f0bd785e8299f48e.jpg"/></span>
+			 						<div class="backg">
+				                    	<span class="bg"></span>
+				                        <span class="text">
+				                        	<em class="price">¥4579 - 5680</em>
+											<em>最低价：国美电器</em>
+				                        </span>
+			                        </div>
+			                    </a>
+			                </div>
+			                <dl class="txt">
+			                    <dt>
+			                    	<a target="_blank" href="http://3c.yiqisoo.com/12/10339/overview/?utm_source=tj_02&anl=shy_tj_02_title">佳能  eos 600d(18-55mm) IS 套机  单反相机</a>
+			                    </dt>
+			                    <dd><span class="grays">最高差评率：</span><em class="en fb">55.95%</em>(淘宝商城)</dd>
+			                    <dd><span class="grays">平均差评率：</span><em class="en fb">1.25%</em>(<em class="en">6739</em>条评论)</dd>
+			                    <dd class="cpCause grays">差评原因：</dd>
+			                    <dd class="cList">
+			                        <img src="/assets/images/transparent.gif" alt="质量" class="c4"/>
+			                        <img src="/assets/images/transparent.gif" alt="物流配送" class="c1"/>
+			                        <img src="/assets/images/transparent.gif" alt="价格" class="c5"/>
+			                        <img src="/assets/images/transparent.gif" alt="服务" class="c2"/>
+			                        <img src="/assets/images/transparent.gif" alt="其它" class="c6"/>
+			                    </dd>
+			                </dl>
+			            </div>
+			           
+			            <div class="comment">
+			            	<p class="clearfix t"><span class="grays">最新评论：</span><a target="_blank" href="http://3c.yiqisoo.com/12/10339/comment/?utm_source=tj_02&anl=shy_tj_02_title">来自库巴购物网</a></p>
+			                <p class="detail">1月2号送到的机器，撕开防伪标签用防伪码在佳能官网上查询，防伪码竟然在11年10月份就第一次...</p>
+			            </div>
+        			</li>
+        			
+        			<li>
+			        	<div class="clearfix top">
+			                <div class="imgTxt">
+			                    <a target="_blank" href="http://3c.yiqisoo.com/9/10678/overview/?utm_source=tj_03&anl=shy_tj_03_pic" >
+			                    	<span class="pic"><img src="http://img02.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/56/34/8b94910cb2a65f328002a90de496f8d1.jpg"/></span>
+			 						<div class="backg">
+			                    		<span class="bg"></span>
+			                        	<span class="text">
+			                        		<em class="price">¥3999 - 4480</em>
+											<em>最低价：易讯网</em>
+			                        	</span>
+			                        </div>
+			                    </a>
+			                </div>
+			                <dl class="txt">
+			                    <dt><a target="_blank" href="http://3c.yiqisoo.com/9/10678/overview/?utm_source=tj_03&anl=shy_tj_03_title">联想  ideacentre b31r4  电脑一体机 Windows系统  独立显卡  21.5英寸   </a></dt>
+			                    <dd><span class="grays">最高差评率：</span><em class="en fb">10.81%</em>(亚马逊)</dd>
+			                    <dd><span class="grays">平均差评率：</span><em class="en fb">4.37%</em>(<em class="en">641</em>条评论)</dd>
+			                    <dd class="cpCause grays">差评原因：</dd>
+			                    <dd class="cList">
+			                        <img src="/assets/images/transparent.gif" alt="质量" class="c4"/>
+			                        <img src="/assets/images/transparent.gif" alt="物流配送" class="c1"/>
+			                        <img src="/assets/images/transparent.gif" alt="价格" class="c5"/>
+			                        <img src="/assets/images/transparent.gif" alt="服务" class="c2"/>
+			                        <img src="/assets/images/transparent.gif" alt="其它" class="c6"/>
+			                   	</dd>
+			                </dl>
+			            </div>
+			            <div class="comment">
+			            	<p class="clearfix t"><span class="grays">最新评论：</span><a target="_blank" href="http://3c.yiqisoo.com/9/10678/comment/?utm_source=tj_03&anl=shy_tj_03_title">来自库巴购物网</a></p>
+			                <p class="detail">本人于2012年2月1日在卓越亚马逊购入这台电脑2月2日开始每天隔4个钟就会有死机情况，更在...</p>
+			            </div>
+			        </li>
+			  
+        			<li>
+			        	<div class="clearfix top">
+			                <div class="imgTxt">
+			                    <a target="_blank" href="http://jd.yiqisoo.com/1/4167/overview/?utm_source=tj_04&anl=shy_tj_04_pic" >
+			                    	<span class="pic"><img src="http://img02.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/29/88/bcafc4b7919fca03d6f479a91640327d.jpg"/></span>
+			 						<div class="backg">
+			                    		<span class="bg"></span>
+			                        	<span class="text">
+			                        		<em class="price">¥8499 - 11699</em>
+											<em>最低价：新蛋网</em>
+			                        	</span>
+			                        </div>
+			                    </a>
+			                </div>
+			                <dl class="txt">
+			                    <dt><a target="_blank" href="http://jd.yiqisoo.com/1/4167/overview/?utm_source=tj_04&anl=shy_tj_04_title">三星  ua46d6600wj  电视 46英寸  1920×1080  1080P   </a></dt>
+			                    <dd><span class="grays">最高差评率：</span><em class="en fb">14.29%</em>(亚马逊)</dd>
+			                    <dd><span class="grays">平均差评率：</span><em class="en fb">2.55%</em>(<em class="en">235</em>条评论)</dd>
+			                    <dd class="cpCause grays">差评原因：</dd>
+			                    <dd class="cList">
+			                        <img src="/assets/images/transparent.gif" alt="物流配送" class="c1"/>
+			                        <img src="/assets/images/transparent.gif" alt="服务" class="c2"/>
+			                    </dd>
+			                </dl>
+			            </div>
+			            <div class="comment">
+			            	<p class="clearfix t"><span class="grays">最新评论：</span><a target="_blank" href="http://jd.yiqisoo.com/1/4167/comment/?utm_source=tj_04&anl=shy_tj_04_title">来自亚马逊</a></p>
+			                <p class="detail">超级差的售后服务，超级差的售后了流程，超级差的售后人员。</p>
+			            </div>
+			        </li>
+        			
+        			<li>
+			        	<div class="clearfix top">
+			            	<div class="imgTxt">
+			                    <a target="_blank" href="http://jd.yiqisoo.com/43/18238/overview/?utm_source=tj_05&anl=shy_tj_05_pic" >
+			                    	<span class="pic"><img src="http://img01.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/91/174/40b7dd0bb95bb45d180627acb9992736.jpg"/></span>
+			 						<div class="backg">
+			                    		<span class="bg"></span>
+			                        	<span class="text">
+			                        		<em class="price">¥1888 - 3999</em>
+											<em>最低价：国美电器</em>
+			                        	</span>
+			                        </div>
+			                    </a>
+			                </div>
+			                <dl class="txt">
+			                    <dt><a target="_blank" href="http://jd.yiqisoo.com/43/18238/overview/?utm_source=tj_05&anl=shy_tj_05_title">方太  cxw-189-jx07e  油烟机</a></dt>
+			                    <dd><span class="grays">最高差评率：</span><em class="en fb">25.00%</em>(亚马逊)</dd>
+			                    <dd><span class="grays">平均差评率：</span><em class="en fb">1.30%</em>(<em class="en">460</em>条评论)</dd>
+			                    <dd class="cpCause grays">差评原因：</dd>
+			                    <dd class="cList">
+			                        <img src="/assets/images/transparent.gif" alt="质量" class="c4"/>
+			                        <img src="/assets/images/transparent.gif" alt="物流配送" class="c1"/>
+			                        <img src="/assets/images/transparent.gif" alt="服务" class="c2"/>
+			                    </dd>
+			                </dl>
+			            </div>
+			            <div class="comment">
+			            	<p class="clearfix t"><span class="grays">最新评论：</span><a target="_blank" href="http://jd.yiqisoo.com/43/18238/comment/?utm_source=tj_05&anl=shy_tj_05_title">来自亚马逊</a></p>
+			                <p class="detail">就是没给发票，打了售后电话，答应补寄发票，10天过去仍然没收到发票</p>
+			            </div>
+			        </li>
+			  
+        			<li>
+			        	<div class="clearfix top">
+			                <div class="imgTxt">
+			                    <a target="_blank" href="http://jd.yiqisoo.com/32/18188/overview/?utm_source=tj_06&anl=shy_tj_06_pic" >
+			                    	<span class="pic"><img src="http://img06.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/186/233/272397010caff6a93f7d1bfcf3485d2e.jpg"/></span>
+			 						<div class="backg">
+				                    	<span class="bg"></span>
+				                        <span class="text">
+				                        	<em class="price">¥65 - 128</em>
+											<em>最低价：淘宝商城</em>
+			    	                    </span>
+			                        </div>
+			                    </a>
+			                </div>
+			                <dl class="txt">
+			                    <dt><a target="_blank" href="http://jd.yiqisoo.com/32/18188/overview/?utm_source=tj_06&anl=shy_tj_06_title">漫步者  r10u  音箱/低音炮</a></dt>
+			                    <dd><span class="grays">最高差评率：</span><em class="en fb">9.12%</em>(亚马逊)</dd>
+			                    <dd><span class="grays">平均差评率：</span><em class="en fb">1.42%</em>(<em class="en">15451</em>条评论)</dd>
+			                    <dd class="cpCause grays">差评原因：</dd>
+			                    <dd class="cList">
+			                        <img src="/assets/images/transparent.gif" alt="质量" class="c4"/>
+			                        <img src="/assets/images/transparent.gif" alt="物流配送" class="c1"/>
+			                        <img src="/assets/images/transparent.gif" alt="价格" class="c5"/>
+			                        <img src="/assets/images/transparent.gif" alt="服务" class="c2"/>
+			                   	</dd>
+			                </dl>
+			            </div>
+			           
+			            <div class="comment">
+			            	<p class="clearfix t"><span class="grays">最新评论：</span><a target="_blank" href="http://jd.yiqisoo.com/32/18188/comment/?utm_source=tj_06&anl=shy_tj_06_title">来自库巴购物网</a></p>
+			                <p class="detail">杂音，质量对不起这个品牌</p>
+			            </div>
+			        </li>
+    			</ul>
+			</div>
+        	<!--推荐 E-->
+        	
+        	<!--促销活 S-->
+    		<h2 class="tit" style="display:none;" id="focus_title">
+   				<span class="fl">促销活动</span>
+        		<em class="fr">
+            		<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=15&anl=ck_hd_search_sourcetype=15" class="gray">天猫</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=14&anl=ck_hd_search_sourcetype=14" class="gray">京东商城</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=11&anl=ck_hd_search_sourcetype=11" class="gray">当当网</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=12&anl=ck_hd_search_sourcetype=12" class="gray">亚马逊</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=21&anl=ck_hd_search_sourcetype=21" class="gray">苏宁易购</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=20&anl=ck_hd_search_sourcetype=20" class="gray">一号店</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=16&anl=ck_hd_search_sourcetype=16" class="gray">国美电器</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=19&anl=ck_hd_search_sourcetype=19" class="gray">新蛋网</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=1&anl=ck_hd_search_sourcetype=1" class="gray">库巴</a>|<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&sourcetype=35&anl=ck_hd_search_sourcetype=35" class="gray">易讯</a>
+					<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&anl=shy_list_tuijian" class="blue more">更多</a>
+                </em>
+    		</h2>
+			<script language="javascript1.1">
+				$(document).ready(function(){
+							focus_json = [{"id":"26233","picurl_md5":"0fe8356301895e80c857b9f1867ace53","picurl":"http:\/\/img10.360buyimg.com\/da\/g5\/M02\/1B\/1D\/rBEIC1AiCPAIAAAAAADmwSiMGXkAAFdGwM13UsAAObZ747.jpg","picurl_http":"http:\/\/sale.360buy.com\/act\/0fsgktjhTr.html","siteurl":"http:\/\/www.360buy.com\/products\/6994-6999-000.html","siteid":"14","pic_1":"\/pics\/focus_pics\/52\/0\/cc1912cb0f8052a95252a7570501e181.jpg","pic_2":"focus_pics\/51\/c2\/0.924738001348026264.jpg","title":"\u5ba0\u7269\u591a\u683c\u66fc\u4e13\u573a \u73a9\u5177\u3001\u7528\u54c1\u3001\u96f6\u98df\u5168\u573a6\u6298\u8d77\u7279\u5356","stime":"0","etime":"0","ctime":"1348016255","utime":"1351736633","classname":"\u5ba0\u7269\u7528\u54c1","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33886","picurl_md5":"8c1118f4bfdc99e558fa54ab97605b7a","picurl":"http:\/\/img11.360buyimg.com\/da\/g6\/M05\/01\/14\/rBEGF1CTcaQIAAAAAADtuNA_CZ4AAAUdwAa1lgAAO3Q106.jpg","picurl_http":"http:\/\/sale.360buy.com\/act\/rWPRmxBh1oZ34i5V.html","siteurl":"http:\/\/www.360buy.com\/toys.html","siteid":"14","pic_1":"\/pics\/focus_pics\/2\/254\/e19e42d4bce5891c819d4de4296578da.jpg","pic_2":"focus_pics\/c2\/12\/0.108079001352107990.jpg","title":"\u96c5\u9a6c\u54c8\u4e13\u573a \u7ed9\u529b\u8fd4\u5238","stime":"1351872000","etime":"1352649600","ctime":"1351888423","utime":"1352107993","classname":"\u73a9\u5177\u4e50\u5668","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33813","picurl_md5":"278951368f51aa2375ceb3149307c35e","picurl":"http:\/\/img14.360buyimg.com\/da\/g7\/M03\/0D\/0E\/rBEHZVCTj1sIAAAAAADDx3n-yj8AACoEQLfPnMAAMPf681.jpg","picurl_http":"http:\/\/sale.360buy.com\/act\/ADlMdpHLwsYo85t7.html","siteurl":"http:\/\/www.360buy.com\/digital.html","siteid":"14","pic_1":"\/pics\/focus_pics\/53\/89\/f758440456163826613f18fc07005e16.jpg","pic_2":"focus_pics\/ee\/c0\/0.117287001352104590.jpg","title":"\u5149\u68cd\u8282\uff0c\u7ed9\u4f60\u673a\u60e0 \u624b\u673a\u4ea7\u54c1 \u4e0d\u5b9a\u65f6\u79d2\u6740","stime":"1351699200","etime":"1354204800","ctime":"1351886851","utime":"1352104593","classname":"\u624b\u673a\u6570\u7801","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"34570","picurl_md5":"4b31679883e80bf4d245f6eb03275d1a","picurl":"http:\/\/img12.360buyimg.com\/da\/g6\/M03\/02\/02\/rBEGC1CaH-AIAAAAAACtI9SebSgAAAZ2wGAA2EAAK07628.jpg","picurl_http":"http:\/\/sale.360buy.com\/act\/5uTBy4NZ0fKxH.html","siteurl":"http:\/\/www.360buy.com\/products\/6196-6227-000.html","siteid":"14","pic_1":"\/pics\/focus_pics\/97\/107\/233a8c34bdc7fe4b743bc26727beff8f.jpg","pic_2":"","title":"\u4e7e\u5510\u8f69 \u5065\u5eb7\u4ece\u74f7\u5f00\u59cb\uff0c\u6d3b\u74f7\uff01 \u5168\u573a9\u6298\u5c01\u9876","stime":"0","etime":"0","ctime":"1352318489","utime":"1352353309","classname":"\u5bb6\u5c45\u5bb6\u88c5","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"6","order":"0"},{"id":"33742","picurl_md5":"102df9580af41086e2adb0b11cdd06fe","picurl":"http:\/\/img11.360buyimg.com\/da\/g9\/M03\/0D\/0C\/rBEHaVCTJCoIAAAAAADLU_akwwoAACncgDigdwAAMtr939.jpg","picurl_http":"http:\/\/sale.360buy.com\/act\/FerTiJaZz8QwG6lq.html","siteurl":"http:\/\/www.360buy.com\/products\/670-729-000.html","siteid":"14","pic_1":"\/pics\/focus_pics\/41\/91\/d258588a6ca13544715bb4f2a74f46d4.jpg","pic_2":"focus_pics\/cc\/64\/0.855905001352104503.jpg","title":"\u9f50\u5fc3\u529e\u516c \u5de5\u4f5c\u66f4\u8f7b\u677e \u7ea6\u201c\u60e0\u201d\u5149\u68cd\u8282 \u6ee199\u5143\u7acb\u51cf30\u5143","stime":"1351699200","etime":"1353081600","ctime":"1351885979","utime":"1352104523","classname":"\u7535\u8111\u529e\u516c","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33740","picurl_md5":"74d6b9838ebf5e4fdcd595a5dc433d42","picurl":"http:\/\/img10.360buyimg.com\/da\/g9\/M03\/0D\/0D\/rBEHaVCTYEUIAAAAAACfWYIlJlYAACnugNJGbkAAJ9x873.jpg","picurl_http":"http:\/\/sale.360buy.com\/act\/YFMRcA1VmJ.html","siteurl":"http:\/\/www.360buy.com\/products\/670-686-000.html","siteid":"14","pic_1":"\/pics\/focus_pics\/36\/125\/5242cde8f7fd57068bf71f6b96403192.jpg","pic_2":"focus_pics\/48\/a5\/0.014095001352104361.jpg","title":"\u5fae\u8f6f\u786c\u4ef6 30\u5468\u5e74\u611f\u6069\u884c\u52a8\uff01\u611f\u6069\u56de\u9988\uff0c\u5168\u573a\u60ca\u559c\u4e0d\u65ad","stime":"1351699200","etime":"1354204800","ctime":"1351885905","utime":"1352104375","classname":"\u7535\u8111\u529e\u516c","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"26126","picurl_md5":"3acb55489e4edc7d4429207133546f6a","picurl":"http:\/\/g-ec4.images-amazon.com\/images\/G\/28\/shoes\/dzx_120918_autumnflats760._V388648018_.jpg","picurl_http":"http:\/\/www.amazon.cn\/s\/ref=amb_link_31423412_2\/476-3096454-5869115?ie=UTF8&bbn=2112004051&page=1&rh=n%3A2112004051%2Cp_n_feature_browse-bin%3A2112161051%2Cn%3A2112003051%2Cn%3A!2029190051%2Cn%3A2029189051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-stage-4&pf_r","siteurl":"http:\/\/www.amazon.cn\/gp\/center-stage\/ajax?cB=1348003107&aPI=2029189051&aMID=A1AJ19PSB66TGU&aPG=shoes_display_on_website&aS=shoes&aPT=101&pTID=2029189051&nS=4&nID=2029189051&ie=UTF8","siteid":"12","pic_1":"\/pics\/focus_pics\/59\/178\/ad87fe5e974628ac2710af1a12ca94ab.jpg","pic_2":"focus_pics\/60\/f7\/0.883538001348029342.jpg","title":"\u5e73\u5e95\u79cb\u8272 \u4f4e\u8ddf\u5973\u978b\u4fc3\u9500","stime":"0","etime":"0","ctime":"1348003215","utime":"1351736633","classname":"\u670d\u88c5\u978b\u5e3d","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"26124","picurl_md5":"97b90930a1b21ab4ca775481b22ce149","picurl":"http:\/\/g-ec4.images-amazon.com\/images\/G\/28\/app-lx\/8\/jx_120828_700x300_shirts._V390990767_.jpg","picurl_http":"http:\/\/www.amazon.cn\/gp\/feature.html\/ref=amb_link_31369232_2\/477-4043676-3965364?ie=UTF8&docId=156798&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-stage-3&pf_rd_r=1AVN0Z1R6BRZM471E34F&pf_rd_t=101&pf_rd_p=65701892&pf_rd_i=2016156051","siteurl":"http:\/\/www.amazon.cn\/gp\/center-stage\/ajax?cB=1348003003&aPI=2016156051&aMID=A1AJ19PSB66TGU&aPG=apparel_display_on_website&aS=apparel&aPT=101&pTID=2016156051&nS=4&nID=2016156051&ie=UTF8","siteid":"12","pic_1":"\/pics\/focus_pics\/116\/163\/3d379d05617743795e8bdd94edba88fd.jpg","pic_2":"focus_pics\/76\/b6\/0.492315001348029264.jpg","title":"\u79cb\u5b63\u7537\u88c5\u65b0\u54c1\u4e0a\u5e02 \u5168\u573a4\u6298\u8d77","stime":"0","etime":"0","ctime":"1348003048","utime":"1351736633","classname":"\u670d\u88c5\u978b\u5e3d","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"24618","picurl_md5":"ca618358944968fd44d0d6f4ad06bdb7","picurl":"http:\/\/d13.yihaodianimg.com\/t4\/2012\/0905\/433\/445\/b0f047c28b0a8d13c77fecedee40a191.jpg","picurl_http":"http:\/\/www.yihaodian.com\/cmsPage\/show.do?pageId=13098","siteurl":"http:\/\/www.yihaodian.com\/channel\/8704_2\/","siteid":"20","pic_1":"\/pics\/focus_pics\/210\/146\/d71c80e9d8876cefc9eca6822aa70f62.jpg","pic_2":"focus_pics\/f8\/31\/0.920032001348128567.jpg","title":"\u767d\u5170\u6c0f\u5347\u7ea7\u56de\u9988 \u6ee199\u7acb\u51cf15","stime":"0","etime":"0","ctime":"1347310899","utime":"1351736633","classname":"\u533b\u836f\u4fdd\u5065","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33966","picurl_md5":"dbb2c98ede144f7cd30223cfc957bd84","picurl":"http:\/\/g-ec4.images-amazon.com\/images\/G\/28\/cheryl\/MA-121105-470-200-km._V400870701_.gif","picurl_http":"http:\/\/www.amazon.cn\/gp\/feature.html\/ref=amb_link_31591172_2\/475-2399538-6906010?ie=UTF8&docId=163408&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-stage-2&pf_rd_r=0YW6XVGKKKE24EE3N1E0&pf_rd_t=101&pf_rd_p=66364772&pf_rd_i=80207071","siteurl":"http:\/\/www.amazon.cn\/gp\/center-stage\/ajax?cB=1352057349&aPI=80207071&aMID=A1AJ19PSB66TGU&aPG=major_appliances_display_on_website&aS=appliances&aPT=101&pTID=80207071&nS=4&nID=80207071&ie=UTF8","siteid":"12","pic_1":"\/pics\/focus_pics\/225\/96\/3dcc20435860c2f43dc535df6b27e5f1.gif","pic_2":"focus_pics\/8f\/3e\/0.272111001352108781.jpg","title":"\u53a8\u623f\u7535\u5668\u5168\u573a\u6ee1\u989d\u7acb\u51cf \u6700\u9ad8\u7acb\u51cf500\u5143","stime":"1352044800","etime":"1354204800","ctime":"1352057348","utime":"1352108784","classname":"\u53a8\u536b\u7528\u54c1","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"26280","picurl_md5":"d28dc23b21ef017725d033544302fd84","picurl":"http:\/\/img03.taobaocdn.com\/tps\/i3\/T104rOXmpcXXb1upjX.jpg","picurl_http":"http:\/\/3c.tmall.com\/go\/act\/sale\/xpdd-bjb.php?spm=141.273912.264455.","siteurl":"http:\/\/3c.tmall.com\/","siteid":"15","pic_1":"\/pics\/focus_pics\/254\/0\/01b1e4ebafb71ff1c4f0af04a6a4037a.jpg","pic_2":"focus_pics\/bc\/53\/0.474470001348125844.jpg","title":"\u8840\u62fc\u5230\u5e95 \u6bcf\u592924\u5c0f\u65f6\u6fc0\u60c5\u75af\u62a2","stime":"0","etime":"0","ctime":"1348087735","utime":"1351498762","classname":"\u7535\u8111\u529e\u516c","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33912","picurl_md5":"dd5ebdf9df09d55e6171d19d787f9e95","picurl":"http:\/\/g-ec4.images-amazon.com\/images\/G\/28\/Baby\/moli\/campaign\/TCG_470_200_template._V400751942_.jpg","picurl_http":"http:\/\/www.amazon.cn\/gp\/feature.html\/ref=amb_link_31578552_2\/477-1595118-8221365?ie=UTF8&docId=166818&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-stage-3&pf_rd_r=1124348YDZQXWGXB4XHT&pf_rd_t=101&pf_rd_p=66322292&pf_rd_i=42692071","siteurl":"http:\/\/www.amazon.cn\/gp\/center-stage\/ajax?cB=1351970978&aPI=42692071&aMID=A1AJ19PSB66TGU&aPG=baby_product_display_on_website&aS=baby&aPT=101&pTID=42692071&nS=4&nID=42692071&ie=UTF8","siteid":"12","pic_1":"\/pics\/focus_pics\/17\/31\/a1739b77df882fcd873e017a873f8b99.jpg","pic_2":"focus_pics\/3f\/82\/0.080376001352108326.jpg","title":"\u8d1d\u4eb2\u5168\u573a\u6ee199\u51cf25","stime":"0","etime":"0","ctime":"1351970975","utime":"1352108331","classname":"\u6bcd\u5a74\u7528\u54c1","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"24813","picurl_md5":"9562b675644b60f70b825c7a6d6712e4","picurl":"http:\/\/g-ec4.images-amazon.com\/images\/G\/28\/img12\/movie\/TCG\/ruiming_tcg._V389853003_.jpg","picurl_http":"http:\/\/www.amazon.cn\/gp\/feature.html\/ref=amb_link_27603932_2\/480-2146906-7684913?ie=UTF8&docId=100698&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-stage-4&pf_rd_r=1XQXGN92EP5FF5M6BM0C&pf_rd_t=101&pf_rd_p=65770192&pf_rd_i=754386051","siteurl":"http:\/\/www.amazon.cn\/gp\/center-stage\/ajax?cB=1347396181&aPI=754386051&aMID=A1AJ19PSB66TGU&aPG=music_display_on_website&aS=music&aPT=101&pTID=754386051&nS=4&nID=754386051&ie=UTF8","siteid":"12","pic_1":"\/pics\/focus_pics\/235\/189\/5f3307d35ece95f4bebf4a5a163affd3.jpg","pic_2":"focus_pics\/9d\/1f\/0.067752001348129146.jpg","title":"\u4e70\u745e\u9e23\u97f3\u4e50\u8d60\u745e\u9e23\u7cbe\u90095CD\u4e00\u5f20","stime":"1347292800","etime":"1356883200","ctime":"1347396208","utime":"1351736633","classname":"\u56fe\u4e66\u97f3\u50cf","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33959","picurl_md5":"02c30c025741aec2f6be78271b5c5b0e","picurl":"http:\/\/img1.icson.com\/ICSONAD\/201209\/1_big20120921184523979595.jpg","picurl_http":"http:\/\/event.51buy.com\/event\/1508ebd6.html","siteurl":"http:\/\/www.51buy.com\/personal_beauty.html","siteid":"35","pic_1":"\/pics\/focus_pics\/86\/107\/8f40030a98a885ce69493b9873945b45.jpg","pic_2":"focus_pics\/13\/4c\/0.447138001352108696.jpg","title":"\u5409\u521711\u6708 \u6ee1108\u7acb\u51cf25","stime":"0","etime":"0","ctime":"1352057212","utime":"1352108698","classname":"\u5316\u5986\u62a4\u7406","classname2":"\u7537\u4eba","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33958","picurl_md5":"67a75c09d8af552fce694852f61faf64","picurl":"http:\/\/img2.icson.com\/ICSONAD\/201211\/1_big20121101181223995711.jpg","picurl_http":"http:\/\/event.51buy.com\/event\/20952cd4.html","siteurl":"http:\/\/www.51buy.com\/personal_beauty.html","siteid":"35","pic_1":"\/pics\/focus_pics\/58\/220\/e34be004e6a78fa929816d8aa7493143.jpg","pic_2":"focus_pics\/ff\/7a\/0.140151001352108567.jpg","title":"\u66fc\u79c0\u96f7\u6566\u5973\u58eb\u4ea7\u54c1\u5168\u573a\u4e70\u8d60","stime":"1351440000","etime":"1352822400","ctime":"1352057207","utime":"1352108570","classname":"\u5316\u5986\u62a4\u7406","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"23623","picurl_md5":"bac8869f7618f87d7a3e47c9c41b98e4","picurl":"http:\/\/g-ec4.images-amazon.com\/images\/G\/28\/ba\/TV-120831-470-200-hisense._V389184161_.png","picurl_http":"http:\/\/www.amazon.cn\/s\/ref=amb_link_31353232_2\/477-3676678-6563255?ie=UTF8&sort=-price&rh=n%3A874269051%2Ck%3A%E6%B5%B7%E4%BF%A1%2Cp_4%3AHisense%20%E6%B5%B7%E4%BF%A1%2Cn%3A874259051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-stage-2&pf_rd_r=1A0SKJR7MNTDKFWNQFK","siteurl":"http:\/\/www.amazon.cn\/gp\/center-stage\/ajax?cB=1346446737&aPI=874259051&aMID=A1AJ19PSB66TGU&aPG=audio_video_display_on_website&aS=audio-video&aPT=101&pTID=874259051&nS=4&nID=874259051&ie=UTF8","siteid":"12","pic_1":"\/pics\/focus_pics\/196\/43\/423c59e3c3b2cb76bb7ae6102e440416.jpg","pic_2":"focus_pics\/f0\/fb\/0.187880001346642654.jpg","title":"Hisense \u6d77\u4fe1 \u5e73\u677f\u7535\u89c6\u76f4\u964d 6.3\u6298\u8d77","stime":"0","etime":"0","ctime":"1346446753","utime":"1351736633","classname":"\u5bb6\u7528\u7535\u5668","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"23619","picurl_md5":"b9f3f577a786501a7adbd21fb0bee50c","picurl":"http:\/\/img2.icson.com\/ICSONAD\/201208\/1_big20120820103728474235.jpg","picurl_http":"http:\/\/event.51buy.com\/event\/1353ee83.html","siteurl":"http:\/\/www.51buy.com\/household_kitchen.html","siteid":"35","pic_1":"\/pics\/focus_pics\/50\/238\/304a805cbab7221ceb5a6f70499d9d73.jpg","pic_2":"","title":"\u5bb6\u7eba\u964d\u5230\u5e95","stime":"0","etime":"0","ctime":"1346446701","utime":"1351736633","classname":"\u5bb6\u5c45\u5bb6\u88c5","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"25159","picurl_md5":"8e404e233ca229cbaf4e67cca1a9249b","picurl":"http:\/\/g-ec4.images-amazon.com\/images\/G\/28\/GroceryHXF\/channel\/2012.8.10\/food_8.10_dazhaxie_470._V390005722_.png","picurl_http":"http:\/\/www.amazon.cn\/gp\/feature.html\/ref=amb_link_31249232_2\/479-3479871-0910143?ie=UTF8&docId=146668&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=center-stage-3&pf_rd_r=1ZZ5GSQ1VHJB8DVB5WX7&pf_rd_t=101&pf_rd_p=65526832&pf_rd_i=2127215051","siteurl":"http:\/\/www.amazon.cn\/gp\/center-stage\/ajax?cB=1347484986&aPI=2127215051&aMID=A1AJ19PSB66TGU&aPG=grocery_display_on_website&aS=grocery&aPT=101&pTID=2127215051&nS=4&nID=2127215051&ie=UTF8","siteid":"12","pic_1":"\/pics\/focus_pics\/169\/58\/94805d5775e0e219b1f834a501b1d859.jpg","pic_2":"focus_pics\/c9\/ac\/0.428862001348129312.png","title":"\u9633\u6f84\u6e56\u5927\u95f8\u87f9 \u5403\u87f9\u6b63\u5f53\u5b63","stime":"0","etime":"0","ctime":"1347485013","utime":"1351736633","classname":"\u98df\u54c1\u9152\u6c34","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"23596","picurl_md5":"db56f4fc57c48f3f4c576e7a473eeb0c","picurl":"http:\/\/c1.neweggimages.com.cn\/NeweggPic2\/Marketing\/201208\/lxcb\/785x210.jpg","picurl_http":"http:\/\/www.newegg.com.cn\/Promotion-4735-%C1%AA%CF%EB%D0%C2%C6%B7%20%C1%F7%D0%D0%C9%E8%BC%C6%B3%B1%B1%BE%20%BE%A7%B2%CA%C9%CF%CA%D0.htm?cm_sp=CL1_NB-_-central-_-Lenovo","siteurl":"http:\/\/www.newegg.com.cn\/Computer.htm","siteid":"19","pic_1":"\/pics\/focus_pics\/151\/182\/9a95d944945affa572c8db90a3a3bd19.jpg","pic_2":"focus_pics\/96\/55\/0.870743001346642911.jpg","title":"\u8054\u60f3\u65b0\u54c1 \u6d41\u884c\u8bbe\u8ba1\u6f6e\u672c \u6676\u5f69\u4e0a\u5e02","stime":"0","etime":"0","ctime":"1346446500","utime":"1351736633","classname":"\u7535\u8111\u529e\u516c","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"17277","picurl_md5":"c1d71af11008c1205f00f0421e1c1550","picurl":"http:\/\/c1.neweggimages.com.cn\/NeweggPic2\/Marketing\/201207\/family\/785x210.jpg","picurl_http":"http:\/\/www.newegg.com.cn\/Promotion-4522-%D0%A1%BC%D2%B5%E7%BE%AB%C6%B7%B9%DD%20%BE%A1%CF%ED%C6%B7%D6%CA%C9%FA%BB%EE%20%C8%AB%B3%A1%BB%DD%C9%CF%BB%DD.htm?cm_sp=CL1_HG-_-central-_-small%20appliances","siteurl":"http:\/\/www.newegg.com.cn\/Home-Garden.htm","siteid":"19","pic_1":"\/pics\/focus_pics\/122\/48\/d4082a4f2a62d8148cf99891bd9c1316.jpg","pic_2":"focus_pics\/63\/4d\/0.209553001345087190.jpg","title":"\u5c0f\u5bb6\u7535\u7cbe\u54c1\u9986 \u5c3d\u4eab\u54c1\u8d28\u751f\u6d3b \u5168\u573a\u60e0\u4e0a\u60e0","stime":"0","etime":"0","ctime":"1342646365","utime":"1351736633","classname":"\u5c5e\u6027\u5206\u7c7b","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"26258","picurl_md5":"3cf154cc6947b75185184127cf2370b8","picurl":"http:\/\/d13.yihaodianimg.com\/t4\/2012\/0919\/342\/104\/c172b4c2d517885dc77fecedee40a191.jpg","picurl_http":"http:\/\/www.yihaodian.com\/cmsPage\/show.do?pageId=13951","siteurl":"http:\/\/www.yihaodian.com\/2\/","siteid":"20","pic_1":"\/pics\/focus_pics\/211\/37\/4471da04049763f5506194f1febf9c17.jpg","pic_2":"focus_pics\/60\/cf\/0.132422001348126801.jpg","title":"\u91d1\u79cb\u53a8\u536b 0\u5229\u62a2 \u52b2\u7206\u4ea7\u54c1\u5747\u4ef7\u8ba9\u5229\u4e2d \u62a2\u4e0d\u505c\uff01","stime":"0","etime":"0","ctime":"1348087498","utime":"1351736633","classname":"\u5bb6\u5c45\u5bb6\u88c5","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33955","picurl_md5":"fd8f020d7e372d60011c6edce32266e7","picurl":"http:\/\/img1.icson.com\/ICSONAD\/201211\/1_big20121101173855714216.jpg","picurl_http":"http:\/\/event.51buy.com\/event\/24079741.html","siteurl":"http:\/\/www.51buy.com\/personal_beauty.html","siteid":"35","pic_1":"\/pics\/focus_pics\/73\/18\/1fa198032ad2c620dd4a21d466ebad51.jpg","pic_2":"focus_pics\/19\/32\/0.504720001352108466.jpg","title":"\u5e2e\u5b9d\u9002 \u8d85\u503c\u6ee1\u51cf \u66f4\u6709\u76f4\u964d\u7279\u60e0","stime":"0","etime":"0","ctime":"1352057206","utime":"1352108469","classname":"\u6bcd\u5a74\u7528\u54c1","classname2":"\u5a74\u5e7c","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"33691","picurl_md5":"c96e1bac0b5486ec70aed099ba8e0dd1","picurl":"http:\/\/img01.taobaocdn.com\/tps\/i3\/T1k6b3XehbXXb1upjX.jpg","picurl_http":"http:\/\/www.tmall.com\/go\/act\/focus\/nryc.php?spm=3.19569.116987.3&ad_id=&am_id=&cm_id=1401040699a7d6748138&pm_id=","siteurl":"http:\/\/www.tmall.com\/go\/chn\/mall\/taobrands.php\/?spm=3.168958.197562.4","siteid":"15","pic_1":"\/pics\/focus_pics\/11\/35\/9ca57ef29b0b15cc586963904eef6bf2.jpg","pic_2":"focus_pics\/27\/53\/0.175434001352104205.jpg","title":"\u5973\u4eba\u8863\u6a71\u4e2d\u6c38\u8fdc\u5c11\u4e86\u90a3\u6837\u4e00\u4ef6\u8863\u670d","stime":"0","etime":"0","ctime":"1351884893","utime":"1352104213","classname":"\u670d\u88c5\u978b\u5e3d","classname2":"\u5973\u4eba","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"26245","picurl_md5":"99df2487c1cb79d05fe447e1252ed048","picurl":"http:\/\/img2.icson.com\/ICSONAD\/201206\/1_big20120629015816976951.jpg","picurl_http":"http:\/\/event.51buy.com\/event\/603d86e.html","siteurl":"http:\/\/www.51buy.com\/automobile_maintenance.html","siteid":"35","pic_1":"\/pics\/focus_pics\/189\/39\/6a8f5e0a967c3c07786e617e0b73a1ec.jpg","pic_2":"focus_pics\/39\/2a\/0.444667001348126646.jpg","title":"\u8f66\u8f7d\u7535\u5b50\u7535\u5668\u4e13\u573a \u6bcf\u65e5\u79d2\u67402\u6b3e","stime":"1341072000","etime":"1356883200","ctime":"1348087442","utime":"1351736633","classname":"\u6c7d\u8f66\u7528\u54c1","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"},{"id":"29631","picurl_md5":"84600fa9c17f6e2342e0944d2f9758d4","picurl":"http:\/\/img2.icson.com\/ICSONAD\/201108\/2001_big20110828034254140836.jpg","picurl_http":"http:\/\/act.icson.com\/promo-2178.html","siteurl":"http:\/\/www.51buy.com\/household_kitchen.html","siteid":"35","pic_1":"\/pics\/focus_pics\/249\/110\/e606ac566d6764b4ae05419aaef69833.jpg","pic_2":"focus_pics\/7a\/25\/0.307342001349931682.jpg","title":"\u4e50\u6263\u4fdd\u9c9c\u76d2\/\u6c34\u58f6 \u7f51\u7edc\u7279\u7279\u4f9b","stime":"0","etime":"0","ctime":"1349903526","utime":"1351498762","classname":"\u5bb6\u5c45\u5bb6\u88c5","classname2":"\u5174\u8da3\u5206\u7c7b","recommend":"1","isedit":"1","status":"5","order":"0"}];
+							website = {"1":{"name":"\u5e93\u5df4\u8d2d\u7269\u7f51","url":"http:\/\/www.coo8.com","tag":"coo8"},"2":{"name":"\u6a61\u679c\u56fd\u9645\u8d2d\u7269","sname":"\u5e93\u5df4\u8d2d\u7269\u7f51","url":"http:\/\/www.chinadrtv.com","tag":"chinadrtv"},"3":{"name":"\u6211\u8036\u7535\u5668\u7f51","url":"http:\/\/www.woye.com","tag":"woye"},"4":{"name":"QQ\u5546\u57ce","url":"http:\/\/shop.qq.com","tag":"paipai."},"5":{"name":"\u8fea\u4fe1\u901a","url":"http:\/\/www.dixintong.com","tag":"dixintong"},"6":{"name":"NOKIA\u7f51\u4e0a\u5e97","url":"http:\/\/www.shop.nokia.com.cn","tag":"shop.nokia"},"7":{"name":"\u8fea\u4e3d\u8fbe\u76f8\u673a\u7f51","sname":"\u8fea\u4e3d\u8fbe\u7f51","url":"http:\/\/www.xiangji.net","tag":"xiangji."},"8":{"name":"\u4eab\u8d2d\u7f51","url":"http:\/\/www.xgou.com","tag":"xgou."},"9":{"name":"\u7f57\u5b9d\u7f51","url":"http:\/\/www.luobao365.com","tag":"luobao365"},"10":{"name":"\u4e2d\u5173\u6751\u5546\u57ce","url":"http:\/\/www.zol.com","tag":"zol."},"11":{"name":"\u5f53\u5f53\u7f51","url":"http:\/\/www.dangdang.com","tag":"dangdang"},"12":{"name":"\u4e9a\u9a6c\u900a","url":"http:\/\/www.amazon.cn","tag":"amazon"},"13":{"name":"\u7eff\u68ee\u6570\u7801","url":"http:\/\/www.lusen.cn","tag":"lusen"},"14":{"name":"\u4eac\u4e1c\u5546\u57ce","url":"http:\/\/www.360buy.com","tag":"360buy"},"15":{"name":"\u6dd8\u5b9d\u5546\u57ce","url":"http:\/\/www.tmall.com","tag":"tmall."},"16":{"name":"\u56fd\u7f8e\u7535\u5668","url":"http:\/\/www.gome.com.cn","tag":"gome.com.cn"},"17":{"name":"\u5927\u4e2d\u7535\u5668","url":"http:\/\/www.dazhongdianqi.com.cn","tag":"dazhongdianqi"},"18":{"name":"\u82cf\u5b81\u7535\u5668","url":"http:\/\/www.cnsuning.com","tag":"cnsuning"},"19":{"name":"\u65b0\u86cb\u7f51","url":"http:\/\/www.newegg.com.cn","tag":"newegg"},"20":{"name":"\u4e00\u53f7\u5e97","url":"http:\/\/www.yihaodian.com\/","tag":"yihaodian,.1mall."},"21":{"name":"\u82cf\u5b81\u6613\u8d2d","url":"http:\/\/www.suning.cn\/","tag":".suning"},"22":{"name":"\u9510\u610f","url":"http:\/\/www.rayi.cn\/","tag":"rayi"},"23":{"name":"\u7845\u8c37\u52a8\u529b\u5546\u57ce","sname":"\u7845\u8c37\u52a8\u529b","url":"http:\/\/shop.enet.com.cn\/","tag":".enet"},"24":{"name":"\u5c0f\u718a\u5546\u57ce","url":"http:\/\/www.bearbuy.com.cn\/","tag":".bearbuy"},"25":{"name":"\u65b0\u4e03\u5929\u7535\u5668\u7f51","sname":"\u65b0\u4e03\u5929\u7f51","url":"http:\/\/www.new7.com\/","tag":".new7"},"26":{"name":"\u4e70\u7279\u7f51","url":"http:\/\/www.360mart.com\/","tag":".360mart"},"27":{"name":"\u5317\u6597\u661f\u624b\u673a\u7f51","sname":"\u5317\u6597\u661f\u7f51","url":"http:\/\/www.139shop.com\/","tag":".139shop"},"28":{"name":"\u98de\u864e\u4e50\u8d2d","url":"http:\/\/www.efeihu.com\/Index.aspx","tag":".efeihu"},"29":{"name":"\u54c1\u724c\u5bb6\u7535","url":"http:\/\/www.goodjd.com\/","tag":".goodjd"},"30":{"name":"2688\u7f51\u5e97","url":"http:\/\/www.2688.com\/","tag":".2688.com"},"31":{"name":"\u6b27\u9177\u7f51","url":"http:\/\/www.ouku.com\/","tag":".ouku"},"32":{"name":"\u4e50\u9177\u5929","url":"http:\/\/www.rakuten.com.cn\/","tag":".rakuten"},"33":{"name":"\u5168\u65f6\u7535\u5668","url":"http:\/\/www.24dq.com\/","tag":".24dq"},"35":{"name":"\u6613\u8baf\u7f51","url":"http:\/\/51buy.com\/","tag":".51buy"},"101":{"name":"\u5929\u5929\u7f51","url":"http:\/\/www.tiantian.com\/","tag":".tiantian"},"102":{"name":"\u7f8e\u7279\u597d\u8d2d\u7269\u7f51","url":"http:\/\/www.meethall.com\/","tag":".meethall"},"103":{"name":"SEPHORA\u4e1d\u8299\u5170","url":"http:\/\/www.sephora.cn\/","tag":".sephora"},"104":{"name":"\u805a\u7f8e\u4f18\u54c1","url":"http:\/\/mall.jumei.com\/","tag":".jumei"},"105":{"name":"N\u00b05\u65f6\u5c1a\u5e7f\u573a","url":"http:\/\/www.no5.com.cn\/","tag":".no5"},"106":{"name":"\u4e50\u8702\u7f51","url":"http:\/\/www.lafaso.com\/","tag":".lafaso"},"107":{"name":"\u9999\u6e2f\u838e\u838e\u5316\u5986\u54c1\u5b98\u7f51","url":"http:\/\/www.sasa.com\/","tag":".sasa"},"108":{"name":"\u9f50\u5bb6\u7f51","url":"http:\/\/mall.tg.com.cn\/","tag":".tg"},"109":{"name":"\u4e3a\u4e3a\u7f51","url":"http:\/\/www.homevv.com\/","tag":".homevv"},"110":{"name":"\u4e1c\u65b9\u5b9c\u5c45\u7f51","url":"http:\/\/www.ohome.cn\/","tag":".ohome"},"111":{"name":"\u7bf1\u7b06\u7f51","url":"http:\/\/home.liba.com\/","tag":".liba"},"112":{"name":"\u4e50\u5bb6\u6613","url":"http:\/\/www.ljy365.com\/","tag":".ljy365"},"113":{"name":"\u7533\u7f51\u5bb6\u7535\u57ce","url":"http:\/\/www.shnn.com\/","tag":".shnn"},"114":{"name":"\u4eae\u5c45\u7f51","url":"http:\/\/www.decojoy.com\/","tag":".decojoy"},"115":{"name":"\u7f8e\u4e50\u4e50\u5bb6\u5177\u7f51","url":"http:\/\/www.meilele.com\/","tag":".meilele"},"116":{"name":"\u6211\u7231\u6211\u5bb6\u7f51","url":"http:\/\/mall.525j.com.cn\/","tag":".525j"},"117":{"name":"\u9053\u7f51","url":"http:\/\/www.dao.com\/","tag":".dao"},"118":{"name":"\u5bb6\u5929\u4e0b","url":"http:\/\/shop.jiatx.com\/","tag":".jiatx"},"119":{"name":"\u51ef\u5962\u706f\u9970","url":"http:\/\/kshes.com\/","tag":"kshes\/"},"120":{"name":"\u83b4\u82e3\u7f51","url":"http:\/\/www.mewowo.com\/","tag":".mewowo"},"121":{"name":"\u66f2\u7f8e\u7f51\u7edc\u5546\u57ce","url":"http:\/\/www.qmshop.cn\/","tag":".qmshop"},"122":{"name":"\u5e03\u8c37\u7f51","url":"http:\/\/www.mybugu.com\/","tag":".mybugu"},"123":{"name":"\u5b9c\u5bb6\u5bb6\u5c45\u5b98\u7f51","url":"http:\/\/www.ikea.com\/","tag":".ikea"},"124":{"name":"\u8054\u5408\u4e00\u5bb6\u5bb6\u5177\u7f51","url":"http:\/\/www.un58.com\/","tag":".un58"},"125":{"name":"\u9633\u5149\u4e00\u53f7\u5546\u57ce","url":"http:\/\/www.sssclub.cn\/","tag":".sssclub"},"126":{"name":"\u805a\u96f6\u98df","url":"http:\/\/www.ju04.com\/","tag":".ju04"},"127":{"name":"\u6cb1\u6cb1\u5de5\u793e","url":"http:\/\/www.tootoo.cn\/","tag":".tootoo"},"128":{"name":"\u6b63\u5927\u5929\u5730\u7f51","url":"http:\/\/www.itruelife.com\/","tag":".itruelife"},"129":{"name":"\u4f9d\u8c37\u7f51","url":"http:\/\/www.egu365.com\/","tag":".egu365"},"130":{"name":"712\u5e97","url":"http:\/\/www.712dian.com\/","tag":".712dian"},"131":{"name":"\u6211\u4e70\u7f51","url":"http:\/\/www.womai.com\/","tag":".womai"},"132":{"name":"\u7f24\u8d2d","url":"http:\/\/www.binggo.com\/","tag":".binggo"},"133":{"name":"\u5e7f\u8425\u8fdb\u53e3\u98df\u54c1\u6279\u53d1\u7f51","url":"http:\/\/www.wwq.cc\/","tag":".wwq"},"134":{"name":"\u6211\u53cb","url":"http:\/\/www.woyo.com\/","tag":".woyo"},"135":{"name":"\u4e2d\u56fd\u96f6\u98df\u7f51","url":"http:\/\/search.lingshi.com\/","tag":".lingshi"},"136":{"name":"\u5343\u817e\u7f51","url":"http:\/\/www.specl.com\/","tag":".specl"},"137":{"name":"\u6211\u8981\u6613\u8d2d","url":"http:\/\/www.51eshop.com\/","tag":".51eshop"},"138":{"name":"\u7ea2\u5b69\u5b50","url":"http:\/\/www.redbaby.com.cn\/","tag":".redbaby"},"139":{"name":"\u4e50\u53cb","url":"http:\/\/www.leyou.com.cn\/","tag":".leyou"},"140":{"name":"\u4e3d\u5bb6\u5b9d\u8d1d","url":"http:\/\/www.lijiababy.com.cn\/","tag":".lijiababy"},"141":{"name":"\u4f181\u5b9d\u8d1d","url":"http:\/\/www.u1baby.com\/","tag":".u1baby"},"142":{"name":"360top","url":"http:\/\/www.360top.com\/","tag":".360top"},"143":{"name":"\u4f73\u54c1\u7f51","url":"http:\/\/www.jiapin.com\/","tag":".jiapin"},"144":{"name":"\u5168\u7403\u5962\u4f88\u54c1\u7cbe\u7cb9","url":"http:\/\/www.ccluxy.com\/","tag":".ccluxy"},"145":{"name":"\u7b2c\u4e94\u5927\u9053","url":"http:\/\/www.5lux.com\/","tag":".5lux"},"146":{"name":"\u5bfa\u5e93","url":"http:\/\/www.secoo.com\/","tag":".secoo"},"147":{"name":"\u5168\u7403\u4f18\u54c1","url":"http:\/\/www.eushophq.com\/","tag":".eushophq"},"148":{"name":"\u5c0a\u9177","url":"http:\/\/www.vipku.com\/","tag":".vipku"},"149":{"name":"\u65b0\u6d6a\u5962\u54c1","url":"http:\/\/l.sina.com.cn\/","tag":".sina"},"150":{"name":"\u7231\u5962\u8d2d","url":"http:\/\/www.ishegou.com\/","tag":".ishegou"},"151":{"name":"\u7f8e\u897f","url":"http:\/\/www.meici.com\/","tag":".meici"},"152":{"name":"\u73cd\u54c1\u7f51","url":"http:\/\/www.zhenpin.com\/","tag":".zhenpin"},"153":{"name":"\u5600\u55d2\u7f51","url":"http:\/\/www.godida.com\/","tag":".godida"},"154":{"name":"\u8d70\u79c0\u7f51","url":"http:\/\/www.xiu.com\/luxury.html","tag":".xiu"},"155":{"name":"\u94f6\u6cf0","url":"http:\/\/www.yintai.com","tag":".yintai"},"156":{"name":"Edel Optics","url":"http:\/\/www.edel-optics.cn\/","tag":".edel-optics"},"157":{"name":"\u585e\u4e5f\u7eb3\u5168\u7403\u8d2d","url":"http:\/\/www.saiyena.com\/gallery-89-grid.html","tag":".saiyena"},"158":{"name":"\u4e5f\u4e70\u9152","url":"http:\/\/www.yesmywine.com\/","tag":".yesmywine"},"159":{"name":"\u9152\u4ed9\u7f51","url":"http:\/\/www.jiuxian.com\/index.php","tag":".jiuxian"},"160":{"name":"\u54c1\u5c1a\u7ea2\u9152","url":"http:\/\/www.wine9.com\/","tag":".wine9"},"161":{"name":"\u9152\u7f8e\u7f51","url":"http:\/\/www.winenice.com\/","tag":".winenice"},"162":{"name":"\u6d0b\u9152","url":"http:\/\/www.yangjiu.com\/","tag":".yangjiu"},"163":{"name":"\u7ea2\u9152\u5ba2","url":"http:\/\/www.winekee.com\/","tag":".winekee"},"164":{"name":"\u5bb6\u5c45\u5c31","url":"http:\/\/www.jiaju.com\/","tag":".jiaju"},"165":{"name":"\u96c6\u7f8e\u7f51","url":"http:\/\/www.jimei.com\/","tag":".jimei"},"166":{"name":"\u535a\u5e93\u7f51","url":"http:\/\/www.bookuu.com","tag":".bookuu"},"167":{"name":"\u5e7f\u8d2d\u4e66\u57ce","url":"http:\/\/www.gg1994.com","tag":".gg1994"},"168":{"name":"\u9636\u68af\u56fe\u4e66\u7f51","url":"http:\/\/www.jieti.com","tag":".jieti"},"169":{"name":"\u7cbe\u5f69\u7f51","url":"http:\/\/www.exvv.com","tag":".exvv"},"170":{"name":"\u5b54\u592b\u5b50\u65e7\u4e66\u7f51","url":"http:\/\/www.kongfz.com","tag":".kongfz"},"171":{"name":"\u4e50\u5bb6\u6613\u5546\u57ce","url":"http:\/\/www.ljy365.com","tag":".ljy365"},"172":{"name":"\u5168\u6069\u7f51","url":"http:\/\/www.7grace.cn","tag":".7grace"},"173":{"name":"\u592a\u5e73\u6d0b\u5bb6\u5c45\u7f51","url":"http:\/\/www.pchouse.com.cn\/","tag":".pchouse"},"174":{"name":"\u738b\u5e9c\u4e95\u4e66\u5e97","url":"http:\/\/www.wfjsd.com\/","tag":".wfjsd"},"175":{"name":"\u851a\u84dd\u7f51","url":"http:\/\/www.wl.cn\/","tag":".wl"},"176":{"name":"\u6587\u8f69\u7f51","url":"http:\/\/www.winexuan.cn\/","tag":".winxuan"},"177":{"name":"\u6613\u8fc5\u7f51","url":"http:\/\/www.51buy.com\/","tag":".51buy"},"178":{"name":"\u4e2d\u5173\u6751\u56fe\u4e66\u5927\u53a6","url":"http:\/\/www.zgcbb.com\/","tag":".zgcbb"},"179":{"name":"\u4e2d\u56fd\u4e92\u52a8\u51fa\u7248\u7f51","url":"http:\/\/www.china-pub.com","tag":".china-pub"},"180":{"name":"\u4e2d\u56fd\u7533\u7f51","url":"http:\/\/www.shnn.com\/","tag":".shnn"},"181":{"name":"\u4e2d\u56fd\u56fe\u4e66\u7f51","url":"http:\/\/www.bookschina.com\/","tag":".bookschina"},"182":{"name":"\u5317\u4eac\u56fe\u4e66\u5927\u53a6","url":"http:\/\/www.bjbb.com","tag":".bjbb"},"183":{"name":"\u4e07\u8868\u7f51","url":"http:\/\/www.wbiao.cn\/","tag":".wbiao"},"186":{"name":"\u805a\u98ce\u5c1a","url":"http:\/\/www.jufengshang.com\/","tag":".jufengshang"},"187":{"name":"\u4e50\u8702\u7f51","url":"http:\/\/www.lefeng.com\/","tag":".lefeng"},"188":{"name":"\u8155\u8868\u4e4b\u5bb6","url":"http:\/\/www.xbiao.com\/","tag":".xbiao"}};
+							data = getArrayItems(focus_json,6);
+							h = '';
+							j=0;
+							for(i=0;i<data.length;i++){
+								j++;
+								if(data.length<6 && j>3) {
+									break;
+								}
+								h += '<li>';
+			            		h += '<p class="tips">'+website[data[i]['siteid']]['name']+'</p>';
+			                    h += '<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&firstid='+data[i].id+'&utm_source=cxhd_0'+(i+1)+'&anl=shy_tj_0'+(i+1)+'_pic" class="img" target="_blank">';
+								h += '<img src="';
+								//if(data[i].pic_2 == ''){
+									h += 'http://img02.yiqisooimg.com/fangdudu'+data[i].pic_1;
+								//}else{
+									//h += 'http://img02.yiqisooimg.com/fangdudu/'+data[i].pic_2;	
+								//}
+								h += '" /></a>';
+			                    h += '<h3><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&firstid='+data[i].id+'&utm_source=cxhd_0'+(i+1)+'&anl=shy_tj_0'+(i+1)+'_title" target="_blank">'+data[i].title+'</a></h3>';
+			                    h += '<div class="txt">';
+			                    h += '<p><span class="gray">活动分类：</span>'+data[i].classname+'</p>';
+			
+								if(data[i].stime != 0 && data[i].etime != 0){
+									
+									d1 = new Date(data[i].etime*1000);
+									y = d1.getFullYear();
+									m = d1.getMonth()+1;
+									d = d1. getDate();
+									d1_str = y+'年'+m+'月'+d+'日';
+									d2 = new Date(data[i].stime*1000);
+									y = d2.getFullYear();
+									m = d2.getMonth()+1;
+									d = d2. getDate();
+									d2_str = y+'年'+m+'月'+d+'日';
+				                    h += '<p><span class="gray">活动时间：</span>'+d2_str+' 至 '+d1_str+'</p>';
+								}
+			                    h +='</div>';
+			            		h += '</li>';	
+							}
+							$('#focus_title').show();
+							document.getElementById('focus_list').innerHTML = h;
+							var iLilen=$("#partE li").length;
+							var iTmp=0;
+							if(iLilen<=3)
+							{
+								iTmp=202;
+							}
+							else if(iLilen<=6)
+							{
+								iTmp=220;
+							}
+							else if(iLilen<=9)
+							{
+								iTmp=226;
+							}
+							var ih=Math.ceil(iLilen/3)*iTmp;
+							$("#partE").css({"height":ih+"px"});
+						});
+					function getArrayItems(arr, num) {
+						//新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
+						var temp_array = new Array();
+						for (var index in arr) {
+							temp_array.push(arr[index]);
+						}
+						//取出的数值项,保存在此数组
+						var return_array = new Array();
+						for (var i = 0; i<num; i++) {
+							//判断如果数组还有可以取出的元素,以防下标越界
+							if (temp_array.length>0) {
+								//在数组中产生一个随机索引
+								var arrIndex = Math.floor(Math.random()*temp_array.length);
+								//将此随机索引的对应的数组元素值复制出来
+								return_array[i] = temp_array[arrIndex];
+								//然后删掉此索引的数组元素,这时候temp_array变为新的数组
+								temp_array.splice(arrIndex, 1);
+							} else {
+								//数组中数据项取完后,退出循环,比如数组本来只有10项,但要求取出20项.
+								break;
+							}
+						}
+						return return_array;
+					}
+			</script>
+    		
+    		<div id="partE">
+    			<ul class="indexList" id='focus_list'>
+    			</ul>
+    		</div>
+    		<!--促销活动 E-->
+
+			<!--商品促销 S-->
+			<h2 class="tit">
+				<span class="fl">促销商品</span>
+				<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&anl=shy_list_cuxiao" class="fr blue more">更多</a>
+			</h2>
+			
+			<div id="partB">
+    			<ul class="saleList_index">
+        			<li>
+			        	<div class="img">
+			            	<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" class="qiang"/>
+			            	<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=413835&utm_source=cxsp_01&anl=shy_tj_01_pic"><img  src="http://img04.yiqisooimg.com/fangdudu/pics/discount_pics/247/229/b6a11007d71ae90857ba0a2430e72115.jpg"/></a>
+			            </div>
+			            <div class="txt">
+			            	<h3><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=413835&utm_source=cxsp_01&anl=shy_tj_01_title" title="哈比高纤维高级豆浆粉（无糖）450g">哈比高纤维高级豆浆粉（无糖）450g</a></h3>
+			                <p class="grays"></p>
+			                <p class="price">¥ 11.00</p>
+			                <p class="from gray">来自缤购</p>
+			            </div>
+			        </li>
+        			<li>
+			        	<div class="img">
+			            	<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" class="jiang"/>
+			            	<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=422020&utm_source=cxsp_02&anl=shy_tj_02_pic"><img  src="http://img02.yiqisooimg.com/fangdudu/pics/discount_pics/72/168/a6080226906a4b65887e43c838fb8c1d.jpg"/></a>
+			            </div>
+			            <div class="txt">
+			            	<h3><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=422020&utm_source=cxsp_02&anl=shy_tj_02_title" title="新飞 二灯暖+风暖壁挂式浴霸 空调型暖风浴霸 XF-B-0201">新飞 二灯暖+风暖壁挂式浴霸 空调型暖风浴霸 XF-B-0201</a></h3>
+			                <p class="grays"></p>
+			                <p class="price">¥ 198.00</p>
+			                <p class="from gray">来自京东商城</p>
+			            </div>
+			        </li>
+			        <li>
+			        	<div class="img">
+			            	<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" class="jiang"/>
+			            	<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=380956&utm_source=cxsp_03&anl=shy_tj_03_pic"><img  src="http://img06.yiqisooimg.com/fangdudu/pics/discount_pics/123/47/6c210eb6659bd30d47d2a78f1b3c572c.jpg"/></a>
+			            </div>
+			            <div class="txt">
+			            	<h3><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=380956&utm_source=cxsp_03&anl=shy_tj_03_title" title="柏丽奈儿 2012秋冬新款优质高档配腰带蝙蝠袖针织衫 tyx.TW1342">柏丽奈儿 2012秋冬新款优质高档配腰带蝙蝠袖针织衫 tyx.TW1342</a></h3>
+			                <p class="grays"><del>原价130.00元</del></p>
+			                <p class="price">¥ 129.00</p>
+			                <p class="from gray">来自当当网</p>
+			            </div>
+			        </li>
+			    	  
+			        <li>
+			        	<div class="img">
+			            	<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" class="jiang"/>
+			            	<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=419808&utm_source=cxsp_04&anl=shy_tj_04_pic"><img  src="http://img02.yiqisooimg.com/fangdudu/pics/discount_pics/2/141/4a88708668b4cf6cc9268ed62b1bff39.jpg"/></a>
+			            </div>
+			            <div class="txt">
+			            	<h3><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=419808&utm_source=cxsp_04&anl=shy_tj_04_title" title="柏丽奈儿 2012宽松一字领厚蝙蝠袖小鹿套头毛衣 hly. H7728">柏丽奈儿 2012宽松一字领厚蝙蝠袖小鹿套头毛衣 hly. H7728</a></h3>
+			                <p class="grays"><del>原价116.00元</del></p>
+			                <p class="price">¥ 115.00</p>
+			                <p class="from gray">来自当当网</p>
+			            </div>
+			        </li>
+			    	  
+			        <li>
+			        	<div class="img">
+			            	<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" class="jiang"/>
+			            	<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=258396&utm_source=cxsp_05&anl=shy_tj_05_pic"><img  src="http://img01.yiqisooimg.com/fangdudu/pics/discount_pics/28/97/7e0b7200a3901a87f8ec4a8e382bc525.jpg"/></a>
+			            </div>
+			            <div class="txt">
+			            	<h3><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=258396&utm_source=cxsp_05&anl=shy_tj_05_title" title="2011新款时尚字母个性印花长袖潮男修身圆领莱卡T恤">2011新款时尚字母个性印花长袖潮男修身圆领莱卡T恤</a></h3>
+			                <p class="grays"><del>原价148.00元</del></p>
+			                <p class="price">¥ 130.00</p>
+			                <p class="from gray">来自当当网</p>
+			            </div>
+			        </li>
+			    	  
+			        <li>
+			        	<div class="img">
+			            	<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" class="qiang"/>
+			            	<a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=423674&utm_source=cxsp_06&anl=shy_tj_06_pic"><img  src="http://img08.yiqisooimg.com/fangdudu/pics/discount_pics/251/232/737c2632076b35af1af1acc07b34e462.jpg"/></a>
+			            </div>
+			            <div class="txt">
+			            	<h3><a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&firstid=423674&utm_source=cxsp_06&anl=shy_tj_06_title" title="SEIWA 车用迷你型烟灰缸(黑色) W322 seiwa车用精品给您车厢生活更多点色彩、更多点舒心！">SEIWA 车用迷你型烟灰缸(黑色) W322 seiwa车用精品给您车厢生活更</a></h3>
+			                <p class="grays"><del>原价32.00元</del></p>
+			                <p class="price">¥ 27.00</p>
+			                <p class="from gray">来自库巴购物网</p>
+			            </div>
+			        </li>    
+		    	</ul>
+			</div>
+    		<!--商品促销 E-->
+
+			<!--商家大全-->
+			<h2 class="tit"><span class="fl">商家大全</span></h2>
+			<div id="partC" class="clearfix">
+				<dl class="fl">
+			    	<dt><span class="fl blue">家电/3C数码</span><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_list_sjdq" class="fr blue more" target="_blank">更多</a></dt>
+			        <dd>
+			        	<ul class="logoImg clearfix">
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_14#shangjia_14" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log14.jpg?123" width="70" height="30" />京东商城</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_1#shangjia_1" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log1.jpg?123" width="70" height="30" />库巴购物网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_21#shangjia_21" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log21.jpg?123" width="70" height="30" />苏宁易购</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_16#shangjia_16" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log16.jpg?123" width="70" height="30" />国美电器</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_11#shangjia_11" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log11.jpg?123" width="70" height="30" />当当网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_12#shangjia_12" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log12.jpg?123" width="70" height="30" />亚马逊</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_177#shangjia_177" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log35.jpg?123" width="70" height="30" />易迅网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_19#shangjia_19" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log19.jpg?123" width="70" height="30" />新蛋网</a></li>
+			            </ul>
+			        </dd>
+			    </dl>
+
+ 				<dl class="fr">
+			    	<dt><span class="fl blue">家居</span><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_list_sjdq" class="fr blue more" target="_blank">更多</a></dt>
+			        <dd>
+			        	<ul class="logoImg clearfix">
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_111#shangjia_111" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log111.jpg?123" width="70" height="30" />篱笆网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_165#shangjia_165" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log165.jpg?123" width="70" height="30" />集美网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_164#shangjia_164" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log164.jpg?123" width="70" height="30" />家居就</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_15#shangjia_15" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log15.jpg?123" width="70" height="30" />淘宝商城</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_173#shangjia_173" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log173.jpg?123" width="70" height="30" />太平洋家居网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_123#shangjia_123" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log123.jpg?123" width="70" height="30" />宜家家居</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_108#shangjia_108" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log108.jpg?123" width="70" height="30" />齐家网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_120#shangjia_120" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log120.jpg?123" width="70" height="30" />莴苣网</a></li>
+			            </ul>
+			        </dd>
+			    </dl>
+
+			    <dl class="fl">
+			    	<dt><span class="fl blue">奢侈品/化妆品</span><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_list_sjdq" class="fr blue more" target="_blank">更多</a></dt>
+			        <dd>
+			        	<ul class="logoImg clearfix">
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_148#shangjia_148" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log148.jpg?123" width="70" height="30" />尊酷网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_146#shangjia_146" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log146.jpg?123" width="70" height="30" />寺库</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_154#shangjia_154" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log154.jpg?123" width="70" height="30" />走秀网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_155#shangjia_155" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log155.jpg?123" width="70" height="30" />银泰网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_106#shangjia_106" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log106.jpg?123" width="70" height="30" />乐蜂网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_107#shangjia_107" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log107.jpg?123" width="70" height="30" />香港莎莎</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_101#shangjia_101" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log101.jpg?123" width="70" height="30" />天天网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_104#shangjia_104" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log104.jpg?123" width="70" height="30" />聚美优品</a></li>
+			            </ul>
+			        </dd>
+			    </dl>
+
+			    <dl class="fr">
+			    	<dt><span class="fl blue">进口食品/葡萄酒</span><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_list_sjdq" class="fr blue more" target="_blank">更多</a></dt>
+			        <dd>
+			        	<ul class="logoImg clearfix">
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_131#shangjia_131" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log131.jpg?123" width="70" height="30" />我买网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_20#shangjia_20" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log20.jpg?123" width="70" height="30" />一号店</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_132#shangjia_132" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log132.jpg?123" width="70" height="30" />缤购网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_134#shangjia_134" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log134.jpg?123" width="70" height="30" />我友网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&page=2&anl=shy_shangjia_158#shangjia_158" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log158.jpg?123" width="70" height="30" />也买酒</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_159#shangjia_159" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log159.jpg?123" width="70" height="30" />酒仙网</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_160#shangjia_160" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log160.jpg?123" width="70" height="30" />品尚红酒</a></li>
+			            	<li><a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_shangjia_161#shangjia_161" target="_blank"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log161.jpg?123" width="70" height="30" />酒美网</a></li>
+			            </ul>
+			        </dd>
+			    </dl>
+			</div>
+			<!--商家大全 E-->
+			
+			<script language="javascript" type="text/javascript">
+				$('.saleList_index li a img').LoadImage(true,145,145);
+				$('.topRecommendations li .pic img').LoadImage(true,110,110);
+				$(".topRecommendations li").hover(function(){
+					$(this).find('.backg').stop().animate({"top":"70px"},150);
+				},function(){
+					$(this).find('.backg').stop().animate({"top":"110px"},150);
+				});
+			</script>
+		</div><!--/part-->
+		
+		#parse("footer.vm")
+    
+    	<script type="text/javascript" language="javascript">
+			$("#tiaozhuanbutton").click(function(){
+				var page=$("#tiaopage").val();
+				if(!${JQUERY}trim(page))
+					return false;
+				url = window.location.href;
+				if(url.indexOf('?')<0){
+					url+='?';	
+				}
+				url = url.replace(/&page[^&]*/,'');
+				url = url.replace(/#tabbar/,'');
+				url += "&page="+page+"&anl=shy_page_"+page+"#tabbar";
+				//alert(url);
+				window.location.href = url;	
+			});
+
+			$("a.guangyiguang").click(function(){
+				var dataid=$(this).attr('dataid');
+				var classid=$(this).attr('classid');
+				var location=$(this).attr('location');
+				
+				tongji(location);
+				
+				${JQUERY}ajax({
+				   type: "POST",
+				   url: "http://www.yiqisoo.com/index.php?action=guang&type=life&t=guang",
+				   data: "dataid="+dataid+"&classid="+classid+"&location="+location,
+				   success: function(msg){	
+				  		//alert(msg);	
+						//window.open(url,"_self");/*ie6下被阻止*/
+				   }
+				});	
+				
+			});
+
+			function tongji(type){
+				str='';
+				switch(type){
+					case 'cuxiao':
+						str = '促销';
+						break;
+					case 'f_list':
+						str = '促销活动';
+						break;
+					case 'guang':
+						str = '逛逛';
+						break;
+					case 'jian':
+						str = '推荐';
+						break;
+					case 'detail':
+						str = '详情页';
+						break;
+					case 'list':
+						str = '3c列表';
+						break;
+					case 'rent':
+						str = '租房';
+						break;
+					case 'esf':
+						str = '二手房';
+						break;
+					case 'title':
+						str = '3c';
+						break;
+					default:
+						str = '';
+						break;
+				}
+				if(str != ''){
+					s = '/tracelog.htm?act-yqs=tods&aid-yqs='.type;
+					dcsMultiTrack(DCS.dcsuri,s,'WY.ti',str);
+				}
+			}
+
+			function check_event(event){   
+  				var code = event.keyCode;   
+  				if(code==13){    
+	 				$("#tiaozhuanbutton").click();
+  				}   
+			} 
+		</script>
+		<script>
+			var d_url=document.location.href;	
+			//alert(d_url);
+			var patt = new RegExp('utm_campaign');
+			if(patt.test(d_url))
+			{
+				var pattern = /utm_campaign=[^&]*/;
+				strs = d_url.match(pattern);
+				var patt2 = new RegExp('javascript');
+				var patt3 = new RegExp('utm_campaign');
+				var patt4 = new RegExp('/overview');
+				var patt5 = /#shangjia_\d*/;
+				$('a').each(function(){
+					if(!patt2.test(this.href) && !patt3.test(this.href)){
+						var lastw = this.href.substr(-1);
+						if(lastw=='/')
+						{
+							this.href = this.href+'?'+strs;
+						}else if(lastw==''){
+							this.href ='';
+						}else{
+							this.href = this.href+'&'+strs;
+						}
+						if(patt5.test(this.href))
+						{
+							str2 = this.href.match(patt5);
+							this.href = this.href.replace(/#shangjia_\d*/g,'');
+							this.href = this.href+str2;
+						}
+					}
+				});
+			}
+		</script>
+		
+		<script type='text/javascript'>
+			document.write("<script src=\'http://img01.yiqisooimg.com/yiqisoo/dandelion/js/yiqisoo_4d3u_tag.js\'");
+			document.write(" type='text\/javascript'><\/script>");
+			document.write("<script type='text\/javascript'>");
+			document.write("var _gaq = _gaq || [];");
+			document.write("_gaq.push(['_setAccount', 'UA-21465425-1']);");
+			document.write("_gaq.push(['_setDomainName', '.yiqisoo.com']);");
+			document.write("_gaq.push(['_trackPageview']);");
+			document.write("(function() {");
+			document.write("var ga = document.createElement('script'); ga.type = 'text\/javascript'; ga.async = true;");
+			document.write("ga.src = ('https:' == document.location.protocol ? 'https:\/\/ssl' : 'http:\/\/www') + '.google-analytics.com\/ga.js';");
+			document.write(" var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);");
+			document.write(" })();");
+			document.write("<\/script>");
+
+			document.write("<p style='display:none'>");
+			document.write("<script type='text\/javascript'>");
+			document.write("var _bdhmProtocol = (('https:' == document.location.protocol) \? ' https:\/\/' : ' http:\/\/');");
+			
+			document.write("document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com\/h.js%3Ff6bbd2a1fae6b4a7b6bd36ba720b99bb' type='text\/javascript'%3E%3C\/script%3E\"));");
+			document.write("<\/script>");
+			document.write("<\/p>");
+		</script>
+
+		<script>
+			var d_url=document.location.href;	
+			var patt = new RegExp('utm_campaign');
+			if(patt.test(d_url))
+			{
+				var pattern = /utm_campaign=([^&]*)/;
+				strs = d_url.match(pattern);
+				var board = document.getElementById("sub_3c");
+				var e = document.createElement("input");
+				e.type = "hidden";
+				e.name = "utm_campaign";
+				e.value = strs[1];
+				var object = board.appendChild(e);
+			}
+		</script>
+		
+		#parse("links.vm")
+		
+		<script>
+			document.write("<img src=\'http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/xianshiqi.gif?width="+window.screen.width+"&height="+window.screen.height+"\'\/>");
+		</script>
+		<!-- START OF SmartSource Data Collector TAG -->
+		<SCRIPT SRC="http://traffic.house.sina.com.cn/smartview_yiqisoo_tag.js" TYPE="text/javascript"></SCRIPT>
+		<!-- END OF SmartSource Data Collector TAG -->
+	</body>
+</html>

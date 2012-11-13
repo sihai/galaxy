@@ -1,0 +1,78 @@
+<!-- 双11 star  -->
+<style>
+	#bnr1111{height:50px;overflow:hidden;}
+	#bnr1111 img{vertical-align:top;}
+	.bnr-close{background:#b40300;}
+	.bnr-open{background:url(http://p8.qhimg.com/t016be15fd310a197f5.png) repeat-x #b40300;}
+	.bnr-main{position:relative;margin:0 auto;display:none;}
+	.bnr-close .main-close{display:block;width:1000px;}
+	.bnr-open .main-open{display:block;width:1040px;}
+	.bnr-share{position:absolute;right:110px;bottom:8px;}
+	.bnr-btn{position:absolute;right:0;bottom:0;width:42px;height:18px;line-height:100px;overflow:hidden;background:url(http://p4.qhimg.com/t01e80b824ce6247120.png) no-repeat;cursor:pointer;}
+	.btn-open{background-position:0 -22px;}
+	.btn-close{background-position:0 0;right:10px;}
+</style>
+<div id="bnr1111">
+	<div class="bnr-main main-close">
+		<a href="http://huodong.360.cn?eee=1111banner" target="_blank"><img src="http://p8.qhimg.com/t0126ec456ef2365737.png" /></a>
+		<span id="bnrbtn-open" class="bnr-btn btn-open">展开</span>
+	</div>
+	<div class="bnr-main main-open">
+		<a href="http://huodong.360.cn?eee=1111banner" target="_blank"><img src="http://p9.qhimg.com/t0141a339bde8b500c9.jpg" /></a>
+		<div class="bnr-share">
+			<script type="text/javascript" charset="utf-8">
+				(function(){
+					var _w = 142 , _h = 32;
+					var param = {
+						url:location.href,
+						type:'4',
+						count:'', /**是否显示分享数，1显示(可选)*/
+						appkey:'3068759065', /**您申请的应用appkey,显示分享来源(可选)*/
+						title:'#360购物·豪门盛宴# 11.7正式奢华开幕！汇聚知名购物网站，一起玩转双十一！！曾经11.11是单身男女自我调侃的光棍节，如今已成为网购盛宴狂欢节。什么值得买？哪些是真折扣，哪些是假忽悠？360购物汇集全网双十一活动，真实惠假优惠，一比全知道。', /**分享的文字内容(可选，默认为所在页面的title)*/
+						pic:'http://p5.qhimg.com/t017677475a57a5e138.jpg', /**分享图片的路径(可选)*/
+						ralateUid:'2129153731', /**关联用户的UID，分享微博会@该用户(可选)*/
+						language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+						rnd:new Date().valueOf()
+						}
+						var temp = [];
+						for( var p in param ){
+						temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+						}
+						$(document).ready(function(){
+							$('.bnr-share').append('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>'); 
+							});
+					})()
+			</script>
+		</div>
+		<span id="bnrbtn-close" class="bnr-btn btn-close">收起</span>
+	</div>
+</div>
+<script>
+	;(function($){
+		var isBnrClose = Qtool.cookie('_Bnr-1111');
+		var closeBnr = function(){
+			$('#bnr1111').animate({height:'50px'},500,function(){
+				$('#bnr1111').attr('class','bnr-close');
+				Qtool.cookie('_Bnr-1111',1,1,'','.360.cn');
+			});
+		}
+		var openBnr = function(){
+			$('#bnr1111').animate({height:'350px'},500);
+			$('#bnr1111').attr('class','bnr-open');
+		}
+		if(isBnrClose){
+			$('#bnr1111').attr('class','bnr-close');
+			closeBnr();
+		}else{
+			openBnr();
+			setTimeout(closeBnr,5000);
+		}
+		$('#bnrbtn-close').live('click',function(){
+			closeBnr();
+		});
+		$('#bnrbtn-open').live('click',function(){
+			openBnr();
+		});
+	})(jQuery);
+</script>
+<!-- 双11 end  -->

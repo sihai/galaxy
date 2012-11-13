@@ -1,0 +1,619 @@
+<div id="classify" class="part">
+	<div class="nav">
+    	<a href="http://www.yiqisoo.com/?anl=shy_list_sy">首页</a>
+        <a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=tuijian&anl=shy_list_tuijian">促销活动</a> 
+        <a href="http://www.yiqisoo.com/index.php?action=search&type=life&child=cuxiao&anl=shy_list_cuxiao">促销商品</a>
+        <a href="http://www.yiqisoo.com/index.php?action=shop&which=shops&anl=shy_list_sjdq">商家大全</a>
+        <a href="http://www.yiqisoo.com/index.php?action=shop&anl=shy_list_qbsp">全部商品</a>
+        <a href="http://www.yiqisoo.com/index.php?action=analytics&anl=shy_list_analy">分析报告</a>
+    </div>
+    
+	<div class="box clearfix">
+		<!--
+		<dl>
+			<dt>
+				<a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=50" id="c1">
+					<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" alt="家电"/>
+					家电
+				</a>
+			</dt>
+			<dd class="clearfix" style="width:460px;">
+				
+				<div class="clearfix line">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=27">大家电</a>
+            		</h4>
+                    <div class="fr" style="width:370px;">		
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=3">洗衣机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=2">冰箱/冰柜</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=4">空调</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=1">电视</a> 
+                    </div>
+				</div>
+			    
+			    <div class="clearfix line">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=28">影音设备</a>
+            		</h4>
+                    <div class="fr" style="width:370px;">
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=29">影碟机/播放器</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=30">迷你音响</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=31">家庭影院</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=32">音箱/低音炮</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=33">功放</a> 
+                   	</div>
+				</div>
+			    
+			    <div class="clearfix line">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=34">厨卫电器</a>
+            		</h4>
+                    <div class="fr" style="width:370px;">
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=37">电磁炉</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=38">微波炉</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=39">电热水器</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=40">燃气热水器</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=41">烟机/灶具套装</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=42">灶台/灶具</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=43">油烟机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=44">电饭煲</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=45">豆浆机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=46">浴霸/排气扇</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=178">冰淇淋机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=179">电饼铛/煎烤机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=180">电烤箱</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=181">电热水壶/电热水瓶</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=182">电压力锅</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=183">多用途锅/自动烹饪锅</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=184">咖啡机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=185">面包机/多士炉</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=186">酸奶机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=187">洗碗机/消毒柜</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=188">饮水机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=189">榨汁机/搅拌机/多功能料理机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=190">煮蛋器/蒸蛋器</a> 
+                	</div>
+				</div>
+			    
+			    <div class="clearfix line">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=176">生活电器</a>
+            		</h4>
+                    <div class="fr" style="width:370px;">
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=35">空气净化器/氧吧</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=36">加湿器</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=157">暖风机/取暖器</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=168">电熨斗</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=169">空调扇</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=170">电风扇</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=171">清洁机/扫地机/打蜡机</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=172">吸尘器</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=173">电吹风</a> 
+				       <a href="http://jd.yiqisoo.com/index.php?action=search&type=life&classid=174">挂烫机/蒸汽刷/干洗刷</a> 
+                	</div>
+				</div>
+			</dd>
+		</dl>
+		-->
+    	<dl>
+			<dt>
+				<a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=50&anl=shy_list_classid=50" id="c1">
+					<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" alt="家电"/>
+					家电
+				</a>
+			</dt>
+			
+			<dd style="width:490px; display: none;" class="clearfix">
+				
+				<div class="clearfix line">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=27&amp;anl=shy_list_classid=27">大家电</a>
+            		</h4>
+                    <div style="width:400px;" class="fr">
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=3&amp;anl=shy_list_classid=3">洗衣机</a> 
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=2&amp;anl=shy_list_classid=2">冰箱/冰柜</a> 
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=4&amp;anl=shy_list_classid=4">空调</a> 
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=1&amp;anl=shy_list_classid=1">电视</a> 
+					</div>
+				</div>
+			    
+			    <div class="clearfix line">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=28&amp;anl=shy_list_classid=28">影音设备</a>
+            		</h4>
+                    <div style="width:400px;" class="fr">
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=33&amp;anl=shy_list_classid=33">功放</a> 
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=30&amp;anl=shy_list_classid=30">迷你音响</a>
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=31&amp;anl=shy_list_classid=31">家庭影院</a> 
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=32&amp;anl=shy_list_classid=32">音箱/低音炮</a>
+                       <a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=29&amp;anl=shy_list_classid=29">影碟机/播放器</a>
+                	</div>
+				</div>
+				
+			    <div class="clearfix line">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=34&amp;anl=shy_list_classid=34">厨卫电器</a>
+            		</h4>
+                    <div style="width:400px;" class="fr">
+                    	<p>
+                    		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=184&amp;anl=shy_list_classid=184">咖啡机</a>
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=188&amp;anl=shy_list_classid=188">饮水机</a> 
+                       	 	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=45&amp;anl=shy_list_classid=45">豆浆机</a>
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=182&amp;anl=shy_list_classid=182">电压力锅</a>
+                        </p>
+                        <p>                        
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=37&amp;anl=shy_list_classid=37">电磁炉</a> 
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=38&amp;anl=shy_list_classid=38">微波炉</a> 
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=180&amp;anl=shy_list_classid=180">电烤箱</a> 
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=42&amp;anl=shy_list_classid=42">灶台/灶具</a>
+                        </p>
+                        <p>                        
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=186&amp;anl=shy_list_classid=186">酸奶机</a>
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=44&amp;anl=shy_list_classid=44">电饭煲</a> 
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=43&amp;anl=shy_list_classid=43">油烟机</a>
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=41&amp;anl=shy_list_classid=41">烟机/灶具套装</a>
+                        </p>
+                        <p>                        
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=178&amp;anl=shy_list_classid=178">冰淇淋机</a>
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=179&amp;anl=shy_list_classid=179">电饼铛/煎烤机</a>
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=185&amp;anl=shy_list_classid=185">面包机/多士炉</a>
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=46&amp;anl=shy_list_classid=46">浴霸/排气扇</a>
+                        </p>
+                        <p>                        
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=39&amp;anl=shy_list_classid=39">电热水器</a>
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=190&amp;anl=shy_list_classid=190">煮蛋器/蒸蛋器</a> 
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=187&amp;anl=shy_list_classid=187">洗碗机/消毒柜</a>
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=181&amp;anl=shy_list_classid=181">电热水壶/电热水瓶</a>
+                       	</p>
+                       
+                       	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=40&amp;anl=shy_list_classid=40">燃气热水器</a> 
+                       	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=183&amp;anl=shy_list_classid=183">多用途锅/自动烹饪锅</a> 
+                       	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=189&amp;anl=shy_list_classid=189">榨汁机/搅拌机/多功能料理机</a> 
+                	</div>
+				</div>
+			    
+			    <div class="clearfix">
+            		<h4 class="fl">
+            			<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=176&amp;anl=shy_list_classid=176">生活电器</a>
+            		</h4>
+                    <div style="width:400px;" class="fr">
+                    	<p>
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=172&amp;anl=shy_list_classid=172">吸尘器</a> 
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=173&amp;anl=shy_list_classid=173">电吹风</a> 
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=36&amp;anl=shy_list_classid=36">加湿器</a>
+                    		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=157&amp;anl=shy_list_classid=157">暖风机/取暖器</a>
+                        </p>
+                        <p>
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=170&amp;anl=shy_list_classid=170">电风扇</a>
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=169&amp;anl=shy_list_classid=169">空调扇</a> 
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=168&amp;anl=shy_list_classid=168">电熨斗</a>
+                        	<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=35&amp;anl=shy_list_classid=35">空气净化器/氧吧</a>
+                        </p>
+                        <p>              
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=171&amp;anl=shy_list_classid=171">清洁机/扫地机/打蜡机</a> 
+                       		<a href="http://jd.yiqisoo.com/index.php?action=life&amp;type=life&amp;classid=174&amp;anl=shy_list_classid=174">挂烫机/蒸汽刷/干洗刷</a>
+                        </p> 
+                	</div>
+				</div>
+			</dd>
+		</dl>
+
+        <dl>
+            <dt>
+            	<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=51&anl=shy_list_classid=51" id="c2">
+            		<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" alt="3C数码"/>
+            		3C数码
+            	</a>
+            </dt>
+            
+            <dd class="clearfix">
+            	
+            	<div class="clearfix line">
+                    <h4 class="fl">
+                    	<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&&classid=47&anl=shy_list_classid=47">电脑</a>
+                    </h4>
+                    <div class="fr">
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=5&anl=shy_list_classid=5">笔记本电脑</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=7&anl=shy_list_classid=7">平板电脑</a> 
+	       				<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=6&anl=shy_list_classid=6">上网本</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=8&anl=shy_list_classid=8">台式机</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=9&anl=shy_list_classid=9">电脑一体机</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=15&anl=shy_list_classid=15">ipad</a> 
+                 	</div>
+				</div>
+				 
+            	<div class="clearfix line">
+                    <h4 class="fl">
+                    	<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&&classid=48&anl=shy_list_classid=48">相机/摄像机</a>
+                    </h4>
+                    <div class="fr">
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=11&anl=shy_list_classid=11">便携/卡片相机</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=12&anl=shy_list_classid=12">单反相机</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=52&anl=shy_list_classid=52">单电/微单相机</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=10&anl=shy_list_classid=10">数码摄像机</a> 
+                   	</div>
+				</div>
+				 
+            	<div class="clearfix line">
+                    <h4 class="fl">
+                    	<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&&classid=49&anl=shy_list_classid=49">手机数码</a>
+                    </h4>
+                    <div class="fr">
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=14&anl=shy_list_classid=14">iphone</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=16&anl=shy_list_classid=16">ipod</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=13&anl=shy_list_classid=13">手机</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=163&anl=shy_list_classid=163">MP3</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=164&anl=shy_list_classid=164">MP4/MP5</a> 
+                  	</div>
+				</div>
+				 
+            	<div class="clearfix line">
+                    <h4 class="fl">
+                    	<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&&classid=158&anl=shy_list_classid=158">电脑外设</a>
+                    </h4>
+                    <div class="fr">
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=159&anl=shy_list_classid=159">U盘</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=160&anl=shy_list_classid=160">移动硬盘</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=165&anl=shy_list_classid=165">键盘</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=166&anl=shy_list_classid=166">鼠标</a> 
+       					<a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=167&anl=shy_list_classid=167">键鼠套装</a> 
+                  	</div>
+				</div>
+			</dd>
+		</dl>
+		
+		<dl>
+			<dt>
+				<a id="c3" href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=53&anl=shy_list_classid=53">
+					<img alt="图书" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">
+					图书
+				</a>
+			</dt>
+			
+            <dd class="clearfix">
+                <div class="f clearfix">
+                	<span>
+                		<em>D</em>
+                		<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=93&anl=shy_list_classid=93">地理/地图</a>
+                	</span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=84&anl=shy_list_classid=84">动漫/绘本</a>
+                    <span>
+                    	<em>F</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=69&anl=shy_list_classid=69">法律</a>
+                    </span>
+                    <span>
+                    	<em>G</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=77&anl=shy_list_classid=77">工具</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=59&anl=shy_list_classid=59">工业技术</a>
+                    <span>
+                    	<em>H</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=91&anl=shy_list_classid=91">化学</a>
+                    </span>
+                    <span>
+                    	<em>J</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=54&anl=shy_list_classid=54">计算机</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=80&anl=shy_list_classid=80">家居/休闲</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=86&anl=shy_list_classid=86">家庭教育</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=68&anl=shy_list_classid=68">建筑</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=74&anl=shy_list_classid=74">健康</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=57&anl=shy_list_classid=57">教材</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=58&anl=shy_list_classid=58">教育</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=55&anl=shy_list_classid=55">进口图书</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=56&anl=shy_list_classid=56">经济/管理</a>
+                    <span>
+                    	<em>K</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=67&anl=shy_list_classid=67">考试</a>
+                    </span>
+                    <span>
+                    	<em>L</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=73&anl=shy_list_classid=73">历史</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=94&anl=shy_list_classid=94">两性</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=82&anl=shy_list_classid=82">旅游</a>
+                    <span>
+                    	<em>M</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=81&anl=shy_list_classid=81">美食</a>
+                    </span>
+                    <span>
+                    	<em>N</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=72&anl=shy_list_classid=72">农业</a>
+                    </span>
+                    <span>
+                    	<em>Q</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=83&anl=shy_list_classid=83">青春文学</a>
+                    </span>
+                    <span>
+                    	<em>S</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=61&anl=shy_list_classid=61">少儿</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=65&anl=shy_list_classid=65">社会科学</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=87&anl=shy_list_classid=87">时尚</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=79&anl=shy_list_classid=79">数学</a>
+                    <span>
+                    	<em>T</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=85&anl=shy_list_classid=85">体育</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=90&anl=shy_list_classid=90">通信</a>
+                    <span>
+                    	<em>W</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=60&anl=shy_list_classid=60">外语</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=78&anl=shy_list_classid=78">文化</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=63&anl=shy_list_classid=63">文学</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=88&anl=shy_list_classid=88">物理</a>
+                    <span>
+                    	<em>X</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=66&anl=shy_list_classid=66">小说</a>
+                    </span>
+                    <span>
+                    	<em>Y</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=64&anl=shy_list_classid=64">医学</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=62&anl=shy_list_classid=62">艺术</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=89&anl=shy_list_classid=89">孕产/育儿</a>
+                    <span>
+                    	<em>Z</em>
+                    	<a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=92&anl=shy_list_classid=92">杂志</a>
+                    </span>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=71&anl=shy_list_classid=71">哲学/宗教</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=70&anl=shy_list_classid=70">政治/军事</a>
+                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=76&anl=shy_list_classid=76">自然科学</a>
+                </div>
+        	</dd>
+    	</dl>
+		
+		<dl>
+			<dt>
+				<a id="c4" href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=96&anl=shy_list_classid=96">
+					<img alt="音像制品" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">音像制品
+				</a>
+			</dt>
+            <dd class="clearfix" style="left:-150px;">
+                <div class="f clearfix">
+                	<span>
+                		<em>D</em>
+                		<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=97&anl=shy_list_classid=97">电视剧</a>
+                	</span>
+                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=98&anl=shy_list_classid=98">电影</a>
+                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=100&anl=shy_list_classid=100">动漫</a>
+                    <span>
+                    	<em>G</em>
+                    	<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=104&anl=shy_list_classid=104">古典/发烧</a>
+                    </span>
+                    <span>
+                    	<em>J</em>
+                    	<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=99&anl=shy_list_classid=99">纪录片</a>
+                    </span>
+                    <span>
+                    	<em>L</em>
+                    	<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=107&anl=shy_list_classid=107">流行</a>
+                    </span>
+                    <span>
+                    	<em>M</em>
+                    	<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=108&anl=shy_list_classid=108">民乐/民歌</a>
+                    </span>
+                    <span>
+                    	<em>Q</em>
+                    	<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=105&anl=shy_list_classid=105">轻音乐 </a>
+                    </span>
+                    <span>
+                    	<em>X</em>
+                    	<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=101&anl=shy_list_classid=101">休闲/生活</a>
+                    </span>
+                    <span>
+                    	<em>Y</em>
+                    	<a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=102&anl=shy_list_classid=102">演唱会</a>
+                    </span>
+                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=103&anl=shy_list_classid=103">影视教育</a>
+                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=106&anl=shy_list_classid=106">育儿/儿童</a>
+                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=95&anl=shy_list_classid=95">其它</a>
+                </div>
+        	</dd>
+    	</dl>        
+        
+		<dl>
+            <dt>
+            	<a id="c5" href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=109&anl=shy_list_classid=109">
+            		<img alt="奢侈品" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">
+            		奢侈品
+            	</a>
+            </dt>
+            <dd class="clearfix" style="left:-150px;">
+            	<div class="f clearfix">
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=110&anl=shy_list_classid=110">腕表</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=111&anl=shy_list_classid=111">包</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=112&anl=shy_list_classid=112">眼镜</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=113&anl=shy_list_classid=113">袖扣</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=114&anl=shy_list_classid=114">鞋</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=115&anl=shy_list_classid=115">帽子</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=116&anl=shy_list_classid=116">手套</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=117&anl=shy_list_classid=117">珠宝首饰</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=118&anl=shy_list_classid=118">打火机</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=119&anl=shy_list_classid=119">笔</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=120&anl=shy_list_classid=120">领带</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=121&anl=shy_list_classid=121">腰饰</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=122&anl=shy_list_classid=122">丝巾</a>
+   					<a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=123&anl=shy_list_classid=123">香水</a>
+				</div>
+            </dd>
+        </dl>
+		
+		<dl>
+            <dt><a id="c6" href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&anl=shy_list_classid=125"><img alt="化妆品" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">化妆品</a></dt>
+            <dd class="clearfix" style="left:-150px;">
+				<div class="f clearfix">
+                        <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=473&anl=shy_list_classid=125">护肤</a>
+                        <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=474&anl=shy_list_classid=125">彩妆</a>
+                        <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=475&anl=shy_list_classid=125">男士护理</a>
+                        <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=476&anl=shy_list_classid=125">身体护理</a>
+                        <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=478&anl=shy_list_classid=125">化妆品套装</a>
+                        <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=479&anl=shy_list_classid=125">化妆工具</a>
+                </div>
+            </dd>
+        </dl>
+        
+        <dl>
+            <dt><a id="c7" href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=126&anl=shy_list_classid=126"><img alt="母婴用品" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">母婴用品</a></dt>
+            <dd class="clearfix" style="left:-150px;">
+                <div class="clearfix line">
+                    <h4 class="fl"><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&anl=shy_list_classid=127">奶粉</a></h4>
+                    <div class="fr">
+                        <a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=664&anl=shy_list_classid=127">一阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=665&anl=shy_list_classid=127">二阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=666&anl=shy_list_classid=127">三阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=667&anl=shy_list_classid=127">四阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=668&anl=shy_list_classid=127">特殊配方奶粉</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=669&anl=shy_list_classid=127">孕妇奶粉</a>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h4 class="fl"><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&anl=shy_list_classid=128">纸尿裤</a></h4>
+                    <div class="fr">
+                        <a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&b=673&anl=shy_list_classid=128">男宝宝</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&b=674&anl=shy_list_classid=128">女宝宝</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&b=675&anl=shy_list_classid=128">通用</a><br>
+                        <a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=676&anl=shy_list_classid=128">新生儿</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=677&anl=shy_list_classid=128">S(小号)</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=678&anl=shy_list_classid=128">M(中号)</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=679&anl=shy_list_classid=128">L(大号)</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=680&anl=shy_list_classid=128">XL(超大号)</a>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+		<dl>
+            <dt><a id="c8" href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&anl=shy_list_classid=124"><img alt="葡萄酒" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">葡萄酒</a></dt>
+            <dd class="clearfix" style="left:-150px">
+            	<div class="clearfix f">
+                        <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=788&anl=shy_list_classid=124">红葡萄酒</a>
+                        <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=789&anl=shy_list_classid=124">白葡萄酒</a>
+                        <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=790&anl=shy_list_classid=124">桃红葡萄酒</a>
+                        <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=791&anl=shy_list_classid=124">起泡酒/香槟</a>
+                        <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=792&anl=shy_list_classid=124">加强葡萄酒</a>
+                </div>
+            </dd>
+        </dl>
+        
+		<dl>
+            <dt><a id="c9" href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=129&anl=shy_list_classid=129"><img alt="进口食品" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">进口食品</a></dt>
+            <dd class="clearfix" style="left:-63px; width:180px;">
+                <div class="clearfix f">
+                       	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=130&anl=shy_list_classid=130">巧克力</a>
+                                   	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=131&anl=shy_list_classid=131">咖啡</a>
+                                   	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=132&anl=shy_list_classid=132">坚果</a>
+                                   	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=133&anl=shy_list_classid=133">饼干糕点</a>
+                                   
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a id="c10" href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=134&anl=shy_list_classid=134"><img alt="家具家居" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">家具家居</a></dt>
+            <dd class="clearfix" style="left:-214px;">
+			    
+                <div class="clearfix line">
+                    <h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=135&anl=shy_list_classid=135">厨房卫浴</a></h4>
+                    <div class="fr">
+                      	
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=136&anl=shy_list_classid=136">水槽</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=137&anl=shy_list_classid=137">淋浴房</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=138&anl=shy_list_classid=138">陶瓷件</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=139&anl=shy_list_classid=139">龙头/镜子</a> 
+                                	                    </div>
+                </div>
+				   
+                <div class="clearfix line">
+                    <h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=140&anl=shy_list_classid=140">五金辅料</a></h4>
+                    <div class="fr">
+                      	
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=141&anl=shy_list_classid=141">门窗</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=142&anl=shy_list_classid=142">开关插座</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=143&anl=shy_list_classid=143">梯具楼梯</a> 
+                                	                    </div>
+                </div>
+				   
+                <div class="clearfix line">
+                    <h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=144&anl=shy_list_classid=144">灯饰软装</a></h4>
+                    <div class="fr">
+                      	
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=145&anl=shy_list_classid=145">装饰性灯具</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=146&anl=shy_list_classid=146">功能照明灯具</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=147&anl=shy_list_classid=147">墙面乳胶漆</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=148&anl=shy_list_classid=148">木器漆</a> 
+                                	                    </div>
+                </div>
+				   
+                <div class="clearfix line">
+                    <h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=149&anl=shy_list_classid=149">精品家具</a></h4>
+                    <div class="fr">
+                      	
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=150&anl=shy_list_classid=150">床垫</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=151&anl=shy_list_classid=151">床</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=152&anl=shy_list_classid=152">沙发</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=153&anl=shy_list_classid=153">柜</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=154&anl=shy_list_classid=154">茶几</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=155&anl=shy_list_classid=155">桌</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=156&anl=shy_list_classid=156">椅子/凳</a> 
+                                	                    </div>
+                </div>
+				            </dd>
+        </dl>
+		<dl>
+            <dt><a id="c11" href="http://rent.yiqisoo.com/" target="_blank"><img alt="租房/二手房" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif">租房/二手房</a></dt>
+            <dd class="clearfix" style="left:-304px;">
+                <div class="clearfix line">
+                    <h4 class="fl blue">业务</h4>
+                    <div class="fr">
+                        <a target="_blank" href="http://rent.yiqisoo.com">租房</a><a target="_blank" href="http://esf.yiqisoo.com">二手房</a><a target="_blank" href="http://www.eju.com/">房产电商</a><a target="_blank" href="http://www.sousea.com">房产网站导航</a>
+                    </div>
+                </div>
+                <div class="line clearfix">
+                    <h4 class="fl"><a target="_blank" href="http://tools.yiqisoo.com/index.php?action=cal">工具</a></h4>
+                    <div class="fr">
+                        <a href="http://tools.yiqisoo.com/index.php?action=cal&type=gjjdk">公积金贷款</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=sfjsq">税费计算器</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=tqhkjsq">提前还贷计算器</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=debjhk">等额本金还款</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=debxhk">等额本息还款</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=gfnl">购房能力评估</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=ht">房屋买卖合同模版</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=ht">房屋租赁合同模版</a>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h4 class="fl"><a target="_blank" href="http://app.yiqisoo.com/jiadiango/">应用</a></h4>
+                    <div class="fr">
+                        <a href="http://app.yiqisoo.com/?action=twitter" target="_blank">中介查查看</a><a href="http://t.leju.com/kuaizu/" target="_blank">快租房</a><a href="http://3g.leju.com/" target="_blank">口袋房产</a><a href="http://app.yiqisoo.com/jiadiango/" target="_blank">家电购</a>
+                    </div>
+                </div>
+			</dd>
+		</dl>
+	</div>
+                
+                
+                
+	
+
+	<script language="javascript" type="text/javascript">
+    $(function(){
+		var iNum=0;
+        $("#classify li").mouseover(function(){
+			iNum=$(this).index();
+            $(this).addClass('active');
+        });
+		$("#classify li").mouseout(function(){
+			iNum=$(this).index();
+			$(this).removeClass('active');
+		});
+        
+		$("#classify dl").hover(function(){
+			$(this).find('dt').addClass('active').end().find('dd').show();
+		},function(){
+			$(this).find('dt').removeClass('active').end().find('dd').hide();
+		});
+		
+    })
+    </script>
+
+</div><!--/classify-->

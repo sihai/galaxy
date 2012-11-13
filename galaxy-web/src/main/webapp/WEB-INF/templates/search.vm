@@ -1,0 +1,2092 @@
+﻿#set(${JQUERY} = '$.')
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>galaxy_一起搜，比较购物搜索引擎</title>
+<meta name="keywords" content="galaxy" />
+<meta name="description" content="一起搜收录了淘宝商城、QQ商城、京东、当当、亚马逊、新蛋、苏宁等上百家网上商城，囊括家电、3C数码、家居用品、图书、音像制品、奢侈品、化妆品、母婴用品、进口食品、葡萄酒等200多个商品分类，几百万种商品。为消费者在购买前，提供商品搜索，查看各个在线商城的全部评论、库存、运费、物流、价格等的比较，让消费者可以货比三家，真正做到理性消费。" />
+<link rel="stylesheet" type="text/css" href="/assets/css/list.css"/>
+
+<script>
+var heightkuang=0;
+var classjsid=0;
+</script>
+
+<script type="text/javascript" src="/assets/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="/assets/js/ui.js"></script>
+
+</head>
+
+<body>
+<script>
+var oEmptyBtn='emptyBtn';
+ var oCurClassify="";
+var oCurClassifyLink="";
+var cityname="hz";
+</script>
+
+<script type="text/javascript" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/js/kws2.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+//选择城市
+document.read
+$(function(){
+		   
+	$(".header_city")
+	.click(function(event){
+		$(".area").fadeOut(200);
+		$(this).next().show();
+	});
+	
+	$(".area a").click(function(event){
+		var city = $(this).text()
+		$(this).parents(".area").fadeOut(200);
+		$(".header_city span").text(city);
+		//return false;
+	});
+	$(".area").mouseleave(function(event){
+		$(this).fadeOut(200);	
+	});
+
+	$(document).mouseup(function(event){
+		$(".area").fadeOut(200);
+		$(".free_popup").fadeOut(200);
+	});
+	//快速发布
+//	$("#publishhouse")
+//	.click(function(event){
+//		$(".free_popup").fadeOut('normal');
+//		$('.free_popup').show();
+//	});
+//	$(".free_popup").mouseleave(function(event){
+//		$(this).fadeOut(200);	
+//	});
+	
+	//动态修改提示的left
+			$('.suggest_list2').css('left','277px');
+					$('.suggest_list2').css('left','379px');
+	
+ });
+ 
+});
+</script>
+<div id="topBar">
+	<div class="part clearfix">
+    	<ul id="top_list">
+        	<li class="t_more">
+            	<a href="javascript:;" class="m">房产</a>
+            	<div class="pop">
+                	<div class="t"></div>
+                    <div class="c">
+                        <a href="http://rent.yiqisoo.com/?anl=lb_kuaijie_rent" target="_blank" >租房</a>
+                        <a href="http://esf.yiqisoo.com/?anl=lb_kuaijie_esf" target="_blank" >二手房</a>
+                        <a href="http://www.eju.com/" target="_blank" >房产电商</a>
+                    </div>
+                    <div class="b"></div>
+                </div>
+            </li>
+            <li><a href="http://jiaju.yiqisoo.com/?action=life&type=life&classid=134&anl=lb_kuaijie_jiaju" >家居</a></li>
+            <li><a href="http://jd.yiqisoo.com/?action=life&type=life&classid=50&anl=lb_kuaijie_jd" >家电</a>/<a href="http://3c.yiqisoo.com/?action=life&type=life&classid=51&anl=lb_kuaijie_3c">数码</a> </a></li>
+            <li><a href="http://book.yiqisoo.com/?action=life&type=life&classid=53&anl=lb_kuaijie_book" >图书</a></li>
+            <li><a href="http://lux.yiqisoo.com/?action=life&type=life&classid=109&anl=lb_kuaijie_lux" >奢侈品</a></li>
+            <li><a href="http://wine.yiqisoo.com/?action=life&type=life&classid=124&anl=lb_kuaijie_wine" >葡萄酒</a></li>
+            <li><a href="http://cos.yiqisoo.com/?action=life&type=life&classid=125&anl=lb_kuaijie_cos" >化妆品</a></li>
+            <li class="t_more">
+            	<a href="javascript:;" class="m">更多</a>
+                <div class="pop">
+                	<div class="t"></div>
+                    <div class="c">
+                        <a href="http://avp.yiqisoo.com/?action=life&type=life&classid=96&anl=lb_kuaijie_avp" >音像制品</a>
+                        <a href="http://food.yiqisoo.com/?action=life&type=life&classid=129&anl=lb_kuaijie_food" >进口食品</a>
+                        <a href="http://baby.yiqisoo.com/?action=life&type=life&classid=126&anl=lb_kuaijie_baby" >母婴</a>
+                        <a href="http://tools.yiqisoo.com/index.php?action=cal&anl=lb_kuaijie_cal" >工具</a>
+                        <a href="http://app.yiqisoo.com/jiadiango/?anl=lb_kuaijie_jiadiango" target="_blank" >应用</a>
+                         <span class="bor">
+                        <a href="http://www.yiqisoo.com/index.php?action=shop&anl=lb_kuaijie_shop" class="moreico">更多</a>
+                        </span>
+                       
+                    </div>
+                    <div class="b"></div>
+                </div>
+            </li>
+        </ul>
+        
+        <p class="fr">
+        	 <!-- <a href="http://www.yiqisoo.com/index.php?action=PublishRent" target="_blank" class="yellow">注册</a>  <a href="http://u.yiqisoo.com/index.php?action=login" target="_blank" class="yellow">登录</a> <i class="grays">|</i> <a href="http://www.sousea.com" class="black" target="_blank">专业导航</a>   -->
+			 <a href="http://www.yiqisoo.com/index.php?action=login&anl=lb_login" target="_blank" class="black">注册</a>  <a href="http://www.yiqisoo.com/index.php?action=login&anl=lb_login" target="_blank" class="black">登录</a> <i class="grays">|</i> <a href="http://www.sousea.com/?anl=lb_dh" class="black" target="_blank">专业导航</a> <i class="grays">|</i> <a class="yellow" target="_blank" href=" http://weibo.com/yiqisoo?anl=lb_weibo">一起搜官方微博</a>
+        </p>
+    </div>	
+</div>
+
+
+<!--header start-->
+<div id="header">
+	
+
+    <div class="part clearfix">
+    	<div class="header_left">
+			                <h1 id="logo"><a href="http://www.yiqisoo.com/?anl=lb_logo" title="一起搜"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/transparent.gif" alt="一起搜"/></a></h1>
+                           	    </div>
+        <div id="header_search">
+        
+                                
+ 
+                    
+                        <input type="text" autocomplete="off" size="32" id="keyword1" value="galaxy"  class="text" maxlength="64" name="keyword" ><input type="button" value="" class="button" id='jdbtn' onmouseover="this.className='button2'" onmouseout="this.className='button'"><a href="javascript:;" id="emptyBtn" onclick="clearColors2();"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/3c/ico4.gif"/></a>
+
+    
+                     <div class="search_suggest2" id="search_suggest1">
+						
+           <!--            -->
+                       
+					   
+					<!--   -->
+                        <ul class="suggest_list2" id="suggest_list1">
+                        </ul>
+					</div>
+                        <input name="action" value="search" type="hidden"/>
+                        <input id="type" name="type" value="life" type="hidden"/>
+                                                  <input type="hidden" value="" id="classid" name="classid"> 
+                                      
+                  
+                
+                
+                
+                              	
+           
+            
+        </div><!--/header_search-->
+      		
+        
+	</div><!--/part-->
+
+</div>
+<!--header end-->
+<script>
+
+
+
+$(function (){
+			$("#keyword1").css('color', '#000');
+	/*	$('.ass a').click(function (){
+		
+		var key=$('#keyword1').val();
+		if(key=='请输入您要搜索的商品关键词')
+		key='';
+		//alert(key);
+		var action = $(this).attr('link');
+		//alert(action);
+		var linkurl=action+'&keyword='+key;
+		//window.open(linkurl);
+		location.href=linkurl;
+
+	});
+	*/
+	
+	
+	
+	$('#jdbtn').click(function (){
+		
+		var key = ${JQUERY}trim($("#keyword1").val());
+		var classid=$("#classid").val();
+		var tempdetail=$("#tempdetail").val();
+		var utm = "";
+		if (key == '请输入您要搜索的商品关键词') key = '';
+		
+
+		if(key==''){
+			if(utm)
+			{
+				window.location.href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=51&anl=lb_search&utm_campaign="+utm;
+				return false;
+			}else
+			{
+				window.location.href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=51&anl=lb_search";
+				return false;
+			}
+		}
+		else{
+			
+			key = encodeURI(key);
+			if(utm){
+				var action_ = "http://www.yiqisoo.com/index.php?keyword="+key+"&action=life&type=life&anl=lb_search&utm_campaign="+utm;
+			}else{
+				var action_ = "http://www.yiqisoo.com/index.php?keyword="+key+"&action=life&type=life&anl=lb_search";
+			}
+		}
+
+		location.href=action_;
+		set_keyword_log(key);
+		//obj.attr("action",action);
+		//obj.submit();
+	
+	});
+	
+	$("#keyword1").keydown(function(event){
+		event = event?event:window.event;
+		if(event.keyCode==13&&type2!=2) {
+
+     		 $("#jdbtn").click();
+			 
+		}
+	});
+});
+	
+
+</script>
+
+<script type="text/javascript">
+	var keyWord=$("#keyword1");
+	if(keyWord.val()!=''&&keyWord.val()!='请输入您要搜索的商品关键词')
+		{
+			keyWord.addClass('text2');
+		}
+	
+	keyWord.focus(function(){
+		if($(this).val()=='请输入您要搜索的商品关键词')
+		{
+			$(this).val('').addClass('text2').css({"color":"#000"});
+			
+		}
+	});	
+	keyWord.blur(function(){
+		if($(this).val()=='')
+		{
+			$(this).val('请输入您要搜索的商品关键词').removeClass('text2').css({"color":"#a4a4a4"});
+		}
+		else if($(this).val()!=''&&$(this).val()!='请输入您要搜索的商品关键词')
+		{
+			$(this).addClass('text2').css({"color":"#000"});
+		}
+	});	
+</script>
+
+<script type="text/javascript">
+	function fangchan_submit_check(key, form) {
+		key = document.getElementById(key);
+		theform = document.getElementById(form);
+		key.value = ${JQUERY}trim(key.value); //	if(key.value.length>0)
+		if (form == 'sub_ershou' || form == 'sub_newhouse' || form == 'sub_rent' || form == 'sub_show' || form == 'sub_jiaju') {
+			if (key.value == '请输入您想租的房源特征信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+			if (key.value == '请输入您想买的二手房信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+	
+			if (key.value == '请输入想搜索的关键字...') key.value = ''; //		theform.submit();
+
+			var action = $("#"+form).attr("action");
+
+			var url = action+encodeURIComponent(encodeURIComponent(key.value))+'-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&.html';
+			
+			window.location.href=url;
+		}
+	}
+
+	function keydown(key, form) {
+		key = document.getElementById(key);
+		theform = document.getElementById(form);
+		key.value = ${JQUERY}trim(key.value); //	if(key.value.length>0)
+		if (form == 'sub_ershou' || form == 'sub_newhouse' || form == 'sub_rent' || form == 'sub_show' || form == 'sub_jiaju') {
+			if (key.value == '请输入您想租的房源特征信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+			if (key.value == '请输入您想买的二手房信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+	
+			if (key.value == '请输入想搜索的关键字...') key.value = ''; //		theform.submit();
+
+			var action = $("#"+form).attr("action");
+
+			var url = action+encodeURIComponent(encodeURIComponent(key.value))+'-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&.html';
+			
+			document.getElementById(form).action=url;
+		}
+	}
+</script>
+<!--header end-->
+
+<!--主体部份-->
+<div class="part clearfix" id="main">
+	<div class="side_left">
+
+<div id="searRes">
+            	<h3 class="show">全部商品分类<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="hide"></h3>
+                <div style="display:none" class="box">
+                                
+                    <dl>
+                        <dt><p><em class="fb">家电</em><i>(11525)</i></p></dt>
+                        <dd class="clearfix">
+                        	    
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=27&anl=lb_list_27">大家电</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=3&anl=lb_list_3">洗衣机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=2&anl=lb_list_2">冰箱/冰柜</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=4&anl=lb_list_4">空调</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=1&anl=lb_list_1">电视</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=28&anl=lb_list_28">影音设备</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=29&anl=lb_list_29">影碟机/播放器</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=30&anl=lb_list_30">迷你音响</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=31&anl=lb_list_31">家庭影院</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=32&anl=lb_list_32">音箱/低音炮</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=33&anl=lb_list_33">功放</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=34&anl=lb_list_34">厨卫电器</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=37&anl=lb_list_37">电磁炉</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=38&anl=lb_list_38">微波炉</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=39&anl=lb_list_39">电热水器</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=40&anl=lb_list_40">燃气热水器</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=41&anl=lb_list_41">烟机/灶具套装</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=42&anl=lb_list_42">灶台/灶具</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=43&anl=lb_list_43">油烟机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=44&anl=lb_list_44">电饭煲</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=45&anl=lb_list_45">豆浆机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=46&anl=lb_list_46">浴霸/排气扇</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=178&anl=lb_list_178">冰淇淋机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=179&anl=lb_list_179">电饼铛/煎烤机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=180&anl=lb_list_180">电烤箱</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=181&anl=lb_list_181">电热水壶/电热水瓶</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=182&anl=lb_list_182">电压力锅</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=183&anl=lb_list_183">多用途锅/自动烹饪锅</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=184&anl=lb_list_184">咖啡机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=185&anl=lb_list_185">面包机/多士炉</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=186&anl=lb_list_186">酸奶机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=187&anl=lb_list_187">洗碗机/消毒柜</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=188&anl=lb_list_188">饮水机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=189&anl=lb_list_189">榨汁机/搅拌机/多功能料理机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=190&anl=lb_list_190">煮蛋器/蒸蛋器</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class=" clearfix">
+                            	<h4 class="fl"><a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=176&anl=lb_list_176">生活电器</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=35&anl=lb_list_35">空气净化器/氧吧</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=36&anl=lb_list_36">加湿器</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=157&anl=lb_list_157">暖风机/取暖器</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=168&anl=lb_list_168">电熨斗</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=169&anl=lb_list_169">空调扇</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=170&anl=lb_list_170">电风扇</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=171&anl=lb_list_171">清洁机/扫地机/打蜡机</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=172&anl=lb_list_172">吸尘器</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=173&anl=lb_list_173">电吹风</a> 
+                                		
+       <a href="http://jd.yiqisoo.com/index.php?action=life&type=life&classid=174&anl=lb_list_174">挂烫机/蒸汽刷/干洗刷</a> 
+                                	                                </div>
+                            </div>
+                                                     </dd>
+                    </dl>
+                    
+                                     
+                    <dl>
+                        <dt><p><em class="fb">3C数码</em><i>(11140)</i></p></dt>
+                        <dd class="clearfix">
+                        	    
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=47&anl=lb_list_47">电脑</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=5&anl=lb_list_5">笔记本电脑</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=7&anl=lb_list_7">平板电脑</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=6&anl=lb_list_6">上网本</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=8&anl=lb_list_8">台式机</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=9&anl=lb_list_9">电脑一体机</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=15&anl=lb_list_15">ipad</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=48&anl=lb_list_48">相机/摄像机</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=11&anl=lb_list_11">便携/卡片相机</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=12&anl=lb_list_12">单反相机</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=52&anl=lb_list_52">单电/微单相机</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=10&anl=lb_list_10">数码摄像机</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=49&anl=lb_list_49">手机数码</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=14&anl=lb_list_14">iphone</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=16&anl=lb_list_16">ipod</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=13&anl=lb_list_13">手机</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=163&anl=lb_list_163">MP3</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=164&anl=lb_list_164">MP4/MP5</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class=" clearfix">
+                            	<h4 class="fl"><a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=158&anl=lb_list_158">电脑外设</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=159&anl=lb_list_159">U盘</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=160&anl=lb_list_160">移动硬盘</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=165&anl=lb_list_165">键盘</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=166&anl=lb_list_166">鼠标</a> 
+                                		
+       <a href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=167&anl=lb_list_167">键鼠套装</a> 
+                                	                                </div>
+                            </div>
+                                                     </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><p><em class="fb">图书/音像制品</em><i>(829)</i></p></dt>
+                        <dd class="clearfix">
+                        
+                        	<div class="line clearfix">
+                            	<h4 class="fl"><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=53&anl=lb_list_53">图书</a></h4>
+                                <div class="fr">
+                                	<span><em>D</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=93&anl=lb_list_93">地理/地图</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=84&anl=lb_list_84">动漫/绘本</a>
+                                    <span><em>F</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=69&anl=lb_list_69">法律</a></span>
+                                    <span><em>G</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=77&anl=lb_list_77">工具</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=59&anl=lb_list_59">工业技术</a>
+                                    <span><em>H</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=91&anl=lb_list_91">化学</a></span>
+                                    <span><em>J</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=54&anl=lb_list_54">计算机</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=80&anl=lb_list_80">家居/休闲</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=86&anl=lb_list_86">家庭教育</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=68&anl=lb_list_68">建筑</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=74&anl=lb_list_74">健康</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=57&anl=lb_list_57">教材</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=58&anl=lb_list_58">教育</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=55&anl=lb_list_55">进口图书</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=56&anl=lb_list_56">经济/管理</a>
+                                    <span><em>K</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=67&anl=lb_list_67">考试</a></span>
+                                    <span><em>L</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=73&anl=lb_list_73">历史</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=94&anl=lb_list_94">两性</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=82&anl=lb_list_82">旅游</a>
+                                    <span><em>M</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=81&anl=lb_list_81">美食</a></span>
+                                    <span><em>N</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=72&anl=lb_list_72">农业</a></span>
+                                    <span><em>Q</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=83&anl=lb_list_83">青春文学</a></span>
+                                    <span><em>S</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=61&anl=lb_list_61">少儿</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=65&anl=lb_list_65">社会科学</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=87&anl=lb_list_87">时尚</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=79&anl=lb_list_79">数学</a>
+                                    <span><em>T</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=85&anl=lb_list_85">体育</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=90&anl=lb_list_90">通信</a>
+                                    <span><em>W</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=60&anl=lb_list_60">外语</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=78&anl=lb_list_78">文化</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=63&anl=lb_list_63">文学</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=88&anl=lb_list_88">物理</a>
+                                    <span><em>X</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=66&anl=lb_list_66">小说</a></span>
+                                    <span><em>Y</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=64&anl=lb_list_64">医学</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=62&anl=lb_list_62">艺术</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=89&anl=lb_list_89">孕产/育儿</a>
+                                    <span><em>Z</em><a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=92&anl=lb_list_92">杂志</a></span>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=71&anl=lb_list_71">哲学/宗教</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=70&anl=lb_list_70">政治/军事</a>
+                                    <a href="http://book.yiqisoo.com/index.php?action=life&type=life&classid=76&anl=lb_list_76">自然科学</a>
+                                </div>
+                            </div>
+                        	<div class="clearfix">
+                            	<h4 class="fl"><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=96&anl=lb_list_96">音像制品</a></h4>
+                                <div class="fr">
+                                	<span><em>D</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=97&anl=lb_list_97">电视剧</a></span>
+                                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=98&anl=lb_list_98">电影</a>
+                                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=100&anl=lb_list_100">动漫</a>
+                                    <span><em>G</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=104&anl=lb_list_104">古典/发烧</a></span>
+                                    <span><em>J</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=99&anl=lb_list_99">纪录片</a></span>
+                                    <span><em>L</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=107&anl=lb_list_107">流行</a></span>
+                                    <span><em>M</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=108&anl=lb_list_108">民乐/民歌</a></span>
+                                    <span><em>Q</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=105&anl=lb_list_105">轻音乐 </a></span>
+                                    <span><em>X</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=101&anl=lb_list_101">休闲/生活</a></span>
+                                    <span><em>Y</em><a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=102&anl=lb_list_102">演唱会</a></span>
+                                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=103&anl=lb_list_103">影视教育</a>
+                                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=106&anl=lb_list_106">育儿/儿童</a>
+                                    <a href="http://avp.yiqisoo.com/index.php?action=life&type=life&classid=95&anl=lb_list_95">其它</a>
+                                </div>
+                            </div>
+                        
+                        
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><p><em class="fb">奢侈品/化妆品</em><i>(91480)</i></p></dt>
+                        <dd class="clearfix">
+
+                        	<div class="line clearfix">
+                            	<h4 class="fl"><a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=109&anl=lb_list_109">奢侈品</a></h4>
+                                <div class="fr">
+                                    	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=110&anl=lb_list_110">腕表</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=111&anl=lb_list_111">包</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=112&anl=lb_list_112">眼镜</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=113&anl=lb_list_113">袖扣</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=114&anl=lb_list_114">鞋</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=115&anl=lb_list_115">帽子</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=116&anl=lb_list_116">手套</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=117&anl=lb_list_117">珠宝首饰</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=118&anl=lb_list_118">打火机</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=119&anl=lb_list_119">笔</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=120&anl=lb_list_120">领带</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=121&anl=lb_list_121">腰饰</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=122&anl=lb_list_122">丝巾</a>
+                                   	
+   <a href="http://lux.yiqisoo.com/index.php?action=life&type=life&classid=123&anl=lb_list_123">香水</a>
+                                    
+                                </div>
+                            </div>
+                        	<div class="clearfix">
+                            	<h4 class="fl"><a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&anl=lb_list_125">化妆品</a></h4>
+                                <div class="fr">
+                                	<a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=473&anl=lb_list_125">护肤</a>
+                                    <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=474&anl=lb_list_125">彩妆</a>
+                                    <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=475&anl=lb_list_125">男士护理</a>
+                                    <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=476&anl=lb_list_125">身体护理</a>
+                                    <a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=478&anl=lb_list_125">化妆品套装</a>
+  									<a href="http://cos.yiqisoo.com/index.php?action=life&type=life&classid=125&b=479&anl=lb_list_125">化妆工具</a>
+                                </div>
+                            </div>
+                        	
+                        
+                        </dd>
+                    </dl>
+
+
+                    <dl>
+                        <dt><p><em class="fb">葡萄酒/进口食品</em><i>(12629)</i></p></dt>
+                        <dd class="clearfix">
+                        
+                        	<div class="line clearfix">
+                            	<h4 class="fl"><a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&anl=lb_list_124">葡萄酒</a></h4>
+                                <div class="fr">
+                                    <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=788&anl=lb_list_124">红葡萄酒</a>
+                                    <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=789&anl=lb_list_124">白葡萄酒</a>
+                                    <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=790&anl=lb_list_124">桃红葡萄酒</a>
+                                    <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=791&anl=lb_list_124">起泡酒/香槟</a>
+                                    <a href="http://wine.yiqisoo.com/index.php?action=life&type=life&classid=124&d=792&anl=lb_list_124">加强葡萄酒</a>
+                                </div>
+                            </div>
+                        	<div class="clearfix">
+                            	<h4 class="fl"><a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=129&anl=lb_list_129">进口食品</a></h4>
+                                <div class="fr">
+                                	    	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=130&anl=lb_list_130">巧克力</a>
+                                   	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=131&anl=lb_list_131">咖啡</a>
+                                   	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=132&anl=lb_list_132">坚果</a>
+                                   	
+   <a href="http://food.yiqisoo.com/index.php?action=life&type=life&classid=133&anl=lb_list_133">饼干糕点</a>
+                                    
+                                </div>
+                            </div>
+                        
+                        </dd>
+                    </dl>
+
+
+                    <dl>
+                        <dt><p><em class="fb">母婴用品</em><i>(1301)</i></p></dt>
+                        <dd class="clearfix">
+                        	<div class="line clearfix">
+                            	<h4 class="fl"><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&anl=lb_list_127">奶粉</a></h4>
+                                <div class="fr">
+                                	<a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=664&anl=lb_list_127">一阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=665&anl=lb_list_127">二阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=666&anl=lb_list_127">三阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=667&anl=lb_list_127">四阶段</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=668&anl=lb_list_127">特殊配方奶粉</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=127&b=669&anl=lb_list_127">孕妇奶粉</a>
+                                </div>
+                            </div>
+                        	<div class="clearfix">
+                            	<h4 class="fl"><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&anl=lb_list_128">纸尿裤</a></h4>
+                                <div class="fr">
+                                	<a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&b=673&anl=lb_list_128">男宝宝</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&b=674&anl=lb_list_128">女宝宝</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&b=675&anl=lb_list_128">通用</a><br />
+									<a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=676&anl=lb_list_128">新生儿</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=677&anl=lb_list_128">S(小号)</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=678&anl=lb_list_128">M(中号)</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=679&anl=lb_list_128">L(大号)</a><a href="http://baby.yiqisoo.com/index.php?action=life&type=life&classid=128&c=680&anl=lb_list_128">XL(超大号)</a>
+                                </div>
+                            </div>
+                        
+                        </dd>
+                    </dl>
+
+
+                    <dl>
+                        <dt><p><em class="fb">家具家居</em><i>(29698)</i></p></dt>
+                        <dd class="clearfix">
+                            
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=135&anl=lb_list_135">厨房卫浴</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=136&anl=lb_list_136">水槽</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=137&anl=lb_list_137">淋浴房</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=138&anl=lb_list_138">陶瓷件</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=139&anl=lb_list_139">龙头/镜子</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=140&anl=lb_list_140">五金辅料</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=141&anl=lb_list_141">门窗</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=142&anl=lb_list_142">开关插座</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=143&anl=lb_list_143">梯具楼梯</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class="line clearfix">
+                            	<h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=144&anl=lb_list_144">灯饰软装</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=145&anl=lb_list_145">装饰性灯具</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=146&anl=lb_list_146">功能照明灯具</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=147&anl=lb_list_147">墙面乳胶漆</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=148&anl=lb_list_148">木器漆</a> 
+                                	                                </div>
+                            </div>
+                                
+                            
+                            <div class=" clearfix">
+                            	<h4 class="fl"><a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=149&anl=lb_list_149">精品家具</a></h4>
+                                <div class="fr">
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=150&anl=lb_list_150">床垫</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=151&anl=lb_list_151">床</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=152&anl=lb_list_152">沙发</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=153&anl=lb_list_153">柜</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=154&anl=lb_list_154">茶几</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=155&anl=lb_list_155">桌</a> 
+                                		
+       <a href="http://jiaju.yiqisoo.com/index.php?action=life&type=life&classid=156&anl=lb_list_156">椅子/凳</a> 
+                                	                                </div>
+                            </div>
+                                                     </dd>
+                    </dl>
+
+
+                    <dl class="last">
+                        <dt><p><em class="fb">房产</em><i>(2704829)</i></p></dt>
+                        <dd class="clearfix">
+                        
+                        	<div class="line clearfix">
+                            	<h4 class="fl blue">业务</h4>
+                                <div class="fr">
+                                	<a href="http://rent.yiqisoo.com" target="_blank">租房</a><a href="http://esf.yiqisoo.com" target="_blank">二手房</a><a href="http://www.eju.com/" target="_blank">房产电商</a><a href="http://www.sousea.com" target="_blank">房产网站导航</a>
+                                </div>
+                            </div>
+                        	<div class="line clearfix">
+                            	<h4 class="fl"><a href="http://tools.yiqisoo.com/index.php?action=cal" target="_blank">工具</a></h4>
+                                <div class="fr">
+                                	<a href="http://tools.yiqisoo.com/index.php?action=cal&type=gjjdk">公积金贷款</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=sfjsq">税费计算器</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=tqhkjsq">提前还贷计算器</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=debjhk">等额本金还款</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=debxhk">等额本息还款</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=gfnl">购房能力评估</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=ht">房屋买卖合同模版</a><a href="http://tools.yiqisoo.com/index.php?action=cal&type=ht">房屋租赁合同模版</a>
+                                </div>
+                            </div>
+                        	<div class="clearfix">
+                            	<h4 class="fl"><a href="http://app.yiqisoo.com/jiadiango/" target="_blank">应用</a></h4>
+                                <div class="fr">
+                                	<a target="_blank" href="http://app.yiqisoo.com/?action=twitter">中介查查看</a><a target="_blank" href="http://t.leju.com/kuaizu/">快租房</a><a target="_blank" href="http://3g.leju.com/">口袋房产</a><a target="_blank" href="http://app.yiqisoo.com/jiadiango/">家电购</a>
+                                </div>
+                            </div>
+                        
+                        </dd>
+                    </dl>
+
+
+                
+                   
+                    
+            	</div>
+            </div>		
+
+
+		
+            	     
+                
+                                  
+                  
+                                      
+                  
+                  
+                     <!--  带关键字的搜索  -->	
+                  <div class="leftBoxStyle">       <!-- 搜索结果开始 --> 
+                <h2>搜索结果 </h2>
+                <div class="box">
+                  <div class="classify">
+                	
+                    <p class="gray"><a class="gray"  >所有分类</a></p>   
+                    <ul id="fenlei">
+                         	
+  <li ><a href="http://book.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=55&pid=0&anl=lb_list_55">[图书]进口图书<i>(64)</i></a></li>		
+  <li ><a href="http://3c.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=7&pid=0&anl=lb_list_7">平板电脑<i>(32)</i></a></li>		
+  <li ><a href="http://3c.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=13&pid=0&anl=lb_list_13">手机<i>(21)</i></a></li>		
+  <li ><a href="http://book.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=53&pid=0&anl=lb_list_53">图书<i>(7)</i></a></li>		
+  <li ><a href="http://book.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=63&pid=0&anl=lb_list_63">[图书]文学<i>(3)</i></a></li>		
+  <li ><a href="http://book.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=54&pid=0&anl=lb_list_54">[图书]计算机<i>(2)</i></a></li>		
+  <li ><a href="http://book.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=60&pid=0&anl=lb_list_60">[图书]外语<i>(1)</i></a></li>		
+  <li ><a href="http://book.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=66&pid=0&anl=lb_list_66">[图书]小说<i>(1)</i></a></li>		
+  <li ><a href="http://lux.yiqisoo.com/index.php?action=life&type=life&keyword=galaxy&classid=111&pid=0&anl=lb_list_111">包<i>(1)</i></a></li>	                    </ul>  
+                  
+                </div>
+                 </div><!--/box-->
+		</div>         
+                                      
+
+   
+
+		   
+		<div class="leftBoxStyle">        
+			<h2>浏览过的商品 </h2>
+            <div class="box">
+                <ul  class="sm_imgList">
+				
+                                  
+                   <li class=last>
+                    	<p class="img"><a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_pic"><img src="http://img06.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/24/163//c24f02f7ea6f907792495bd42d14b904.jpg"></a></p>
+                        <div class="txt">
+            				<p class="tcon"><a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_title">苹果  iphone 4s(16G)  手机</a></p>
+                            <p class="price">¥4666.00</p>
+                        </div>
+                    </li>
+                      	 	        	 	              	
+                	
+                </ul>            
+            
+            
+          
+            </div><!--/box-->
+		</div>
+		<!---热销商品 --->
+	
+<script language="javascript" type="text/javascript">
+        	$(function(){
+				$("#tjList li .pic img").LoadImage(true,73,78);
+				
+				
+				$("#change").click(function(){
+					$("#tjList").html('');
+					$("#loading").show();
+					//$("#tjList li").hide();
+					ids = $("#id_str").html();
+					//alert(ids);
+					var classid = "";
+					var utm = "";
+					if(utm)
+					{
+						var geturl = 'http://www.yiqisoo.com/api/get_yiqisoo_3c_recommend.php?classid='+classid+'&ids='+ids+'&utm_campaign='+utm+'&format=json&jsoncallback=?';
+					}else{
+						var geturl = 'http://www.yiqisoo.com/api/get_yiqisoo_3c_recommend.php?classid='+classid+'&ids='+ids+'&format=json&jsoncallback=?';
+					}
+					${JQUERY}getJSON(geturl,function(data){
+						try{
+							
+							if(data){
+								$("#loading").hide();
+								$("#id_str").html(data.id_str);
+								var recommend_str = '';						
+								var new_data = data.recommend;
+								var len = new_data.length;		
+								if(utm)
+								{
+									for(var j=0;j<len;j++){
+										json = new_data[j];
+										recommend_str += '<li class="clearfix" ><img src="'+ json.img +'" class="hot"/><div class="pic"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_pic&utm_campaign='+utm+'" target="_blank"><img src="'+ json._pic +'" alt="'+ json.title +'" /></a></div><div class="txt"><h3 class="title f12"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_title&utm_campaign='+utm+'" target="_blank">'+ json.title2 +'</a></h3><p class="price">¥'+ json.minprice +'-'+ json.maxprice +'</p><p class="gray">'+ json.shoptot +'个商城报价</p><p class="gray">'+ json.commtot +'条评论</p></div></li>';
+									}                   
+									if(recommend_str){
+										$("#tjList").html(recommend_str);
+										$("#tjList li .pic img").LoadImage(true,73,78);
+									}
+								}else{
+									for(var j=0;j<len;j++){
+										json = new_data[j];
+										recommend_str += '<li class="clearfix" ><img src="'+ json.img +'" class="hot"/><div class="pic"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_pic" target="_blank"><img src="'+ json._pic +'" alt="'+ json.title +'" /></a></div><div class="txt"><h3 class="title f12"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_title" target="_blank">'+ json.title2 +'</a></h3><p class="price">¥'+ json.minprice +'-'+ json.maxprice +'</p><p class="gray">'+ json.shoptot +'个商城报价</p><p class="gray">'+ json.commtot +'条评论</p></div></li>';
+									}                   
+									if(recommend_str){
+										$("#tjList").html(recommend_str);
+										$("#tjList li .pic img").LoadImage(true,73,78);
+									}
+								}
+							}
+						}catch(e){
+							return;
+						}
+					});
+					
+
+				});
+				
+				$("#change").trigger("click");
+			})
+			
+        </script>
+<div class="leftBoxStyle">        
+			<h2><span class="fl">热销产品</span><a href="javascript:;" class="gray fn fr f12" id="change">换一换</a> </h2>
+            <div class="box">
+            	<div id="loading" style="text-align:center; padding:30px;"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/loading.gif" /></div>
+				<ul class="list_img_tj" id="tjList">
+				
+				</ul>
+            
+          
+            </div><!--/box-->
+		</div>
+		<div id="id_str" style="display:none"></div>
+	<!--/热销商品 -->
+    </div><!--/左-->
+    <div class="side_right">
+		<div class="search_terms clearfix">
+			<div class="position">
+            	<span class="fl">
+                	<span class="gray">您的位置：</span>
+                    <em class="blue">
+                    	<a href="http://www.yiqisoo.com/?anl=lb_weizhi_sy" class="blue">首页</a> &gt; <a href="http://www.yiqisoo.com/index.php?action=shop&anl=lb_weizhi_shop" class="blue">全部分类</a>                     </em>
+				</span>
+                <span class="fr">找到相关结果约 <em class="black">132</em> 个(用时 <em class="black">0.067</em> 秒)</span>
+                
+            </div><!--/当前位置-->
+                  
+		</div>
+        
+        <!--/条件筛选结束-->
+        	<script language="javascript" type="text/javascript">
+        	$(function(){
+				
+				var oScreening=$("#screening");
+				var oOffset=oScreening.offset();
+				var iWindowScroll=0;
+				
+				var oldTop=parseInt(oOffset.top);
+				
+				var oIe6True=${JQUERY}browser.msie && (${JQUERY}browser.version == "6.0") && !${JQUERY}support.style;
+				$(window).bind('scroll',sortingScroll);
+				$(window).bind('resize',sortingScroll);
+				function sortingScroll(){
+					
+					var oldLeft=parseInt($(".side_right").offset().left);
+					
+					iWindowScroll=parseInt($(window).scrollTop());
+					
+					if(iWindowScroll>oldTop)
+					{
+						if (oIe6True)
+						{
+							oScreening.css({"position":"absolute","left":oldLeft+"px","z-index":9999}).animate({"top":iWindowScroll+"px"},5);
+						}
+						else
+						{
+							oScreening.css({"position":"fixed","left":oldLeft+"px","top":"0px","z-index":9999});
+						}
+						
+						$("#recovery").show();
+						
+					}else
+					{
+						if (oIe6True)
+						{
+							oScreening.css({"position":"relative","left":"0px","z-index":9999}).animate({"top":"0px"},5);
+						}
+						else
+						{
+							oScreening.css({"position":"relative","left":"0px","top":"0px","z-index":9999});
+						}
+						$("#recovery").hide();
+					}
+				};
+				
+				$("#recovery").click(function()
+				{
+					if (oIe6True)
+					{
+						oScreening.css({"position":"relative","left":"0px","z-index":9999}).animate({"top":"0px"},5);
+					}
+					else
+					{
+						oScreening.css({"position":"relative","left":"0px","top":"0px","z-index":9999});
+					}
+					$(this).hide();
+					$(window).unbind('scroll');
+				});
+				
+			});
+        </script>
+        
+		<div class="sorting" id="screening">
+			<div class="page fr"> <span>1 / 8</span>    <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&page=2&anl=lb_page_2" class="next">下一页</a>			</div>
+
+			<ul>
+				<!--排序-->
+                <li style="background:none;" ><a class="toggle_list" href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&list=1&page=1&anl=lb_gongneng_list=1" title="列表显示"></a></li>
+				<li style="background:none;" class="active"><a class="toggle_img" href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&list=2&page=1&anl=lb_gongneng_list=2" title="图片显示"></a></li>
+				
+                <li>
+                    <div class="select">
+                        <span class="btn">默认排序</span>
+                        <div class="super_select">
+                            <p><a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=minprice&direction=1&anl=lb_gongneng_order=minprice">最低价从低到高</a></p>
+                            <p><a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=minprice&direction=0&anl=lb_gongneng_order=minprice">最低价从高到低</a></p>
+                            <p><a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=zonghepingfen&direction=0&anl=lb_gongneng_order=zonghepingfen">综合评分从高到低</a></p>
+                            <p><a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=zonghepingfen&direction=1&anl=lb_gongneng_order=zonghepingfen">综合评分从低到高</a></p>
+							
+							                            <p><a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=commtot&direction=0&anl=lb_gongneng_order=commtot">评论数从多到少</a></p>
+                            <p><a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=commtot&direction=1&anl=lb_gongneng_order=commtot">评论数从少到多</a></p>
+                            <p><a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life">默认排序</a></p>
+                        </div>
+                    </div>
+                  </li>
+    
+          <li><a title="点击按（评论数从多到少）" href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=commtot&anl=lb_gongneng_order=commtot&direction=0"  class="down_long">评论数</a></li>
+                   <li><a title="点击按（综合评分从高到低）" href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=zonghepingfen&anl=lb_gongneng_order=zonghepingfen&direction=0" class="down_long2">综合评分</a></li>
+                  <li><a title="点击按（最低价从低到高）" href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&order=minprice&anl=lb_gongneng_order=minprice&direction=1" target="_self" class="down_long">最低价</a></li>
+                 
+                <li><div class="search_price">
+                  		                         <input type="text" class="txt" id="price1" value="" onfocus="this.className='txt2'" onblur="this.className='txt'" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/><i>-</i><input type="text" class="txt" id="price2"  value=""  onfocus="this.className='txt2'" onblur="this.className='txt'" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/><input type="button" value="" class="btn" id="pricesubmit" onmouseover="this.className='btn2'"  onmouseout="this.className='btn'"/>
+                    </div> 
+                    </li>
+                                 </ul>
+             <a href="javascript:;" id="recovery"></a>
+			<!--/排序-->
+		</div>        
+       
+        
+       	
+                 <div class="new_list_img2 clearfix" >
+        	<ul class="clearfix">
+            	                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/46/32/ca010ece742bee3fe0669bb6ca98d276.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_title_1"  >三星  GALAXY NOTE I9220  手机 GSM/联通3G(WCDMA)  ANDROID  直板   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.79</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">11963</em>个评分)</em></p>
+                            <p><span class="gray">暂无评论</span></p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/14245/price/?anl=lb_price_1" target="_blank" >¥3419 - 5999</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">18</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/13805/overview/?anl=lb_pic_2"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img07.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/187/131/47a952e116097717f1a429ca75f0bc24.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/13805/overview/?anl=lb_title_2"  >三星  I9100G  手机 直板  ANDROID  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.78</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">25399</em>个评分)</em></p>
+                            <p><em class="en f12">8634</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/13805/price/?anl=lb_price_2" target="_blank" >¥2798 - 4550</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">16</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/2390792/overview/?anl=lb_pic_3"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/109/157//fda60a0667bcfac366f99dd5d67c8d6e.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/2390792/overview/?anl=lb_title_3"  >三星  GALAXY NOTE I9228 3G  手机 ANDROID  GSM/移动3G(TD-SCDMA)  直板   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.84</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">2798</em>个评分)</em></p>
+                            <p><em class="en f12">2763</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/2390792/price/?anl=lb_price_3" target="_blank" >¥3688 - 5699</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">13</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/7272/overview/?anl=lb_pic_4"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img04.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/121/12/dae01afbd91ab77f4fe403449dc2d993.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/7272/overview/?anl=lb_title_4"  >三星  I9103/GALAXY R  手机 ANDROID  直板  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.77</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">15117</em>个评分)</em></p>
+                            <p><em class="en f12">1243</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/7272/price/?anl=lb_price_4" target="_blank" >¥2299 - 3999</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">16</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/7/3916/overview/?anl=lb_pic_5"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img03.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/21/254/13b93cad37265ed8287303ff812d4dcc.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/7/3916/overview/?anl=lb_title_5"  >三星  GALAXY TAB P7510(16G)  平板电脑</a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.69</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">2763</em>个评分)</em></p>
+                            <p><em class="en f12">3254</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/7/3916/price/?anl=lb_price_5" target="_blank" >¥2388 - 3999</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">11</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/2390989/overview/?anl=lb_pic_6"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img05.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/176/137//1b6783d3f33258f856850945f0ae2ab2.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/2390989/overview/?anl=lb_title_6"  >三星  I8150 3G  手机 直板  ANDROID  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.68</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">14456</em>个评分)</em></p>
+                            <p><em class="en f12">9631</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/2390989/price/?anl=lb_price_6" target="_blank" >¥1496 - 2998</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">17</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/14066/overview/?anl=lb_pic_7"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img02.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/47/161//337e8334d7a811abb099e70b8f95b8ce.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/14066/overview/?anl=lb_title_7"  >三星  I9100G 至尊版  手机 直板  ANDROID  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.69</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">8204</em>个评分)</em></p>
+                            <p><em class="en f12">4934</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/14066/price/?anl=lb_price_7" target="_blank" >¥2860 - 4049</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">14</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/7/4887/overview/?anl=lb_pic_8"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img04.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/121/81/ab041f876ff377d001b2794ebb9df667.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/7/4887/overview/?anl=lb_title_8"  >三星  GALAXY TAB P7500(16G)  平板电脑</a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.74</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">1144</em>个评分)</em></p>
+                            <p><em class="en f12">1154</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/7/4887/price/?anl=lb_price_8" target="_blank" >¥2799 - 4999</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">9</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/10384/overview/?anl=lb_pic_9"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img04.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/13/116/afc1e3093b17b56e65ce2bc3f88fd52d.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/10384/overview/?anl=lb_title_9"  >三星  I9003(GALAXY SL)  手机 直板  ANDROID  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.62</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">19700</em>个评分)</em></p>
+                            <p><em class="en f12">14106</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/10384/price/?anl=lb_price_9" target="_blank" >¥1998 - 3588</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">16</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/2904/overview/?anl=lb_pic_10"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img08.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/242/18/ae2e4c81ca8ffe7a6668384a455ca34a.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/2904/overview/?anl=lb_title_10"  >三星  GALAXY MINI S5570 WCDMA/GSM 3G  手机 ANDROID  触屏  直板   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.70</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">13644</em>个评分)</em></p>
+                            <p><em class="en f12">21872</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/2904/price/?anl=lb_price_10" target="_blank" >¥758 - 1490</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">13</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/16695/overview/?anl=lb_pic_11"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img05.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/248/59/5d6c6a7b4206d7adcf4a0fd5e6b7c4a7.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/16695/overview/?anl=lb_title_11"  >三星  6200  手机 ANDROID   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.82</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">86</em>个评分)</em></p>
+                            <p><em class="en f12">225</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/16695/price/?anl=lb_price_11" target="_blank" >¥1998 - 3699</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">8</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/2390980/overview/?anl=lb_pic_12"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img02.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/65/26//b50582b1c82eac290d092fb7a8d54b02.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/2390980/overview/?anl=lb_title_12"  >三星  GALAXY Sⅱ I919 3G  手机 直板  ANDROID  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.54</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">531</em>个评分)</em></p>
+                            <p><em class="en f12">960</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/2390980/price/?anl=lb_price_12" target="_blank" >¥3199 - 6280</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">13</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/2391313/overview/?anl=lb_pic_13"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img01.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/19/15//50d6a9aff5ffbba3c0da0f23b1a6f859.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/2391313/overview/?anl=lb_title_13"  >三星  I929 3G  手机 直板  ANDROID  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.66</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">2176</em>个评分)</em></p>
+                            <p><em class="en f12">3314</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/2391313/price/?anl=lb_price_13" target="_blank" >¥3719 - 5980</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">15</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/2834/overview/?anl=lb_pic_14"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img07.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/16/68/e4105a2b771d6a584c64c5706deddd8c.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/2834/overview/?anl=lb_title_14"  >三星  S5660(GALAXY GIO) WCDMA/GSM  手机 ANDROID  触屏  直板   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.74</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">35926</em>个评分)</em></p>
+                            <p><em class="en f12">29983</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/2834/price/?anl=lb_price_14" target="_blank" >¥899 - 1780</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">15</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/7/2391492/overview/?anl=lb_pic_15"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img05.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/212/31//4f54a8ef9c3c04489df78b6865d8f2a0.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/7/2391492/overview/?anl=lb_title_15"  >三星  GALAXY TAB P6800  平板电脑 16GB  ANDROID  7.7英寸   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.40</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">1130</em>个评分)</em></p>
+                            <p><em class="en f12">1075</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/7/2391492/price/?anl=lb_price_15" target="_blank" >¥3759 - 4999</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">7</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/7/4551/overview/?anl=lb_pic_16"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img08.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/17/4/7fbb0af5f81930c881ca4ed4a94b9f76.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/7/4551/overview/?anl=lb_title_16"  >三星  GALAXY TAB P1000  平板电脑 ANDROID  7英寸  16GB   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.08</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">528</em>个评分)</em></p>
+                            <p><em class="en f12">621</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/7/4551/price/?anl=lb_price_16" target="_blank" >¥2029.7 - 4099</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">8</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/4280/overview/?anl=lb_pic_17"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img02.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/207/170/ae4ae0fbde6fddb98d55bc00a9f5c365.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/4280/overview/?anl=lb_title_17"  >三星  SCH-I909  手机 ANDROID  直板  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.74</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">3695</em>个评分)</em></p>
+                            <p><em class="en f12">2034</em>条评论</p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/4280/price/?anl=lb_price_17" target="_blank" >¥2399 - 4988</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">11</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				                  
+                <li>
+                	<div class="box">
+                    	<div class="t"></div>
+                        <div class="c">
+                            <div class="pic">
+                                <a target="_blank" href="http://3c.yiqisoo.com/13/3318/overview/?anl=lb_pic_18"  ><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/t.gif" _src="http://img05.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/86/165/060f61d7a54419f4672c56fdba67e988.jpg"></a>
+                            </div><!--/图-->
+                            <h3><a target="_blank" href="http://3c.yiqisoo.com/13/3318/overview/?anl=lb_title_18"  >三星  GT-I9100  手机 ANDROID  直板  触屏   </a></h3>
+                            <p>
+                            <em class="f14"><em class="en">4.71</em>分</em>
+                            <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span><em class="gray">(<em class="en">4414</em>个评分)</em></p>
+                            <p><span class="gray">暂无评论</span></p>
+                            <p class="price"><a href="http://3c.yiqisoo.com/13/3318/price/?anl=lb_price_18" target="_blank" >¥2899 - 4700</a> </p>
+                        	<p class="clearfix">
+                                <span class="fl"><em class="en">13</em>个商城报价</span>
+                                                          </p>
+                            
+                        
+                            
+                   		</div><!--/c-->
+                        <div class="b">
+                        </div>
+                    </div><!--/box-->
+                </li>
+                
+      				 
+  
+            	
+			</ul>
+            
+        </div>  
+        
+                 
+        <div id="page"><a  class="active" target="_self">1</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_2&page=2" target="_self">2</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_3&page=3" target="_self">3</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_4&page=4" target="_self">4</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_5&page=5" target="_self">5</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_6&page=6" target="_self">6</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_7&page=7" target="_self">7</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_8&page=8" target="_self">8</a> <a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_2&page=2" class="next" target="_self">下一页</a> <span>共8页</span> <span>跳转</span><input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" id="tiaopage" class="pageNum" onKeyPress="check_event(event)"><span>页</span><input type="button" value="" class="btnGo" id="tiaozhuanbutton"></div>
+
+        
+    </div><!--/右-->
+</div><!--/主体部份-->
+
+<script language="javascript" type="text/javascript">
+	
+	$('.sm_imgList li .img img').LoadImage(true,60,60);
+	
+
+	function showPic(obj,num)
+	{
+		var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+		var clientHeight=document.documentElement.clientHeight;
+		var viewHeight=scrollTop+clientHeight;
+		obj.each(function(i){
+			try
+			{
+				var offset=obj.eq(i).offset();
+				var thisImg=obj.eq(i).find('img').eq(num);
+				if(offset.top<viewHeight)
+				{
+					
+					thisImg.LoadImageList(true,220,220);
+					thisImg.attr('src',thisImg.attr('_src'));
+				}
+			}catch(e){};
+		});
+	}
+	function scrollresize()
+	{
+		showPic($('.new_list_img2 li .pic'),0);
+	}
+	scrollresize();
+	$(window).bind('scroll',scrollresize);
+	$(window).bind('resize',scrollresize);
+	
+	
+	
+		
+		
+	var new_zindex2=20;
+	
+	$(".imgListshow").click(function(){
+		var classid =$(this).attr('classid');
+		var md5keyid =$(this).attr('md5keyid');
+		var page = "1";
+		var utm = "";
+		var _this=$(this);
+		if($(this).attr('flag')=='true')
+		{
+			if(utm)
+			{
+				var urls ='http://www.yiqisoo.com/api/get_new_list_detail.php?classid='+classid+'&anl=lb_list_'+classid+'_page_'+page+'&utm_campaign='+utm+'&md5keyid='+md5keyid+'&format=json&jsoncallback=?';
+			}else{
+				var urls ='http://www.yiqisoo.com/api/get_new_list_detail.php?classid='+classid+'&anl=lb_list_'+classid+'_page_'+page+'&md5keyid='+md5keyid+'&format=json&jsoncallback=?';
+			}
+			
+			${JQUERY}getJSON(urls,function(data){
+				
+				try{
+					if(data){
+						
+						
+						_this.parents('.c').append(data.detail);	
+							
+						_this.parents('.c').find(".imgListhide").click(function(){
+							_this.parents('li').removeClass();
+						});
+						
+						
+					}
+				}catch(e){
+					return;
+				}
+			});
+			$(this).attr('flag','false')
+		}
+		
+		$(this).parents('li').addClass('active').css({"z-index":new_zindex2++}).siblings().removeClass();
+	});
+
+		
+		
+	
+	
+	
+</script>
+
+<!--footer-->
+<div id="footer">
+			<p>免责声明：一起搜所刊载的所有信息、资料及图片均来自互联网，本网站不声明或保证其内容之正确性或可靠性。</p>
+            <p class="t_line">
+		<a href="http://www.yiqisoo.com/aboutus.html?anl=lb_aboutus
+		" target="_blank">关于我们</a>&nbsp;&nbsp;&nbsp; 
+		<a href="http://www.yiqisoo.com/mianzeshengming.html?anl=lb_shengming" target="_blank">免责声明</a>&nbsp;&nbsp;&nbsp; 
+		<a href="http://www.yiqisoo.com/zhaopin.html?anl=lb_zhaopin" target="_blank">招聘信息</a>&nbsp;&nbsp;&nbsp; 
+		<a href="http://www.yiqisoo.com/index.php?action=shop&anl=lb_map" target="_blank">网站地图</a>&nbsp;&nbsp;&nbsp; 
+		<a onclick="addBookmark();" href="javascript:void(1);">加入收藏夹</a>&nbsp;&nbsp;&nbsp; 
+		<a onclick="SetHome(this);" href="javascript:void(1);">设为首页</a>&nbsp;&nbsp;&nbsp; 
+		<br>
+
+			2012 <span class="en"><a style="color:#9D9D9D" href="http://www.yiqisoo.com/zhishichanquan.html" target="_blank">&copy;</a></span> 一起搜 京ICP备12023412号-1</p>
+
+
+</div>
+    <script type="text/javascript" language="javascript">
+
+$("#tiaozhuanbutton").click(function(){
+		
+	var page=$("#tiaopage").val();
+	if(!${JQUERY}trim(page))return false;
+	url = window.location.href;
+	if(url.indexOf('?')<0){
+		url+='?';	
+	}
+	url = url.replace(/&page[^&]*/,'');
+	url = url.replace(/#tabbar/,'');
+	url += "&page="+page+"&anl=lb_page_"+page+"#tabbar";
+	//alert(url);
+	window.location.href = url;	
+});
+
+$("a.guangyiguang").click(function(){
+	
+	var dataid=$(this).attr('dataid');
+	var classid=$(this).attr('classid');
+	var location=$(this).attr('location');
+	
+	tongji(location);
+	
+	${JQUERY}ajax({
+	   type: "POST",
+	   url: "http://www.yiqisoo.com/index.php?action=guang&type=life&t=guang",
+	   data: "dataid="+dataid+"&classid="+classid+"&location="+location,
+	   success: function(msg){	
+	  		//alert(msg);	
+			//window.open(url,"_self");/*ie6下被阻止*/
+	   }
+	});	
+	
+});
+function tongji(type){
+	str='';
+	switch(type){
+		case 'cuxiao':
+			str = '促销';
+			break;
+		case 'f_list':
+			str = '促销活动';
+			break;
+		case 'guang':
+			str = '逛逛';
+			break;
+		case 'jian':
+			str = '推荐';
+			break;
+		case 'detail':
+			str = '详情页';
+			break;
+		case 'list':
+			str = '3c列表';
+			break;
+		case 'rent':
+			str = '租房';
+			break;
+		case 'esf':
+			str = '二手房';
+			break;
+		case 'title':
+			str = '3c';
+			break;
+		default:
+			str = '';
+			break;
+	}
+	if(str != ''){
+		s = '/tracelog.htm?act-yqs=tods&aid-yqs='.type;
+		dcsMultiTrack(DCS.dcsuri,s,'WY.ti',str);
+	}
+	
+}
+function check_event(event){   
+  var code = event.keyCode;   
+  if(code==13){    
+	 $("#tiaozhuanbutton").click();
+  }   
+} 
+</script>
+<script>
+	var d_url=document.location.href;	
+	//alert(d_url);
+	var patt = new RegExp('utm_campaign');
+	if(patt.test(d_url))
+	{
+		var pattern = /utm_campaign=[^&]*/;
+		strs = d_url.match(pattern);
+		var patt2 = new RegExp('javascript');
+		var patt3 = new RegExp('utm_campaign');
+		var patt4 = new RegExp('/overview');
+		var patt5 = /#shangjia_\d*/;
+		$('a').each(function(){
+			if(!patt2.test(this.href) && !patt3.test(this.href)){
+				var lastw = this.href.substr(-1);
+				if(lastw=='/')
+				{
+					this.href = this.href+'?'+strs;
+				}else if(lastw==''){
+					this.href ='';
+				}else{
+					this.href = this.href+'&'+strs;
+				}
+				if(patt5.test(this.href))
+				{
+					str2 = this.href.match(patt5);
+					this.href = this.href.replace(/#shangjia_\d*/g,'');
+					this.href = this.href+str2;
+				}
+			}
+		});
+	}
+</script>
+
+
+<script type='text/javascript'>
+document.write("<script src=\'http://img01.yiqisooimg.com/yiqisoo/dandelion/js/yiqisoo_4d3u_tag.js\'");
+document.write(" type='text\/javascript'><\/script>");
+
+
+document.write("<script type='text\/javascript'>");
+document.write("var _gaq = _gaq || [];");
+document.write("_gaq.push(['_setAccount', 'UA-21465425-1']);");
+document.write("_gaq.push(['_setDomainName', '.yiqisoo.com']);");
+document.write("_gaq.push(['_trackPageview']);");
+document.write("(function() {");
+document.write("var ga = document.createElement('script'); ga.type = 'text\/javascript'; ga.async = true;");
+document.write("ga.src = ('https:' == document.location.protocol ? 'https:\/\/ssl' : 'http:\/\/www') + '.google-analytics.com\/ga.js';");
+document.write(" var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);");
+document.write(" })();");
+document.write("<\/script>");
+
+document.write("<p style='display:none'>");
+document.write("<script type='text\/javascript'>");
+document.write("var _bdhmProtocol = (('https:' == document.location.protocol) \? ' https:\/\/' : ' http:\/\/');");
+
+document.write("document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com\/h.js%3Ff6bbd2a1fae6b4a7b6bd36ba720b99bb' type='text\/javascript'%3E%3C\/script%3E\"));");
+document.write("<\/script>");
+document.write("<\/p>");
+
+
+</script>
+
+<!--/footer-->
+
+<script>
+//家电选择品牌
+function selectBrand4C(className)
+{
+	checkboxes = $("#ssp2 a");
+	size=checkboxes.length;
+	var compare=[];
+	for(i=0;i<size;++i)
+	{
+		v = checkboxes.eq(i);
+		if(v.hasClass('active'))
+		compare.push(v.attr("value"));
+	}
+	if(compare.length==0)return;
+	
+	url = window.location.href;
+	url = url.replace(/&bd[^&]*/,'');
+	url = url.replace(/&page[^&]*/,'');
+
+	if(compare.length)
+		url += '&bd='+encodeURIComponent(compare.join(','));
+		//alert(url);
+	window.location.href = url;
+}
+
+$("#pricesubmit").click(function(){
+	var price1v=${JQUERY}trim($('#price1').val());
+	var price2v=${JQUERY}trim($('#price2').val());
+	if(price1v==''){
+		price1v=0;
+	}
+	if(price2v==''||price2v=='不限'){
+				price2v='';
+			}
+			if(price2v==''){
+			price2v=99999999;
+		}
+		
+	if (parseInt(price1v) > parseInt(price2v)) {
+		alert('最低价格不能大于最高价格');
+		return false;
+	}
+	url = window.location.href;
+	url = url.replace(/[?|&]price=[^&]*/i, '');
+	url = url.replace(/[?|&]menu=[^&]*/i, '');
+	url = url + "&menu=1&price=" + encodeURIComponent(price1v + '-' + price2v);
+	window.location = url;
+});
+
+</script>
+
+<script language="javascript" type="text/javascript">
+function newSetCookie(name, value, iDay)
+	{
+		//'名字=值;expires=时间'
+		var oDate=new Date();
+		
+		oDate.setDate(oDate.getDate()+iDay);
+		
+		document.cookie=name+'='+value+';expires='+oDate;
+	}
+	
+	function newGetCookie(name)
+	{
+		var arr=document.cookie.split('; ');
+		var i=0;
+		
+		for(i=0;i<arr.length;i++)
+		{
+			var arr2=arr[i].split('=');
+			
+			if(arr2[0]==name)
+			{
+				return arr2[1];
+			}
+		}
+		
+		return '';
+	}
+	
+	function newRemoveCookie(name)
+	{
+		setCookie(name, 1, -1);
+	}
+
+
+$(function(){
+	var showMores=newGetCookie('showMore'+classjsid);
+	var showMoreA=$("#showmore a");
+	if(showMores==1)
+	{
+			showMoreA.removeClass().addClass('hide');
+			showMoreA.parents('.box').find('dl:gt(3)').show();
+	}
+	else if(showMores==2)
+	{
+			showMoreA.removeClass().addClass('show');
+			showMoreA.parents('.box').find('dl:gt(3)').hide();
+	}
+	
+	
+	showMoreA.click(function()
+	{
+		if($(this).hasClass('show'))//展开cookie为0
+		{
+			newSetCookie('showMore'+classjsid,1);
+			$(this).removeClass().addClass('hide');
+			$(this).parents('.box').find('dl:gt(3)').show();
+			showMores=newGetCookie('showMore'+classjsid);
+		}
+		else//收起cookie为1
+		{
+			newSetCookie('showMore'+classjsid,2);
+			$(this).removeClass().addClass('show');
+			$(this).parents('.box').find('dl:gt(3)').hide();
+			showMores=newGetCookie('showMore'+classjsid);
+		}
+		
+		
+	});
+
+	
+	
+	
+	var oShow1=$("#show1");
+	var oShow2=$("#show2");
+	var oBrand1=$("#brand1");
+	var oBrand2=$("#brand2");
+	var sClassActive='active';
+	var oShowBrandA=$("#showbrand a");
+	var oShowBrandA2=$("#showbrand2 a");
+	
+	var sGD='更多';
+	var sSQ='收起';
+	
+	if(oBrand2.is(":visible"))
+	{
+		newSetCookie('showPin'+classjsid,'show');
+	}
+	
+	
+	
+	oShowBrandA.click(function()
+	{
+		if($(this).hasClass('show'))
+		{
+			newSetCookie('showPin'+classjsid,'show');
+			$(this).removeClass().addClass('hide').text(sSQ);
+			
+			
+			if(newGetCookie('showPinDuo'+classjsid)=='duo')
+			{
+				oBrand1.hide();
+				oShow1.removeClass(sClassActive);
+				oBrand2.show();
+				if(heightkuang!=0)
+				{
+					oShow2.addClass(sClassActive).css({"height":heightkuang+"px"});
+				}
+				else
+				{
+					oShow2.addClass(sClassActive);
+				}
+				$("#ssp2 li").show();
+			}
+			else
+			{
+				oBrand2.hide();
+				oShow2.removeClass(sClassActive);
+				oBrand1.show();
+				if(heightkuang!=0)
+				{
+					oShow1.addClass(sClassActive).css({"height":heightkuang+"px"});
+				}
+				else
+				{
+					oShow1.addClass(sClassActive);
+				}
+				$("#ssp li").show();
+			}
+			
+		}
+		else
+		{
+			newSetCookie('showPin'+classjsid,'hide');
+			$(this).removeClass().addClass('show').text(sGD);
+			oBrand2.hide();
+			oBrand1.show();
+			if(heightkuang!=0)
+			{
+				oShow2.removeClass(sClassActive).css({"height":"auto"});
+				oShow1.removeClass(sClassActive).css({"height":"auto"});;
+			}
+			else
+			{
+				oShow2.removeClass(sClassActive);
+				oShow1.removeClass(sClassActive);
+			}
+			$("#ssp li:gt(4)").hide();
+			$("#ssp li").last().show();
+			
+		}
+	});
+
+	
+
+	oShowBrandA2.click(function()
+	{
+		if($(this).hasClass('show'))
+		{
+			newSetCookie('showPin'+classjsid,'show');
+			$(this).removeClass().addClass('hide').text(sSQ);
+			
+			if(newGetCookie('showPinDuo'+classjsid)=='duo')
+			{
+				oBrand1.hide();
+				oShow1.removeClass(sClassActive);
+				oBrand2.show();
+				if(heightkuang!=0)
+				{
+					oShow2.addClass(sClassActive).css({"height":heightkuang+"px"});
+				}
+				else
+				{
+					oShow2.addClass(sClassActive);
+				}
+				$("#ssp2 li").show();
+			}
+			else
+			{
+				oBrand2.hide();
+				oShow2.removeClass(sClassActive);
+				oBrand1.show();
+				if(heightkuang!=0)
+				{
+					oShow1.addClass(sClassActive).css({"height":heightkuang+"px"});
+				}
+				else
+				{
+					oShow1.addClass(sClassActive);
+				}
+				$("#ssp li").show();
+			}
+			
+			
+		}
+		else
+		{
+			newSetCookie('showPin'+classjsid,'hide');
+			$(this).removeClass().addClass('show').text(sGD);
+			oBrand2.hide();
+			oBrand1.show();
+			if(heightkuang!=0)
+			{
+				oShow2.removeClass(sClassActive).css({"height":"auto"});
+				oShow1.removeClass(sClassActive).css({"height":"auto"});;
+			}
+			else
+			{
+				oShow2.removeClass(sClassActive);
+				oShow1.removeClass(sClassActive);
+			}
+			$("#ssp li:gt(6)").hide();
+			$("#ssp li").last().show();
+		}
+	});
+
+
+	
+	$("#multiple").click(function()
+	{
+		newSetCookie('showPinDuo'+classjsid,'duo');
+		newSetCookie('showPin'+classjsid,'show');
+		isdanduo=1;
+		oBrand1.hide();
+		oShow1.removeClass(sClassActive);
+		oBrand2.show();
+			if(heightkuang!=0)
+			{
+				oShow2.addClass(sClassActive).css({"height":heightkuang+"px"});
+			}
+			else
+			{
+				oShow2.addClass(sClassActive);
+			}
+		$("#ssp2 li").show();
+		oShowBrandA.removeClass().addClass('hide').text(sSQ);
+		oShowBrandA2.removeClass().addClass('hide').text(sSQ);
+		
+	});
+
+	$("#single").click(function()
+	{
+		newSetCookie('showPinDuo'+classjsid,'dan');
+		newSetCookie('showPin'+classjsid,'show');
+		isdanduo=2;
+		oBrand2.hide();
+		oShow2.removeClass(sClassActive);
+		oBrand1.show();
+			if(heightkuang!=0)
+			{
+				oShow1.addClass(sClassActive).css({"height":heightkuang+"px"});
+			}
+			else
+			{
+				oShow1.addClass(sClassActive);
+			}
+		$("#ssp li").show();
+		oShowBrandA.removeClass().addClass('hide').text(sSQ);
+		oShowBrandA2.removeClass().addClass('hide').text(sSQ);
+	});
+
+})
+</script>
+
+
+</body>
+</html>

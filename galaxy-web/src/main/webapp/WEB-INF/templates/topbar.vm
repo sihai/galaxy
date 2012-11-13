@@ -1,0 +1,14 @@
+<div id="topbar">
+    <div class="part clearfix">
+    	<span class="fl"><img src="/assets/images/transparent.gif" class="slogan"/></span>
+        <span class="fr">
+        	<a href="/login.jhtml">免费注册</a>
+            <a href="/login.jhtml">登录</a>
+            <i>|</i>
+            <a href="http://www.sousea.com/?anl=shy_dh" target="_blank">专业导航</a> 
+			<i>|</i> 
+			<a class="yellow" target="_blank" href="http://weibo.com/galaxy">Galaxy官方微博</a>
+        </span>
+    </div>
+</div>
+<!--/tapbar-->

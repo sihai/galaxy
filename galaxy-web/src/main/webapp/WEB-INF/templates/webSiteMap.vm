@@ -1,0 +1,231 @@
+﻿#set($JQUERY='$.')
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Galaxy</title>
+        <meta name="keywords" content="购物,购物导航,商家导航,优惠券,促销活动,网上商城,网上购物,购物比价,购物搜索" />
+        <meta name="description" content="Galaxy购物商家导航提供全网商城全面的信息指引，放心购物从Galaxy开始。" />
+        <link href="/assets/css/galaxy.css?v=1351677647" type="text/css" rel="stylesheet" />
+        <link href="/assets/css/index.css?v=1351844821" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/assets/js/jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="/assets/js/tuan.js"></script>
+        <script type="text/javascript" src="/assets/js/dialog.js"></script>
+        <script type="text/javascript" src="/assets/js/websitemap.js"></script>
+    </head>
+	
+	<body>
+	
+		<!--Advertisement S-->
+		#parse("advertisement.vm")
+		<!--Advertisement E-->
+		
+    	<!-- 顶部 S -->
+       	#parse("topbar.vm")
+		<!-- 顶部 E -->
+		
+		<!-- 头部 S -->
+		#parse("header.vm")
+		<!-- 头部 E -->
+		
+		<!-- 导航 S -->
+		#parse("nav.vm")
+		<!-- 导航 E -->
+		
+        <div class="hd-bg">
+            <div class="wrap"> 
+                <div class="content clearfix">
+                	#foreach(${entry} in ${resultModelMap.entrySet()})
+	                    <div class="famous_list clearfix" bk id="index_logowall">
+							<div class="hdgray">
+								<h2>$!{entry.key.name}<input type="button" onclick="recommend(${entry.key.value})" style="float:right;padding-right:13px;" class="button" value="我来推荐一个"></h2>
+							</div>
+							
+							<ul class="famous-bd" id="famous_list">
+								#foreach(${webSite} in ${entry.value.itemList})
+									<li #if($velocityCount % 7 == 0 && $velocityCount != 0) class="hidden_r" #end>
+										<a target="_blank" href="/goto.jhtml?web_site_id=${webSite.id}">
+											<img src="$!{webSite.logo}" alt="$!{webSite.name}" />
+											<p>haha</p>
+										</a>
+									</li>
+								#end
+							</ul>
+	                        <!-- 购物名站 E -->
+	                        <div id="mall_fa">
+								<div style="display:block;" class="favor_bus">
+									</em><span>大家常去逛：</span>
+									<a  bk="index_merchant_commend" href="/mall_businessitem.html?bid=2223">易迅</a>
+								</div>
+							</div>
+						</div>
+					#end
+                </div>
+			
+                <div class="content clearfix">
+                	<!-- 所有分类 S -->
+					#parse("categoryMap.vm")
+					<!-- 所有分类 E -->
+                </div>
+            </div>
+            
+            <!--Footer S-->
+			#parse("footer.vm")
+			<!--Footer E-->
+            
+            <script>
+                (function($){
+                    $(function(){
+                        ELogin.regLoginFun('fav',function(){
+                            location = location.href;
+                        });
+                        ELogin.regLogoutFun('fav',function(){
+                            location = location.href;
+                        });
+                    });
+                    var cookie_collect_bids = 'collect_bids';
+                    $('#mall_fa del').click(function(){
+                        var p1 = $(this).parent();
+                        var bid = p1.attr('bid');
+                        if(!bid) return;
+                        var p2 = p1.parent();
+                        if(window.qid){
+                            ${JQUERY}getJSON('/?do=collect_delete&bid='+bid,function(){
+                                p1.remove();
+                                if(p2.find('a').length == 0){
+                                    p2.prev().remove();
+                                }
+                            });
+                            }else{
+
+                            var collect_bids = Qtool.cookie(cookie_collect_bids);
+                            var collect_bids_arr = [];
+                            if(collect_bids){
+                                collect_bids_arr = collect_bids_arr.concat(collect_bids.split(','));
+                                var index = $.inArray(''+bid,collect_bids_arr);
+                                if(index > -1){
+                                    collect_bids_arr.splice(index,1);
+                                }
+                            }
+                            Qtool.cookie(cookie_collect_bids,collect_bids_arr.join(','),365);
+                            p1.remove();
+                            if(p2.find('a').length == 0){
+                                p2.prev().remove();
+                            }
+                        }
+                        return false;
+                    });
+                    for( var i=0;i<$('.product_box').length; i++)
+                    {						
+                        $('.product_box').eq(i).find('li').eq(0).addClass('current');
+                        $('.product_box').eq(i).find('.product_list').show();
+                    }
+                    $('.product_box .hd ul li').mouseover(function(){
+                        var that =$(this);
+                        var index = $(this).index();
+                        var prolist = that.parents('.product_box').find('.product_list');
+                        var bralist = that.parents('.product_box').find('.brand_list');
+                        if(that.hasClass('current')) return;
+                        that.siblings().removeClass('current');
+                        prolist.hide();
+                        bralist.hide();
+                        that.addClass('current');
+                        if(index==0)prolist.show();
+                        else bralist.show();
+                    });
+                    $('.famous_list li,.cate_item,.product_list li').hover(function(){
+                        $(this).addClass('hover_trigger');
+                        },function(){
+                        $(this).removeClass('hover_trigger');
+                    });
+                })(jQuery);
+            </script>
+        </div>
+        
+        <!---->
+        <div id="recommend-div" style="display:none;">
+	        <div class="login-box">
+				<form method="post" action="/website_action.jhtml?_operation_=_add_" enctype="multipart/form-data">
+				<input type="hidden" name="type" id="type" value="' + type + '" />
+				<fieldset>
+					<legend>推荐网站</legend> 
+					<ul> 
+						<li class="loginmar-b10">
+							<label for="webSiteName">网站名：</label>
+							<input type="text" name="name" id="webSiteName" class="login-input1" value="$!{webSite.name}" />
+						</li>
+						<li class="loginmar-b10">
+							<label for="site_url">链接&nbsp;&nbsp;&nbsp;&nbsp;：</label>
+							<input type="text" name="site_u_r_l" id="site_url" class="login-input1" value="$!{webSite.siteURL}" />
+						</li>
+						<li class="loginmar-b10">
+							<label for="logo">Logo&nbsp;&nbsp;&nbsp;：</label>
+							<input type="file" name="logo" id="logo" class="login-input1"/>
+						</li>	
+						<li class="loginmar-l50">
+							<input type="submit" class="login-but" value="提 交" />
+							<a href="http://i.360.cn/findpwd/?src=login" class="login-lost">取 消</a>
+						</li>
+					</ul>
+				</fieldset>
+				</form>
+			</div>
+			<div class="login-share"> 
+				<p>还没有360账号？</p>
+					<a  class="login-but loginmar-b30"  href="http://i.360.cn/reg?src='+'&destUrl='+destUrl+'" >轻松注册</a> <p >你可以通过以下方式登录：
+				</p>
+				<span class="login-mar" >
+					<a href="http://i.360.cn/oauth/loginByOauth?c=Sina&f='+'&destUrl='+destUrl+'" >
+						<img src="http://p2.qhimg.com/t01e3dbc4ce6ab4b2ac.png" class="login-sina" />
+					</a>
+					<a href="http://i.360.cn/oauth/loginByOauth?c=RenRen&f='+'&destUrl='+destUrl+'" >
+						<img src="http://p2.qhimg.com/t01e3dbc4ce6ab4b2ac.png " class="login-ren"  />
+					</a>
+				</span>
+			</div>
+		</div>
+	
+        <!---->	
+        
+        #parse("login.vm")
+		<script type="text/javascript" src="/assets/js/mall_m.js?_v=1.1"></script>
+		<script type="text/javascript" src="/assets/js/newfeedback2.js"></script>
+		<script>
+			feedbackBiz.main({objectNameId:51,inputName:'newmallitem',callback:1,image:'http://p0.qhimg.com/t01f6cc3e8ab0860bf5.png',hdimage:'http://p0.qhimg.com/t01ae308426434363f0.png',position:'rb'});
+				;(function($){
+				$(function(){
+					ELogin.regLoginFun('favicon',function(){
+						${JQUERY}getJSON('/?do=collect_sync');
+					});
+				});
+			}(jQuery));
+		</script>
+		<script>
+			var _comscore = _comscore || [];
+			_comscore.push({ c1: "2", c2: "7129932" });
+			(function() {
+				var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+
+		<noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=7129932&cv=2.0&cj=1" /></noscript>
+
+		<script type="text/javascript" src="/assets/js/emonitor.js?_v=2"></script>
+		<script>
+			emonitor.setHostname('mall.360.cn');
+		</script>
+    </body>
+    
+    <script>
+    $().ready(function() {
+    	#if($recommendErrorMsg)
+    		showRecommendErrorMsg('$recommendErrorMsg');
+    	#end
+    	#if($loginErrorMsg)
+    		showLoginErrorMsg('$loginErrorMsg');
+    	#end
+    });
+    </script>
+</html>

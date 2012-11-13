@@ -1,0 +1,69 @@
+#set($tPage= ${resultModel.totalPage})
+#set($cPage = ${resultModel.queryModel.currentPage})
+#set($leftStart = 1)
+#set($leftEnd = 2)
+#set($mStart = ${resultModel.queryModel.currentPage} - 2)
+#set($mEnd = ${resultModel.queryModel.currentPage} + 2)
+#set($rStart = ${resultModel.totalPage} - 1)
+#set($rEnd = ${resultModel.totalPage})
+
+#if ($mStart <= $leftEnd)
+	#set($leftStart = 0)
+	#set($leftEnd = 0)
+	#set($mStart = 1)
+#end
+#if ($mEnd >= $rStart)
+	#set($rStart = 0)
+	#set($rEnd = 0)
+	#set($mEnd = $tPage)
+#end
+
+<div id="small_page" bk="" class="pagination">
+	<a class="pre" href="#" #if(${resultModel.queryModel.currentPage} == 1) class="disabled" #end onclick="goto($cPage -1)">&lt;</a>
+	
+	#if ($leftEnd > $leftStart)
+			#foreach($p in [${leftStart}..${leftEnd}])
+				<a class="pre" href="#" onclick="goto($p)">$!{p}</a>
+			#end
+		#end
+		#if ($mStart > $leftEnd + 1)
+			<span class="divide">...</span>
+		#end
+		#foreach($p in [${mStart}..${mEnd}])
+			#if($p == $cPage) ## 当前页
+		    	<a href="#" class="pre active">$!{p}</a>
+			#else
+				<a class="pre" href="#" onclick="goto($p)">$!{p}</a>
+			#end
+		#end
+		#if ($rStart > $mEnd + 1)
+			<span class="divide">...</span>
+		#end
+		#if ($rEnd > $rStart)
+			#foreach($p in [${rStart}..${rEnd}])
+				<li><a href="#" onclick="goto($p)">$!{p}</a></li>
+			#end
+		#end
+		
+		<a class="pre" href="#" #if($cPage == $tPage) class="disabled" #end onclick="goto($cPage + 1)">&gt;</a>
+		
+		<span class="skip">
+			共$!{resultModel.totalPage}页，到第
+			<input type="text" id="pageno" value="$!{resultModel.totalPage}" name="pageno" class="txt">
+			页
+			<button id="skip_btn" class="btn" onclick="goto()">确定</button>
+		</span>
+</div>
+
+<script type="text/javascript">
+	
+	function goto(page) {
+		var page = $("#pageno").val();
+		goto(page);
+	}	
+	
+	function goto(page) {
+		$("#current_page").val(page);
+		$("#page_form").submit();
+	}	
+</script>

@@ -1,0 +1,46 @@
+﻿#mod_quc_pop{position:absolute;z-index:10000;border-radius:7px;border:7px solid #484848;background-color:#888;}
+#gotoQuickLogin,.emptyhint{display:none;}
+#pop_mask_bg{width:100%;background:#000;top:0;left:0;position:absolute;height:100%;z-index:9999;filter:alpha(opacity=60);opacity:0.6}
+.mod-qiuser-pop-bg iframe{width:100%;height:100%;position:absolute;top:0;left:0;z-index:9997;display:none;}
+.mod-qiuser-pop-bg div{width:100%;height:100%;top:0;left:0;z-index:9998;background-color:#000;display:none;}
+.mod-quc-top .pop-dia-close,
+.login-wrap .btn-login,
+.login-wrap .login-error,
+.login-wrap .no-account .new-clk-regnew,
+.login-wrap .no-account .clk-regnew,
+.login-wrap .other .loginbtn_sina,
+.login-wrap .other .loginbtn_rr,
+.login-wrap .other .loginbtn_msn,
+.login-wrap .other .loginbtn_fx
+{background:url(http://p9.qhimg.com/t01388e1ef3b5f31238.png) no-repeat;}
+.mod-qiuser-pop{position:relative;background:#fff;}
+.mod-quc-top{position: relative;zoom:1;height: 34px;background: #BB0000;}
+.mod-quc-top .top-title{position:absolute;top:10px;right:2px;width:14px;height: 14px;overflow: hidden;background-position:0 -120px;}
+.mod-quc-top .pop-dia-close{display:block;width:14px;height:14px;background-position:-82px -36px;}
+.mod-quc-top .quc-top-title{height:34px;color:#fff;font-size:14px;font-weight:bold;line-height:34px;text-indent:14px;}
+.login-wrap{position: relative;zoom:1;height:168px;overflow:hidden;padding:34px 28px 0;background:url(http://p9.qhimg.com/t01172eef8f51ba7c78.png) 59% 46% no-repeat;}
+.login-wrap dt{display: none;}
+.login-wrap dd{min-height:26px;_height:26px;margin: 0 0 10px;}
+.login-wrap .ipt{width: 215px;height: 18px;padding: 3px 0 3px 3px;border: 1px solid #C8C8C8;box-shadow: 2px 2px 2px #EBEBEB inset;}
+.login-wrap .find{margin: 0 0 10px 50px;}
+.login-wrap .submit{margin: 0 0 0 50px;}
+.login-wrap .other{position:absolute;left: 380px;top:122px;}
+.login-wrap .other span{display: block;margin: 0 0 15px;}
+.login-wrap .other a{display:inline-block;width:18px;height:18px;overflow:hidden;margin:0 6px 0 0;}
+.login-wrap .other .loginbtn_sina{background-position:0 -36px;}
+.login-wrap .other .loginbtn_rr{background-position:-20px -36px;}
+.login-wrap .other .loginbtn_fx{background-position:-40px -36px;}
+.login-wrap .other .loginbtn_msn{background-position:-60px -36px;}
+.login-wrap .login-error{padding:0 0 0 20px;background-position:0 -58px;color:#ff0000;}
+.login-wrap input{vertical-align: middle;}
+.login-wrap .btn-login{width:85px;height:32px;border:0 none;background-position:-88px 0;cursor: pointer;}
+.login-wrap label{float: left;width:40px;height:26px;padding:0 10px 0 0;line-height: 26px;text-align: right;}
+.login-wrap .find label{width: 100px;margin:0 0 0 -8px;}
+.login-wrap .input-bg-focus{overflow: hidden;zoom:1;}
+.login-wrap b{display: none;}
+.login-wrap .no-account{position: absolute;top:34px;left: 380px;width:160px;height:62px;}
+.login-wrap .no-account .no-account-text{display: block;height:16px;margin:0 0 15px;}
+.login-wrap .no-account .new-clk-regnew{display: block;width:85px;height: 30px;overflow:hidden;background-position:0 0;line-height:300px;}
+.login-wrap .no-account .clk-regnew{display: block;width:85px;height: 30px;overflow:hidden;background-position:0 0;line-height:300px;}
+.login-wrap .find .fac{position: absolute;left:176px;top:150px;}
+.login-wrap .login-error,.login-wrap .login-loading,.login-wrap .login-success{position: absolute;left:78px;top:0;height: 34px;line-height: 34px;} 

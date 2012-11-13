@@ -1,0 +1,20 @@
+<div id="header" class="part clearfix"> 
+	<h1 id="logo"><a href="/?anl=shy_logo"><span>一起搜,yiqisoo.com</span></a></h1>
+    <div class="tsearch-panel">
+        <form id="search" action="/search.jhtml" method="get" onsubmit="return submit_check('keyword1','search');">
+            <div class="tsearch-panel_f">
+                <input name="q" class="s" value="请输入您要搜索的商品关键词" maxlength="32" id="keyword1" size="32" autocomplete="off" type="text">
+                <div id="search_suggest1" class="search_suggest">
+                    <ul id="suggest_list1" class="suggest_list">
+                    	
+                    </ul>
+                </div>
+            </div><!--/tsearch_panel_f-->
+            <input name="action" value="life" type="hidden">
+            <input id="type" name="type" value="life" type="hidden">
+            <input  name="anl" value="shy_search" type="hidden">
+            <input type="submit" class="btn" value=""  onclick="return submit_check('keyword1','search');" onmouseout="this.className='btn'" onmouseover="this.className='btn2'"/>
+        </form>
+	</div>
+</div>
+<!--/header-->

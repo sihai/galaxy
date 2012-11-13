@@ -1,0 +1,48 @@
+<div class="header">
+	<h1 class="logo" bk id="s_logo">
+		<a href="/" target="_self"><img src="/assets/images/logo.png" alt="Galaxy" /></a>
+	</h1>
+	<!--Search S-->
+	<div class="search-bar">
+		<form id="galaxy_search" action="/search.jhtml" method="get">
+			<input type="hidden" name="k" value="v" />
+			<input class="txt" type="text" name="q" id="q" value="$!{resultModel.queryModel.q}" />
+			<button class="btn" type="submit">搜 索</button>
+		</form>
+		<div class="link-pill hot-search" bk="hot_search">
+			<a target="_blank" style="color:#FF8000;"href="http://huodong.360.cn/">双十一大促</a>
+			<a target="_blank" href="/search.html?eee=s&query=%E6%96%B0%E6%AC%BE%E5%A4%A7%E8%A1%A3">新款大衣</a>
+			<a target="_blank" href="/search.html?eee=s&query=%E8%A3%B8%E9%9D%B4">裸靴</a>
+			<a target="_blank" style="color:#FF8000;"href="/search.html?eee=s&query=%E7%A7%8B%E5%86%AC%E7%9D%A1%E8%A1%A3">秋冬睡衣</a>
+			<a target="_blank" href="/search.html?tag=273&query=%E5%8C%85&brand=&bid=0&label=&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=">新款女包</a>
+			<a target="_blank" href="/search.html?eee=s&query=%E4%BF%9D%E6%9A%96%E5%86%85%E8%A1%A3">保暖内衣</a>
+			<a target="_blank" style="color:#FF8000;"href="/search.html?eee=s&query=%E7%BE%BD%E7%BB%92%E6%9C%8D">羽绒服</a>
+			<a target="_blank" href="/search.html?tag=252&query=%E9%9B%AA%E5%9C%B0%E9%9D%B4&brand=&bid=0&label=&aname=&yizhantong=0&cps=0&return=0&pay=0&prmt=&event=&through=1&pricemin=0&pricemax=0&sort=">雪地靴</a>
+		</div>
+		<script>
+			;(function(){
+				var defKeyword = '输入你要购买的商品名称';
+				Qtool.placeholder({input:'#mall_keyword',form:'#kwsearch',defKeyword:defKeyword});
+				Qtool.newsuggest({input:'#mall_keyword',
+					nameSpace:'gouwusearch',
+					url:'/suggestdict_get.html?count=10&py=',
+					tpls:{base:'<div class="left">{0}</div><div class="right">约<font color="red">{1}</font>件商品</div> '},
+					style:'#gouwusearch .e_suggest_box{border-color:#cb5050;}#gouwusearch .e_suggest_box .current{background-color:#ffe9be;}#gouwusearch .e_suggest_box .left{float:left;padding-left:5px;}#gouwusearch .e_suggest_box .right{float:right;padding-right:5px;}'});
+			})();
+		</script>
+	</div>
+	<!--Search E-->
+	
+	<div class="link-pill recomment-product" style="display:none;">
+		<a target="_blank" style="color:#FF8000;" href="http://huodong.360.cn/">双十一大促</a>
+		<a target="_blank" href="/search.html?eee=s&query=%E8%81%9A%E7%BE%8E%E4%BC%98%E5%93%81/search.html?eee=s&query=%E5%BD%93%E5%BD%93%E7%BD%91">当当网</a>
+		<a target="_blank" href="/search.html?eee=s&query=%E7%BA%A2%E5%AD%A9%E5%AD%90">红孩子</a>
+		<a target="_blank" href="http://chujian.360.cn ">换季搭配</a>
+		<a target="_blank" href="http://chujian.360.cn/items.html?tag=3649&label=%E6%89%93%E5%BA%95%E8%A3%A4">打底裤</a>
+		<a target="_blank" style="color:#FF8000;"href="http://chujian.360.cn/items.html?tag=3639&label=%E5%A4%A7%E8%A1%A3&label_id=0&clabel=%E5%91%A2%E5%AD%90">毛呢外套</a>
+	</div>
+
+	<div class="hd-entrance" bk id="banner-small">
+		<a href="http://huodong.360.cn/" target="_blank"><img src="http://p4.qhimg.com/t01daa9856f208ecbae.jpg" alt="双十一豪门盛宴" /></a>
+	</div>
+</div>

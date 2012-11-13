@@ -1,0 +1,51 @@
+﻿/**
+ * @name       :topbar
+ * @author     :Bug
+ * @version    :1.0
+ * @type       :basic
+ * @explain    :顶部通栏
+ * @dependent  :none
+ * @lastmodify :2012.10.17
+  */
+.topbar{height:41px;background:url(http://p3.qhimg.com/t0133acb2932b1915b6.png) center bottom no-repeat;}
+.topbar .wrap-inner{width:1000px;margin:0 auto;}
+.topbar .bg{height:37px;background:url(http://p1.qhimg.com/t01267b19878445c8be.png) repeat-x 0 0;}
+.topbar .mini-logo{display:none;float:left;width:88px;height:37px;margin:0 14px 0 0;}
+.fn-logo .mini-logo{display:block;}
+.channel {float:left;width:492px;height:37px;padding:0 0 4px;}
+.channel li{float:left;}
+.channel a{float:left;height:37px;padding:0 12px;color:#cfcfcf;font-size:14px;line-height:37px;}
+.channel a:hover{color:#f60;text-decoration:none;}
+.channel .current{background:#d2272a url(http://p7.qhimg.com/t01267b19878445c8be.png) repeat-x 0 -37px;color:#fff;font-weight: bold;}
+.channel .current:hover{color:#fff;cursor:default;}
+
+.search-box{float: left;width:200px;height: 22px;overflow:hidden;margin:8px 0 0;background:url(http://p4.qhimg.com/t0104439663e307e878.png) no-repeat 0 0;}
+.search-box-focus{background-position: 0 -28px;}
+.search-box input{float: left;width: 164px;height:14px;padding:4px 0 4px 10px;border:0 none;background:transparent;color:#656565;}
+.search-box input:focus{outline: none;}
+.search-box button{float: left;width:26px;height:22px;border:0 none;background:transparent;font-size: 0;cursor: pointer;}
+
+.user-info{float:right;height:37px;}
+.user-info ul{float:right;}
+.user-info li{float: left;}
+.user-info .group-btn .devide{width:1px;height:10px;overflow: hidden;margin:14px 0 0;background: #ccc;}
+.user-info .group-btn a{float:left;height:37px;padding:0 12px;color:#d0d0d0;line-height: 37px;}
+.user-info .dropdown ul{vertical-align:top;}
+.user-info .dropdown a{color:#fff;}
+.user-info .dropdown a:hover{text-decoration: none;}
+.user-info .uid{float: left;margin:0 16px 0 0;color:#ee7e5c;line-height: 37px;}
+
+.dropdown{position:relative;z-index:100;zoom:1;width:92px;}
+.dropdown li{clear:both;float:none;width:100%;height:28px;overflow:hidden;}
+.dropdown a{color:#fff;padding:0 16px;}
+.dropdown .title{display:block;height:37px;padding:0 16px;color:#fff;line-height:37px;font-weight: bold;}
+.dropdown .devide{width:100%;height:0;border-top:1px solid #362525;border-bottom:1px solid #756363;font-size:0;line-height:0;}
+.dropdown-menu{display:none;position: absolute;left: 0;top:38px;z-index:101;width:92px;border-top:1px solid #756363;}
+.dropdown-menu ul{width:92px;padding:0 0 4px;background:#544444 url(http://p0.qhimg.com/t01235f4c1e39d7a868.png) left bottom repeat-x;}
+.dropdown-menu a{display: block;width:100%;height:28px;line-height: 28px;white-space: nowrap;}
+.dropdown-menu a:hover{background: #f15e27;}
+
+.fn-open{background:#544444;}
+.fn-open .dropdown-menu{display: block;}
+.fn-open .title{border-bottom:1px solid #362525;}
+/* @end **/

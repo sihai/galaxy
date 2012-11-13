@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop   
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   
+        http://www.springframework.org/schema/beans   
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+        http://www.springframework.org/schema/context   
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd   
+        http://www.springframework.org/schema/mvc   
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd   
+        http://www.springframework.org/schema/tx   
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<mvc:annotation-driven />
+	<context:component-scan base-package="galaxy" />
+	
+	<!-- Interceptors that execute common control logic across multiple requests -->
+	<mvc:interceptors>
+	
+		<!-- Detects the client's Device -->
+		<bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
+		
+		<!-- Redirects the client to their preferred site if necessary.
+		     This particular configuration redirects clients preferring the mobile site to 'm.testdomain'.
+		     NOTE: for this redirect to work testdomain.com and m.testdomain.com must be added to your hosts file when running the app -->
+		<!--
+		<bean class="org.springframework.mobile.device.switcher.SiteSwitcherHandlerInterceptor" factory-method="mDot">
+			<beans:constructor-arg value="testdomain.com" />
+		</bean>
+		-->
+	</mvc:interceptors>
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.velocity.VelocityView</value>
+		</property>
+		<property name="suffix">
+			<value>.vm</value>
+		</property>
+		<property name="contentType" value="text/html;charset=UTF-8" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes">
+	        <value>true</value>
+	    </property>
+	</bean>
+	
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/WEB-INF/templates" />
+		<property name="velocityProperties">
+			<map>
+				<entry key="input.encoding" value="utf-8" />
+				<entry key="output.encoding" value="utf-8" />
+				<entry key="runtime.log.logsystem.class" value="org.apache.velocity.runtime.log.Log4JLogChute" />
+				<entry key="runtime.log.logsystem.log4j.logger" value="com.ihome.galaxy.velocityLogger" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+    	<!-- 设置上传文件的最大尺寸为1GB -->  
+    	<property name="maxUploadSize">  
+        	<value>1073741824</value>  
+    	</property>  
+	</bean>  
+
+	<bean id="simpleUrlHandlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/index.jhtml">index</prop>
+				<prop key="/login.jhtml">login</prop>
+				<prop key="/register.jhtml">login</prop>
+				<prop key="/qqcallback.jhtml">qqCallback</prop>
+				<prop key="/topcallback.jhtml">topCallback</prop>
+				<prop key="/user_action.jhtml">userAction</prop>
+				<prop key="/search.jhtml">search</prop>
+				<prop key="/detail.jhtml">search</prop>
+				<prop key="/query.jhtml">query</prop>
+				<prop key="/goto.jhtml">goto</prop>
+				<prop key="/websitemap.jhtml">webSiteMap</prop>
+				<prop key="/website_action.jhtml">webSiteAction</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+	
+	<bean id="index" class="com.ihome.galaxy.web.controller.Index">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="shopManager" ref="shopManager" />
+	</bean>
+	
+	<bean id="login" class="com.ihome.galaxy.web.controller.user.Login">
+		<property name="traceLogManager" ref="traceLogManager" />
+	</bean>
+	
+	<bean id="qqCallback" class="com.ihome.galaxy.web.controller.QQCallback">
+		<property name="traceLogManager" ref="traceLogManager" />
+	</bean>
+	
+	<bean id="topCallback" class="com.ihome.galaxy.web.controller.TopCallback">
+		<property name="traceLogManager" ref="traceLogManager" />
+	</bean>
+	
+	<bean id="userAction" class="com.ihome.galaxy.web.action.user.UserAction">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="userManager" ref="userManager" />
+	</bean>
+	
+	<bean id="search" class="com.ihome.galaxy.web.controller.Search">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="searcher" ref="searcher" />
+	</bean>
+	
+	<bean id="detail" class="com.ihome.galaxy.web.controller.Detail">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="shopManager" ref="shopManager" />
+		<property name="itemManager" ref="itemManager" />
+	</bean>
+	
+	<bean id="query" class="com.ihome.galaxy.web.controller.Query">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="searcher" ref="searcher" />
+	</bean>
+	
+	<bean id="goto" class="com.ihome.galaxy.web.controller.Goto">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="itemManager" ref="itemManager" />
+		<property name="shopManager" ref="shopManager" />
+		<property name="webSiteManager" ref="webSiteManager" />
+	</bean>
+	
+	<bean id="webSiteMap" class="com.ihome.galaxy.web.controller.WebSiteMap">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="webSiteManager" ref="webSiteManager" />
+	</bean>
+	
+	<bean id="webSiteAction" class="com.ihome.galaxy.web.action.website.WebSiteAction">
+		<property name="traceLogManager" ref="traceLogManager" />
+		<property name="webSiteManager" ref="webSiteManager" />
+	</bean>
+</beans>  

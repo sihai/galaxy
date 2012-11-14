@@ -3,7 +3,7 @@
     <div class="tsearch-panel">
         <form id="search" action="/search.jhtml" method="get" onsubmit="return submit_check('keyword1','search');">
             <div class="tsearch-panel_f">
-                <input name="q" class="s" value="请输入您要搜索的商品关键词" maxlength="32" id="keyword1" size="32" autocomplete="off" type="text">
+                <input name="q" class="s" #if(${resultModel.queryModel.q}) value="$!{resultModel.queryModel.q}" #else value="请输入您要搜索的商品关键词" #end maxlength="32" id="keyword1" size="32" autocomplete="off" type="text">
                 <div id="search_suggest1" class="search_suggest">
                     <ul id="suggest_list1" class="suggest_list">
                     	
@@ -18,3 +18,183 @@
 	</div>
 </div>
 <!--/header-->
+
+<!--头部搜索-->
+<script>
+	var oEmptyBtn='emptyBtn';
+	var oCurClassify="手机";
+	var oCurClassifyLink="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=13";
+	var cityname="杭州";
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//选择城市
+		document.read
+		$(function(){
+			$(".header_city").click(function(event){
+				$(".area").fadeOut(200);
+				$(this).next().show();
+			});
+
+		$(".area a").click(function(event){
+			var city = $(this).text()
+			$(this).parents(".area").fadeOut(200);
+			$(".header_city span").text(city);
+			//return false;
+		});
+		$(".area").mouseleave(function(event){
+			$(this).fadeOut(200);	
+		});
+
+		$(document).mouseup(function(event){
+			$(".area").fadeOut(200);
+			$(".free_popup").fadeOut(200);
+		});
+		//快速发布
+		//	$("#publishhouse")
+		//	.click(function(event){
+		//		$(".free_popup").fadeOut('normal');
+		//		$('.free_popup').show();
+		//	});
+		//	$(".free_popup").mouseleave(function(event){	
+		//		$(this).fadeOut(200);	
+		//	});
+
+		//动态修改提示的left
+		$('.suggest_list2').css('left','277px');
+				$('.suggest_list2').css('left','379px');
+		});
+ 
+	});
+</script>
+
+
+<script>
+	$(function (){
+		$("#keyword1").css('color', '#000');
+		/*	$('.ass a').click(function (){
+			
+			var key=$('#keyword1').val();
+			if(key=='请输入您要搜索的商品关键词')
+			key='';
+			//alert(key);
+			var action = $(this).attr('link');
+			//alert(action);
+			var linkurl=action+'&keyword='+key;
+			//window.open(linkurl);
+			location.href=linkurl;
+	
+		});
+		*/
+		
+	
+	
+		$('#jdbtn').click(function (){
+			var key = ${JQUERY}trim($("#keyword1").val());
+			var classid=$("#classid").val();
+			var tempdetail=$("#tempdetail").val();
+			var utm = "";
+			if (key == '请输入您要搜索的商品关键词') key = '';
+			if(key==''){
+				if(utm)
+				{
+					window.location.href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=51&anl=lb_search&utm_campaign="+utm;
+					return false;
+				}else
+				{
+					window.location.href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=51&anl=lb_search";
+					return false;
+				}
+			}
+			else{
+				
+				key = encodeURI(key);
+				if(utm){
+					var action_ = "http://www.yiqisoo.com/index.php?keyword="+key+"&action=life&type=life&anl=lb_search&utm_campaign="+utm;
+				}else{
+					var action_ = "http://www.yiqisoo.com/index.php?keyword="+key+"&action=life&type=life&anl=lb_search";
+				}
+			}
+	
+			location.href=action_;
+			set_keyword_log(key);
+			//obj.attr("action",action);
+			//obj.submit();
+		
+		});
+		
+		$("#keyword1").keydown(function(event){
+			event = event?event:window.event;
+			if(event.keyCode==13&&type2!=2) {
+	
+	     		 $("#jdbtn").click();
+				 
+			}
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	var keyWord=$("#keyword1");
+	if(keyWord.val()!=''&&keyWord.val()!='请输入您要搜索的商品关键词')
+		{
+			keyWord.addClass('text2');
+		}
+	
+	keyWord.focus(function(){
+		if($(this).val()=='请输入您要搜索的商品关键词')
+		{
+			$(this).val('').addClass('text2').css({"color":"#000"});
+			
+		}
+	});	
+	keyWord.blur(function(){
+		if($(this).val()=='')
+		{
+			$(this).val('请输入您要搜索的商品关键词').removeClass('text2').css({"color":"#a4a4a4"});
+		}
+		else if($(this).val()!=''&&$(this).val()!='请输入您要搜索的商品关键词')
+		{
+			$(this).addClass('text2').css({"color":"#000"});
+		}
+	});	
+</script>
+
+<script type="text/javascript">
+	function fangchan_submit_check(key, form) {
+		key = document.getElementById(key);
+		theform = document.getElementById(form);
+		key.value = ${JQUERY}trim(key.value); //	if(key.value.length>0)
+		if (form == 'sub_ershou' || form == 'sub_newhouse' || form == 'sub_rent' || form == 'sub_show' || form == 'sub_jiaju') {
+			if (key.value == '请输入您想租的房源特征信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+			if (key.value == '请输入您想买的二手房信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+	
+			if (key.value == '请输入想搜索的关键字...') key.value = ''; //		theform.submit();
+
+			var action = $("#"+form).attr("action");
+
+			var url = action+encodeURIComponent(encodeURIComponent(key.value))+'-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&.html';
+			
+			window.location.href=url;
+		}
+	}
+
+	function keydown(key, form) {
+		key = document.getElementById(key);
+		theform = document.getElementById(form);
+		key.value = ${JQUERY}trim(key.value); //	if(key.value.length>0)
+		if (form == 'sub_ershou' || form == 'sub_newhouse' || form == 'sub_rent' || form == 'sub_show' || form == 'sub_jiaju') {
+			if (key.value == '请输入您想租的房源特征信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+			if (key.value == '请输入您想买的二手房信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
+	
+			if (key.value == '请输入想搜索的关键字...') key.value = ''; //		theform.submit();
+
+			var action = $("#"+form).attr("action");
+
+			var url = action+encodeURIComponent(encodeURIComponent(key.value))+'-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&.html';
+			
+			document.getElementById(form).action=url;
+		}
+	}
+</script>

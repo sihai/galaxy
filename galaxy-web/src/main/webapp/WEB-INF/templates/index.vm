@@ -10,6 +10,7 @@
 		<meta name="keywords" content="购物搜索,比较购物,网上购物,购物查价,商品比价,商品导购,购物比价,一起搜,垂直搜索" />
 		<meta name="description" content="一起搜是一个中立的、公正的电商导购平台，是一个开放的购物类垂直搜索引擎。提供各网上商城的商品评论、库存、运费、物流、价格等信息的比较，帮助消费者在网购前进行理性决策。" />
 
+		<link rel="stylesheet" type="text/css" href="/assets/css/topbar.css"/>
 		<link rel="stylesheet" type="text/css" href="/assets/css/index.css"/>
 
 		<script type="text/javascript" src="/assets/js/jquery-1.6.4.min.js"></script>
@@ -25,33 +26,6 @@
 		
 		#parse("topbar.vm")
 		#parse("header.vm")
-		
-        <script type="text/javascript">
-			var keyWord=$("#keyword1");
-			if(keyWord.val()!=''&&keyWord.val()!='请输入您要搜索的商品关键词')
-				{
-					keyWord.addClass('s2');
-				}
-			
-			keyWord.focus(function(){
-				if($(this).val()=='请输入您要搜索的商品关键词')
-				{
-					$(this).val('').addClass('s2').css({"color":"#000"});
-					
-				}
-			});	
-			keyWord.blur(function(){
-				if($(this).val()=='')
-				{
-					$(this).val('请输入您要搜索的商品关键词').removeClass('s2').css({"color":"#a4a4a4"});
-				}
-				else if($(this).val()!=''&&$(this).val()!='请输入您要搜索的商品关键词')
-				{
-					$(this).addClass('s2').css({"color":"#000"});
-				}
-			});	
-        </script>
-		
 		#parse("nav.vm")
 		
 		<div id="partA" class="part clearfix">
@@ -663,147 +637,7 @@
 		</div><!--/part-->
 		
 		#parse("footer.vm")
-    
-    	<script type="text/javascript" language="javascript">
-			$("#tiaozhuanbutton").click(function(){
-				var page=$("#tiaopage").val();
-				if(!${JQUERY}trim(page))
-					return false;
-				url = window.location.href;
-				if(url.indexOf('?')<0){
-					url+='?';	
-				}
-				url = url.replace(/&page[^&]*/,'');
-				url = url.replace(/#tabbar/,'');
-				url += "&page="+page+"&anl=shy_page_"+page+"#tabbar";
-				//alert(url);
-				window.location.href = url;	
-			});
-
-			$("a.guangyiguang").click(function(){
-				var dataid=$(this).attr('dataid');
-				var classid=$(this).attr('classid');
-				var location=$(this).attr('location');
-				
-				tongji(location);
-				
-				${JQUERY}ajax({
-				   type: "POST",
-				   url: "http://www.yiqisoo.com/index.php?action=guang&type=life&t=guang",
-				   data: "dataid="+dataid+"&classid="+classid+"&location="+location,
-				   success: function(msg){	
-				  		//alert(msg);	
-						//window.open(url,"_self");/*ie6下被阻止*/
-				   }
-				});	
-				
-			});
-
-			function tongji(type){
-				str='';
-				switch(type){
-					case 'cuxiao':
-						str = '促销';
-						break;
-					case 'f_list':
-						str = '促销活动';
-						break;
-					case 'guang':
-						str = '逛逛';
-						break;
-					case 'jian':
-						str = '推荐';
-						break;
-					case 'detail':
-						str = '详情页';
-						break;
-					case 'list':
-						str = '3c列表';
-						break;
-					case 'rent':
-						str = '租房';
-						break;
-					case 'esf':
-						str = '二手房';
-						break;
-					case 'title':
-						str = '3c';
-						break;
-					default:
-						str = '';
-						break;
-				}
-				if(str != ''){
-					s = '/tracelog.htm?act-yqs=tods&aid-yqs='.type;
-					dcsMultiTrack(DCS.dcsuri,s,'WY.ti',str);
-				}
-			}
-
-			function check_event(event){   
-  				var code = event.keyCode;   
-  				if(code==13){    
-	 				$("#tiaozhuanbutton").click();
-  				}   
-			} 
-		</script>
-		<script>
-			var d_url=document.location.href;	
-			//alert(d_url);
-			var patt = new RegExp('utm_campaign');
-			if(patt.test(d_url))
-			{
-				var pattern = /utm_campaign=[^&]*/;
-				strs = d_url.match(pattern);
-				var patt2 = new RegExp('javascript');
-				var patt3 = new RegExp('utm_campaign');
-				var patt4 = new RegExp('/overview');
-				var patt5 = /#shangjia_\d*/;
-				$('a').each(function(){
-					if(!patt2.test(this.href) && !patt3.test(this.href)){
-						var lastw = this.href.substr(-1);
-						if(lastw=='/')
-						{
-							this.href = this.href+'?'+strs;
-						}else if(lastw==''){
-							this.href ='';
-						}else{
-							this.href = this.href+'&'+strs;
-						}
-						if(patt5.test(this.href))
-						{
-							str2 = this.href.match(patt5);
-							this.href = this.href.replace(/#shangjia_\d*/g,'');
-							this.href = this.href+str2;
-						}
-					}
-				});
-			}
-		</script>
-		
-		<script type='text/javascript'>
-			document.write("<script src=\'http://img01.yiqisooimg.com/yiqisoo/dandelion/js/yiqisoo_4d3u_tag.js\'");
-			document.write(" type='text\/javascript'><\/script>");
-			document.write("<script type='text\/javascript'>");
-			document.write("var _gaq = _gaq || [];");
-			document.write("_gaq.push(['_setAccount', 'UA-21465425-1']);");
-			document.write("_gaq.push(['_setDomainName', '.yiqisoo.com']);");
-			document.write("_gaq.push(['_trackPageview']);");
-			document.write("(function() {");
-			document.write("var ga = document.createElement('script'); ga.type = 'text\/javascript'; ga.async = true;");
-			document.write("ga.src = ('https:' == document.location.protocol ? 'https:\/\/ssl' : 'http:\/\/www') + '.google-analytics.com\/ga.js';");
-			document.write(" var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);");
-			document.write(" })();");
-			document.write("<\/script>");
-
-			document.write("<p style='display:none'>");
-			document.write("<script type='text\/javascript'>");
-			document.write("var _bdhmProtocol = (('https:' == document.location.protocol) \? ' https:\/\/' : ' http:\/\/');");
-			
-			document.write("document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com\/h.js%3Ff6bbd2a1fae6b4a7b6bd36ba720b99bb' type='text\/javascript'%3E%3C\/script%3E\"));");
-			document.write("<\/script>");
-			document.write("<\/p>");
-		</script>
-
+  
 		<script>
 			var d_url=document.location.href;	
 			var patt = new RegExp('utm_campaign');

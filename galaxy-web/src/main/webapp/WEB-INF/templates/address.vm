@@ -1,0 +1,33 @@
+<div class="addressShow" >
+	<div class="topCity clearfix">
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=北京&anl=product_city" >北京</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=上海&anl=product_city" >上海</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=广州&anl=product_city" >广州</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=深圳&anl=product_city" >深圳</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=天津&anl=product_city" >天津</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=杭州&anl=product_city" class="active">杭州</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=成都&anl=product_city" >成都</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=大连&anl=product_city" >大连</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南京&anl=product_city" >南京</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=苏州&anl=product_city" >苏州</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=武汉&anl=product_city" >武汉</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=重庆&anl=product_city" >重庆</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=西安&anl=product_city" >西安</a>
+        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=厦门&anl=product_city" >厦门</a>  
+	</div>
+                
+    <!--
+    <div class="findCity">
+    	<input type="text" class="txt" id="cityyunfei" value="杭州" onKeyPress="press_event(event)"><input type="button" id="citybutton" class="btn" value="" onMouseOver="this.className='btn2'" onMouseOut="this.className='btn'"/>
+    </div>
+    -->
+
+	<div class="clearfix" id="cityList">
+		#parse("tmp.vm")
+	</div>
+	<div class="morek">
+		<a href="http://www.yiqisoo.com/specials/daogou.html?anl=product_daogou" class="blue" target="_blank">了解更多</a>
+	</div>
+</div>
+            		
+                          

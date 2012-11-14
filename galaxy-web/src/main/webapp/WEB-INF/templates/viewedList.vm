@@ -1,0 +1,59 @@
+<div class="leftBoxStyle">        
+	<h2>浏览过的商品 </h2>
+	<div class="box">
+		<ul class="sm_imgList">
+			<li>
+    			<p class="img">
+    				<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_pic">
+    					<img src="http://img06.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/24/163//c24f02f7ea6f907792495bd42d14b904.jpg">
+    				</a>
+    			</p>
+        		<div class="txt">
+					<p class="tcon">
+						<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_title">苹果  iphone 4s(16G)  手机</a>
+					</p>
+            		<p class="price">¥4666.00</p>
+        		</div>
+    		</li>
+    		<li>
+    			<p class="img">
+    				<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_pic">
+    					<img src="http://img06.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/24/163//c24f02f7ea6f907792495bd42d14b904.jpg">
+    				</a>
+    			</p>
+        		<div class="txt">
+					<p class="tcon">
+						<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_title">苹果  iphone 4s(16G)  手机</a>
+					</p>
+            		<p class="price">¥4666.00</p>
+        		</div>
+    		</li>
+    		<li>
+    			<p class="img">
+    				<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_pic">
+    					<img src="http://img06.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/24/163//c24f02f7ea6f907792495bd42d14b904.jpg">
+    				</a>
+    			</p>
+        		<div class="txt">
+					<p class="tcon">
+						<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_title">苹果  iphone 4s(16G)  手机</a>
+					</p>
+            		<p class="price">¥4666.00</p>
+        		</div>
+    		</li>
+   			<li class="last">
+    			<p class="img">
+    				<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_pic">
+    					<img src="http://img06.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/24/163//c24f02f7ea6f907792495bd42d14b904.jpg">
+    				</a>
+    			</p>
+        		<div class="txt">
+					<p class="tcon">
+						<a target="_blank" href="http://3c.yiqisoo.com/14/4325467/overview/?anl=lb_click_14_title">苹果  iphone 4s(16G)  手机</a>
+					</p>
+            		<p class="price">¥4666.00</p>
+        		</div>
+    		</li>
+		</ul>            
+	</div><!--/box-->
+</div>

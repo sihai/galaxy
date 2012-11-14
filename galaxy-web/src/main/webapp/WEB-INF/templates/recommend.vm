@@ -1,43 +1,70 @@
-<div class="mall-hot">
-	<div class="hd">
-		<h3>精选商品</h3>
-	</div>
-	
-	<div class="bd">
-		<ul class="list-img-tit" bk="list_ad">
-			<li>
-				<a class="pic" href="http://open.union.360.cn/go?bid=2000801&qihoo_id=36050&stat_id=48&cid=48&url=http%3A%2F%2Fwww.360buy.com%2Fproduct%2F722416.html&sign=533fb0b43e" target="_blank">
-					<img src="http://p0.qhimg.com/dr/160_160_100/t01f70634ecdf4dd3ae.jpg" alt="三星（SAMSUNG）S7562 3G手机（纯白）WCDMA/GSM 双卡双待" />
-					<i class="hot"></i>
-				</a>
-				<h4><a href="http://open.union.360.cn/go?bid=2000801&qihoo_id=36050&stat_id=48&cid=48&url=http%3A%2F%2Fwww.360buy.com%2Fproduct%2F722416.html&sign=533fb0b43e" target="_blank" title="三星（SAMSUNG）S7562 3G手机（纯白）WCDMA/GSM 双卡双待">三星（SAMSUNG）S7562 3G手机（纯白）WCDMA/GSM 双卡双待</a></h4>
-				<p>
-					<strong>￥1798</strong>
-	            </p>
-			</li>
-			
-			<li>
-				<a class="pic" href="http://open.union.360.cn/go?bid=2000801&qihoo_id=36050&stat_id=48&cid=48&url=http%3A%2F%2Fwww.360buy.com%2Fproduct%2F656206.html&sign=a48cca24fc" target="_blank">
-					<img src="http://p2.qhimg.com/dr/160_160_100/t0103d107b4edb0c9d0.jpg" alt="三星（SAMSUNG）Galaxy S3 I9308 3G手机 (云石白) TD-SCDMA/GSM" />
-					<i class="hot"></i>
-				</a>
-				<h4><a href="http://open.union.360.cn/go?bid=2000801&qihoo_id=36050&stat_id=48&cid=48&url=http%3A%2F%2Fwww.360buy.com%2Fproduct%2F656206.html&sign=a48cca24fc" target="_blank" title="三星（SAMSUNG）Galaxy S3 I9308 3G手机 (云石白) TD-SCDMA/GSM">三星（SAMSUNG）Galaxy S3 I9308 3G手机 (云石白) TD-SCDMA/GSM</a></h4>
-				<p>
-									<strong>￥3899</strong>
-													</p>
-			</li>
-			
-			<li>
-				<a class="pic" href="http://open.union.360.cn/go?bid=2000319&qiiihoo_id=36050&stat_id=910&cid=910&url=http%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D60326115&sign=bf92619523" target="_blank">
-				<img src="http://p1.qhimg.com/dr/160_160_100/t01adc4a80888e834a4.jpg" alt="【当当自营】 SAMSUNG三星 I9220 原装耳机白色 简装适用于三星i9108 i9228 i9250 I9220 i9300 i9308 等3.5接口手机" />
-				<i class="new"></i>
-				</a>
-					<h4><a href="http://open.union.360.cn/go?bid=2000319&qihoo_id=36050&stat_id=910&cid=910&url=http%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D60326115&sign=bf92619523" target="_blank" title="【当当自营】 SAMSUNG三星 I9220 原装耳机白色 简装适用于三星i9108 i9228 i9250 I9220 i9300 i9308 等3.5接口手机">【当当自营】 SAMSUNG三星 I9220 原装耳机白色 简装适用于三星i9108 i9228 i9250 I9220 i9300 i9308 等3.5接口手机</a></h4>
-					<p>
-										<strong>￥49</strong>
-											<del>￥99</del>
-														</p>
-			</li>	
+<!---热销商品 --->
+<script language="javascript" type="text/javascript">
+	$(function() {
+		$("#tjList li .pic img").LoadImage(true,73,78);
+		$("#change").click(function(){
+			$("#tjList").html('');
+			$("#loading").show();
+			//$("#tjList li").hide();
+			ids = $("#id_str").html();
+			//alert(ids);
+			var classid = "";
+			var utm = "";
+			if(utm) {
+				var geturl = 'http://www.yiqisoo.com/api/get_yiqisoo_3c_recommend.php?classid='+classid+'&ids='+ids+'&utm_campaign='+utm+'&format=json&jsoncallback=?';
+			}else{
+				var geturl = 'http://www.yiqisoo.com/api/get_yiqisoo_3c_recommend.php?classid='+classid+'&ids='+ids+'&format=json&jsoncallback=?';
+			}
+			${JQUERY}getJSON(geturl,function(data){
+				try{
+					if(data){
+						$("#loading").hide();
+						$("#id_str").html(data.id_str);
+						var recommend_str = '';						
+						var new_data = data.recommend;
+						var len = new_data.length;		
+						if(utm) {
+							for(var j=0;j<len;j++){
+								json = new_data[j];
+								recommend_str += '<li class="clearfix" ><img src="'+ json.img +'" class="hot"/><div class="pic"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_pic&utm_campaign='+utm+'" target="_blank"><img src="'+ json._pic +'" alt="'+ json.title +'" /></a></div><div class="txt"><h3 class="title f12"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_title&utm_campaign='+utm+'" target="_blank">'+ json.title2 +'</a></h3><p class="price">¥'+ json.minprice +'-'+ json.maxprice +'</p><p class="gray">'+ json.shoptot +'个商城报价</p><p class="gray">'+ json.commtot +'条评论</p></div></li>';
+							}                   
+							if(recommend_str){
+								$("#tjList").html(recommend_str);
+								$("#tjList li .pic img").LoadImage(true,73,78);
+							}
+						}else{
+							for(var j=0;j<len;j++){
+								json = new_data[j];
+								recommend_str += '<li class="clearfix" ><img src="'+ json.img +'" class="hot"/><div class="pic"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_pic" target="_blank"><img src="'+ json._pic +'" alt="'+ json.title +'" /></a></div><div class="txt"><h3 class="title f12"><a href="'+ json.url +'?anl=lb_hot_'+classid+'_'+(j+1)+'_title" target="_blank">'+ json.title2 +'</a></h3><p class="price">¥'+ json.minprice +'-'+ json.maxprice +'</p><p class="gray">'+ json.shoptot +'个商城报价</p><p class="gray">'+ json.commtot +'条评论</p></div></li>';
+							}                   
+							if(recommend_str){
+								$("#tjList").html(recommend_str);
+								$("#tjList li .pic img").LoadImage(true,73,78);
+							}
+						}
+					}
+				}catch(e){
+					return;
+				}
+			});
+		});
+
+		$("#change").trigger("click");
+	});
+</script>
+
+<div class="leftBoxStyle">        
+	<h2>
+		<span class="fl">
+			热销产品
+		</span>
+		<a href="javascript:;" class="gray fn fr f12" id="change">换一换</a> 
+	</h2>
+	<div class="box">
+		<div id="loading" style="text-align:center; padding:30px;"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/loading.gif" /></div>
+		<ul class="list_img_tj" id="tjList">
 		</ul>
-	</div>
+	</div><!--/box-->
 </div>
+<div id="id_str" style="display:none"></div>
+<!--/热销商品 -->

@@ -18,6 +18,23 @@
 	#set($mEnd = $tPage)
 #end
 
+<div id="page">
+	<a  class="active" target="_self">1</a> 
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_2&page=2" target="_self">2</a>
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_3&page=3" target="_self">3</a>
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_4&page=4" target="_self">4</a>
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_5&page=5" target="_self">5</a>
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_6&page=6" target="_self">6</a>
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_7&page=7" target="_self">7</a>
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_8&page=8" target="_self">8</a>
+	<a href="http://www.yiqisoo.com/index.php?keyword=galaxy&action=life&type=life&anl=lb_page_2&page=2" class="next" target="_self">下一页</a> 
+	<span>共8页</span> 
+	<span>跳转</span>
+	<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" id="tiaopage" class="pageNum" onKeyPress="check_event(event)"><span>页</span>
+	<input type="button" value="" class="btnGo" id="tiaozhuanbutton">
+</div>
+
+<!--
 <div id="small_page" bk="" class="pagination">
 	<a class="pre" href="#" #if(${resultModel.queryModel.currentPage} == 1) class="disabled" #end onclick="goto($cPage -1)">&lt;</a>
 	
@@ -54,6 +71,7 @@
 			<button id="skip_btn" class="btn" onclick="goto()">确定</button>
 		</span>
 </div>
+-->
 
 <script type="text/javascript">
 	

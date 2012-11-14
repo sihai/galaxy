@@ -1,1483 +1,540 @@
-﻿#set(${JQUERY} = '$.')
+﻿#set($JQUERY='$.')
 
 <!DOCTYPE HTML>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>三星  GALAXY NOTE I9220  手机 GSM/联通3G(WCDMA)  ANDROID  直板   _一起搜，比较购物搜索引擎</title>
-<meta name="keywords" content="手机数码,3C数码,手机" />
-<meta name="description" content="别名三星  galaxy note i9220  手机 GSM/联通3G(WCDMA)  Android  直板   品牌三星操作系统安卓Android 2.3产品类型3G版, 商务平板屏幕尺寸5.3英寸屏幕描述电容式多点触摸屏存储容量16GB标准分辨率1280×800处理器Samsung Exynos 双核 1.4GHz存储扩展支持Micro SD(TF)卡扩展,最大支持32GB显卡芯片ARM Mali-400MP内存1GBWiFi支 持网络制式联通3G(WCDMA)蓝牙Bluetooth 3.0+HS" />
-<link href="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/style/3cstylenew.css" rel="stylesheet" type="text/css">
-
-</head>
-<body>
-<script type="text/javascript" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/js/ui.js"></script>
-<!--头部搜索-->
-	<script>
-var oEmptyBtn='emptyBtn';
-  var oCurClassify="手机";
-var oCurClassifyLink="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=13";
-  var cityname="杭州";
-</script>
-
-<script type="text/javascript" src="http://img01.yiqisooimg.com/yiqisoo/dandelion/js/kws2.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-//选择城市
-document.read
-$(function(){
-		   
-	$(".header_city")
-	.click(function(event){
-		$(".area").fadeOut(200);
-		$(this).next().show();
-	});
-	
-	$(".area a").click(function(event){
-		var city = $(this).text()
-		$(this).parents(".area").fadeOut(200);
-		$(".header_city span").text(city);
-		//return false;
-	});
-	$(".area").mouseleave(function(event){
-		$(this).fadeOut(200);	
-	});
-
-	$(document).mouseup(function(event){
-		$(".area").fadeOut(200);
-		$(".free_popup").fadeOut(200);
-	});
-	//快速发布
-//	$("#publishhouse")
-//	.click(function(event){
-//		$(".free_popup").fadeOut('normal');
-//		$('.free_popup').show();
-//	});
-//	$(".free_popup").mouseleave(function(event){
-//		$(this).fadeOut(200);	
-//	});
-	
-	//动态修改提示的left
-			$('.suggest_list2').css('left','277px');
-					$('.suggest_list2').css('left','379px');
-	
- });
- 
-});
-</script>
-<div id="topBar">
-	<div class="part clearfix">
-    	<ul id="top_list">
-        	<li class="t_more">
-            	<a href="javascript:;" class="m">房产</a>
-            	<div class="pop">
-                	<div class="t"></div>
-                    <div class="c">
-                        <a href="http://rent.yiqisoo.com/?anl=product_kuaijie_rent" target="_blank" >租房</a>
-                        <a href="http://esf.yiqisoo.com/?anl=product_kuaijie_esf" target="_blank" >二手房</a>
-                        <a href="http://www.eju.com/" target="_blank" >房产电商</a>
-                    </div>
-                    <div class="b"></div>
-                </div>
-            </li>
-            <li><a href="http://jiaju.yiqisoo.com/?action=life&type=life&classid=134&anl=product_kuaijie_jiaju" >家居</a></li>
-            <li><a href="http://jd.yiqisoo.com/?action=life&type=life&classid=50&anl=product_kuaijie_jd" >家电</a>/<a href="http://3c.yiqisoo.com/?action=life&type=life&classid=51&anl=product_kuaijie_3c">数码</a> </a></li>
-            <li><a href="http://book.yiqisoo.com/?action=life&type=life&classid=53&anl=product_kuaijie_book" >图书</a></li>
-            <li><a href="http://lux.yiqisoo.com/?action=life&type=life&classid=109&anl=product_kuaijie_lux" >奢侈品</a></li>
-            <li><a href="http://wine.yiqisoo.com/?action=life&type=life&classid=124&anl=product_kuaijie_wine" >葡萄酒</a></li>
-            <li><a href="http://cos.yiqisoo.com/?action=life&type=life&classid=125&anl=product_kuaijie_cos" >化妆品</a></li>
-            <li class="t_more">
-            	<a href="javascript:;" class="m">更多</a>
-                <div class="pop">
-                	<div class="t"></div>
-                    <div class="c">
-                        <a href="http://avp.yiqisoo.com/?action=life&type=life&classid=96&anl=product_kuaijie_avp" >音像制品</a>
-                        <a href="http://food.yiqisoo.com/?action=life&type=life&classid=129&anl=product_kuaijie_food" >进口食品</a>
-                        <a href="http://baby.yiqisoo.com/?action=life&type=life&classid=126&anl=product_kuaijie_baby" >母婴</a>
-                        <a href="http://tools.yiqisoo.com/index.php?action=cal&anl=product_kuaijie_cal" >工具</a>
-                        <a href="http://app.yiqisoo.com/jiadiango/?anl=product_kuaijie_jiadiango" target="_blank" >应用</a>
-                         <span class="bor">
-                        <a href="http://www.yiqisoo.com/index.php?action=shop&anl=product_kuaijie_shop" class="moreico">更多</a>
-                        </span>
-                       
-                    </div>
-                    <div class="b"></div>
-                </div>
-            </li>
-        </ul>
-        
-        <p class="fr">
-        	 <!-- <a href="http://www.yiqisoo.com/index.php?action=PublishRent" target="_blank" class="yellow">注册</a>  <a href="http://u.yiqisoo.com/index.php?action=login" target="_blank" class="yellow">登录</a> <i class="grays">|</i> <a href="http://www.sousea.com" class="black" target="_blank">专业导航</a>   -->
-			 <a href="http://www.yiqisoo.com/index.php?action=login&anl=product_login" target="_blank" class="black">注册</a>  <a href="http://www.yiqisoo.com/index.php?action=login&anl=product_login" target="_blank" class="black">登录</a> <i class="grays">|</i> <a href="http://www.sousea.com/?anl=product_dh" class="black" target="_blank">专业导航</a> <i class="grays">|</i> <a class="yellow" target="_blank" href=" http://weibo.com/yiqisoo?anl=product_weibo">一起搜官方微博</a>
-        </p>
-    </div>	
-</div>
-
-
-<!--header start-->
-<div id="header">
-	
-
-    <div class="part clearfix">
-    	<div class="header_left">
-			                <h1 id="logo"><a href="http://www.yiqisoo.com/?anl=product_logo" title="一起搜"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common2012/images/transparent.gif" alt="一起搜"/></a></h1>
-                           	    </div>
-        <div id="header_search">
-        
-                                
- 
-                    
-                        <input type="text" autocomplete="off" size="32" id="keyword1" value="请输入您要搜索的商品关键词"  class="text" maxlength="64" name="keyword" ><input type="button" value="" class="button" id='jdbtn' onmouseover="this.className='button2'" onmouseout="this.className='button'"><a href="javascript:;" id="emptyBtn" onclick="clearColors2();"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/3c/ico4.gif"/></a>
-
-    
-                     <div class="search_suggest2" id="search_suggest1">
-						
-           <!--            -->
-                       
-					   
-					<!--   					
-                         <div class="ass">
-                                <h3><a link="http://3c.yiqisoo.com/index.php?action=search&type=life&classid=13">在<span class="red">手机</span>分类中查找</a></h3>
-                                <p><a link="http://www.yiqisoo.com/index.php?action=search&type=life">在<span class="red">全部</span>分类中查找</a></p>
-                          </div>
-                       -->
-                        <ul class="suggest_list2" id="suggest_list1">
-                        </ul>
-					</div>
-                        <input name="action" value="search" type="hidden"/>
-                        <input id="type" name="type" value="life" type="hidden"/>
-                        							<script language="javascript" type="text/javascript">
-							${JQUERY}ajax({
-							   type: "POST",
-							   url: "http://3c.yiqisoo.com/index.php?action=snapshot3cnew&t=click_count",
-							   data: "pid=14245&md5_key_id=2497168",
-							   success: function(msg){	
-							   }
-							});	
-							</script>
-                         <input type="hidden" value="13" id="classid" name="classid">
-				   
-                         <input type="hidden" value="1" id="tempdetail" name="tempdetail">
-						 
-                                       
-                  
-                
-                
-                
-                              	
-           
-            
-        </div><!--/header_search-->
-      		
-        
-	</div><!--/part-->
-
-</div>
-<!--header end-->
-<script>
-
-
-
-$(function (){
-	/*	$('.ass a').click(function (){
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>$!{item.name}   _Galaxy，比较购物搜索引擎</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="别名三星  galaxy note i9220  手机 GSM/联通3G(WCDMA)  Android  直板   品牌三星操作系统安卓Android 2.3产品类型3G版, 商务平板屏幕尺寸5.3英寸屏幕描述电容式多点触摸屏存储容量16GB标准分辨率1280×800处理器Samsung Exynos 双核 1.4GHz存储扩展支持Micro SD(TF)卡扩展,最大支持32GB显卡芯片ARM Mali-400MP内存1GBWiFi支 持网络制式联通3G(WCDMA)蓝牙Bluetooth 3.0+HS" />
 		
-		var key=$('#keyword1').val();
-		if(key=='请输入您要搜索的商品关键词')
-		key='';
-		//alert(key);
-		var action = $(this).attr('link');
-		//alert(action);
-		var linkurl=action+'&keyword='+key;
-		//window.open(linkurl);
-		location.href=linkurl;
-
-	});
-	*/
-	
-	
-	
-	$('#jdbtn').click(function (){
+		<link href="/assets/css/3cstylenew.css" rel="stylesheet" type="text/css">
 		
-		var key = ${JQUERY}trim($("#keyword1").val());
-		var classid=$("#classid").val();
-		var tempdetail=$("#tempdetail").val();
-		var utm = "";
-		if (key == '请输入您要搜索的商品关键词') key = '';
+		<script type="text/javascript" src="/assets/js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="/assets/js/ui.js"></script>
+	</head>
+
+	<body>		
 		
-
-		if(key==''){
-			if(utm)
-			{
-				window.location.href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=51&anl=product_search&utm_campaign="+utm;
-				return false;
-			}else
-			{
-				window.location.href="http://3c.yiqisoo.com/index.php?action=life&type=life&classid=51&anl=product_search";
-				return false;
-			}
-		}
-		else{
-			
-			key = encodeURI(key);
-			if(utm){
-				var action_ = "http://3c.yiqisoo.com/index.php?keyword="+key+"&action=life&type=life&anl=product_search&utm_campaign="+utm;
-			}else{
-				var action_ = "http://3c.yiqisoo.com/index.php?keyword="+key+"&action=life&type=life&anl=product_search";
-			}
-		}
-
-		location.href=action_;
-		set_keyword_log(key);
-		//obj.attr("action",action);
-		//obj.submit();
+		#parse("topbar.vm")
+		#parse("header.vm")
 	
-	});
-	
-	$("#keyword1").keydown(function(event){
-		event = event?event:window.event;
-		if(event.keyCode==13&&type2!=2) {
-
-     		 $("#jdbtn").click();
-			 
-		}
-	});
-});
-	
-
-</script>
-
-<script type="text/javascript">
-	var keyWord=$("#keyword1");
-	if(keyWord.val()!=''&&keyWord.val()!='请输入您要搜索的商品关键词')
-		{
-			keyWord.addClass('text2');
-		}
-	
-	keyWord.focus(function(){
-		if($(this).val()=='请输入您要搜索的商品关键词')
-		{
-			$(this).val('').addClass('text2').css({"color":"#000"});
-			
-		}
-	});	
-	keyWord.blur(function(){
-		if($(this).val()=='')
-		{
-			$(this).val('请输入您要搜索的商品关键词').removeClass('text2').css({"color":"#a4a4a4"});
-		}
-		else if($(this).val()!=''&&$(this).val()!='请输入您要搜索的商品关键词')
-		{
-			$(this).addClass('text2').css({"color":"#000"});
-		}
-	});	
-</script>
-
-<script type="text/javascript">
-	function fangchan_submit_check(key, form) {
-		key = document.getElementById(key);
-		theform = document.getElementById(form);
-		key.value = ${JQUERY}trim(key.value); //	if(key.value.length>0)
-		if (form == 'sub_ershou' || form == 'sub_newhouse' || form == 'sub_rent' || form == 'sub_show' || form == 'sub_jiaju') {
-			if (key.value == '请输入您想租的房源特征信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
-			if (key.value == '请输入您想买的二手房信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
-	
-			if (key.value == '请输入想搜索的关键字...') key.value = ''; //		theform.submit();
-
-			var action = $("#"+form).attr("action");
-
-			var url = action+encodeURIComponent(encodeURIComponent(key.value))+'-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&.html';
-			
-			window.location.href=url;
-		}
-	}
-
-	function keydown(key, form) {
-		key = document.getElementById(key);
-		theform = document.getElementById(form);
-		key.value = ${JQUERY}trim(key.value); //	if(key.value.length>0)
-		if (form == 'sub_ershou' || form == 'sub_newhouse' || form == 'sub_rent' || form == 'sub_show' || form == 'sub_jiaju') {
-			if (key.value == '请输入您想租的房源特征信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
-			if (key.value == '请输入您想买的二手房信息，如小区名称、地址...') key.value = ''; //alert(form.substr(4,form.length));
-	
-			if (key.value == '请输入想搜索的关键字...') key.value = ''; //		theform.submit();
-
-			var action = $("#"+form).attr("action");
-
-			var url = action+encodeURIComponent(encodeURIComponent(key.value))+'-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&-&.html';
-			
-			document.getElementById(form).action=url;
-		}
-	}
-</script>
-	<!--/头部搜索-->
-<div id="main">
-
-     <div class="road"><span class="gray">您的位置： </span><a href="http://www.yiqisoo.com/?anl=product_weizhi_sy">首页</a> <i class="blue">></i> <a href="http://www.yiqisoo.com/index.php?action=shop&anl=product_weizhi_shop">全部分类</a> <i class="blue">></i> <a href="/index.php?action=life&type=life&classid=51&anl=product_weizhi_51">3C数码</a> <i class="blue">></i> <a href="/index.php?action=life&type=life&classid=49&anl=product_weizhi_49">手机数码</a> <i class="blue">></i> <a href="/index.php?action=life&type=life&classid=13&anl=product_weizhi_13">手机</a> <i class="blue">></i> 三星  GALAXY NOTE I9220  手机 GSM/联通3G(WCDMA)  ANDROID  直板   </div><!--/位置-->
-<div class="details_box">
-    	<h2 class="title">三星  GALAXY NOTE I9220  手机 GSM/联通3G(WCDMA)  ANDROID  直板   </h2>
-        
-        
-        <div class="parameter">
-         
-            <span><em>ANDROID</em></span>
-            
-            <span><em>直板</em></span>
-            
-            <span><em>触屏</em></span>
-            
-            <span><em>GSM/联通3G(WCDMA)</em></span>
-             
-            <em class="detail"><a href="http://3c.yiqisoo.com/13/14245/param/?&anl=product_param#tabbar" class="moreico">详细参数</a></em>
-        </div><!--/参数-->
+		<div id="main">
+     		<div class="road">
+     			<span class="gray">您的位置： </span>
+     			<a href="http://www.yiqisoo.com/?anl=product_weizhi_sy">首页</a> 
+     			<i class="blue">></i> 
+     			<a href="http://www.yiqisoo.com/index.php?action=shop&anl=product_weizhi_shop">全部分类</a> 
+     			<i class="blue">></i> <a href="/index.php?action=life&type=life&classid=51&anl=product_weizhi_51">3C数码</a> 
+     			<i class="blue">></i> 
+     			<a href="/index.php?action=life&type=life&classid=49&anl=product_weizhi_49">手机数码</a> 
+     			<i class="blue">></i> 
+     			<a href="/index.php?action=life&type=life&classid=13&anl=product_weizhi_13">手机</a> 
+     			<i class="blue">></i> 
+     			$!{item.name}   
+     		</div><!--/位置-->
+     		
+			<div class="details_box">
+    			<h2 class="title">$!{item.name}</h2>
+        		<div class="parameter">
+            		<span><em>ANDROID</em></span>
+            		<span><em>直板</em></span>
+            		<span><em>触屏</em></span>
+            		<span><em>GSM/联通3G(WCDMA)</em></span>
+            		<em class="detail">
+            			<a href="http://3c.yiqisoo.com/13/14245/param/?&anl=product_param#tabbar" class="moreico">详细参数
+            			</a>
+            		</em>
+        		</div><!--/参数-->
+                
                 <div class="clearfix">
-            <div class="details_img">
-                <p class="img"><img src="http://img01.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/46/32/ca010ece742bee3fe0669bb6ca98d276.jpg"/></p>
-                <p><a href="http://3c.yiqisoo.com/13/14245/pic/?&anl=product_pic#tabbar">查看全部 559 张图片&gt;&gt;</a></p>
-            </div><!--/details_img-->
-          	<div class="details_right">
-            	<div class="clearfix">  
-                    <div class="details_txt">
-                               
-                        <dl class="clearfix">
-                            <dt>综合评分：</dt>
-                            <dd>
-                                <p>
-                                    <em class="f16 red fb en">4.79</em> 分
-                                    <span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span>
-                                
-                                    <span class="showrating">
-                                        <img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="ico">
-                                        <span class="tips en">
-                                             
-                                            <span class="p"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="star1"/><em class="percent"><i style="width:56.54px"></i></em> <em class="gray">56.54%（4582个）</em></span>
-                                               
-                                            <span class="p"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="star2"/><em class="percent"><i style="width:43.45px"></i></em> <em class="gray">43.45%（3521个）</em></span>
-                                               
-                                            <span class="p"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="star3"/><em class="percent"><i style="width:0px"></i></em> <em class="gray">0%（0个）</em></span>
-                                               
-                                            <span class="p"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="star4"/><em class="percent"><i style="width:0.01px"></i></em> <em class="gray">0.01%（1个）</em></span>
-                                               
-                                            <span class="p"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="star5"/><em class="percent"><i style="width:0px"></i></em> <em class="gray">0%（0个）</em></span>
-                                                                                    </span>
-                                    </span>
-                               
-                                    <em class="gray">(11个商城11963个评分)</em>
-                                </p>
-                                <p><em class="gray">本类商品综合评分</em>4.21分</p>
-                            </dd>
-                        </dl>
+            		<div class="details_img">
+               	 		<p class="img">
+               	 			<img src="http://img01.yiqisooimg.com/fangdudu/pics/new_jiadian_product_pics/46/32/ca010ece742bee3fe0669bb6ca98d276.jpg"/>
+               	 		</p>
+               	 		<p>
+               	 			<a href="http://3c.yiqisoo.com/13/14245/pic/?&anl=product_pic#tabbar">查看全部 559 张图片&gt;&gt;</a>
+               	 		</p>
+            		</div><!--/details_img-->
+          			
+          			<div class="details_right">
+            			<div class="clearfix">  
+                    		<div class="details_txt">
+                        		<dl class="clearfix">
+                            		<dt>综合评分：</dt>
+                            		<dd>
+                                		<p>
+                                    		<em class="f16 red fb en">${item.score}</em> 分
+                                    		<span class="rating">
+                                    			<em class="ico_ratefull"></em>
+                                    			<em class="ico_ratefull"></em>
+                                    			<em class="ico_ratefull"></em>
+                                    			<em class="ico_ratefull"></em>
+                                    			<em class="ico_ratepart"></em>
+                                    		</span>
+                                    		<span class="showrating">
+                                        		<img src="/assets/images/transparent.gif" class="ico"/>
+                                        		<span class="tips en">
+                                            		<span class="p">
+                                            			<img src="/assets/images/transparent.gif" class="star1"/>
+                                            			<em class="percent">
+                                            				<i style="width:56.54px"></i>
+                                            			</em>
+                                            			<em class="gray">56.54%（4582个）</em>
+                                            		</span>
+                                            		<span class="p">
+                                            			<img src="/assets/images/transparent.gif" class="star2"/>
+                                            			<em class="percent">
+                                            				<i style="width:43.45px"></i>
+                                            			</em>
+                                            			<em class="gray">43.45%（3521个）</em>
+                                            		</span>
+                                            		<span class="p">
+                                            			<img src="/assets/images/transparent.gif" class="star3"/>
+                                            			<em class="percent">
+                                            				<i style="width:0px"></i>
+                                            			</em> 
+                                            			<em class="gray">0%（0个）</em>
+                                            		</span>
+                                            		<span class="p">
+                                            			<img src="/assets/images/transparent.gif" class="star4"/>
+                                            			<em class="percent">
+                                            				<i style="width:0.01px"></i>
+                                            			</em>
+                                            			<em class="gray">0.01%（1个）</em>
+                                            		</span>
+                                            		<span class="p">
+                                            			<img src="/assets/images/transparent.gif" class="star5"/>
+                                            			<em class="percent">
+                                            				<i style="width:0px"></i>
+                                            			</em>
+                                            			<em class="gray">0%（0个）</em>
+                                            		</span>
+                                               	</span>
+                                    		</span>
+                                    		<em class="gray">(${item.sellerCount}个商城11963个评分)</em>
+                                		</p>
+                                		<p><em class="gray">本类商品综合评分</em>4.21分</p>
+                            		</dd>
+                        		</dl>
                             
-                       
-                        <dl class="clearfix">
-                            <dt>商品价格：</dt>
-                            <dd>
-                                <p><em class="price">¥
-								3419.00 - 5999.00</em> <em class="gray">(18个商城报价)</em></p>
-                                <p><em class="gray">今日均价</em><em class="red en">¥4433.00</em>，较昨天 <em class="red">↑<em class="en">3.83%</em></em>  <a href="http://3c.yiqisoo.com/13/14245/price/?&anl_product_price#tabbar" class="moreico">价格走势</a>  </p>
-                            </dd>
-                        </dl>
+                        		<dl class="clearfix">
+                            		<dt>商品价格：</dt>
+                            		<dd>
+                                		<p>
+                                			<em class="price">
+                                				¥${item.minPrice} - ${item.maxPrice}
+                                			</em> 
+                                			<em class="gray">
+                                				(${item.sellerCount}个商城报价)
+                                			</em>
+                                		</p>
+                                		<p>
+                                			<em class="gray">今日均价</em>
+                                			<em class="red en">¥4433.00</em>，
+                                			较昨天 
+                                			<em class="red">
+                                				↑<em class="en">3.83%</em>
+                                			</em>
+                                			<a href="http://3c.yiqisoo.com/13/14245/price/?&anl_product_price#tabbar" class="moreico">价格走势</a>
+                                		</p>
+                            		</dd>
+                        		</dl>
                         
+                         		<div class="details_btn">
+                            		<!-- ShareTo Button BEGIN -->
+                            		<a target="_blank" class="jiathis jiathis_txt a1" href="javascript:;" style="">
+                            			<span>分享</span>
+                            		</a>
                         
-                         <div class="details_btn">
-                            <!-- ShareTo Button BEGIN -->
-                            <a target="_blank" class="jiathis jiathis_txt a1" href="javascript:;" style=""><span>分享</span></a>
-                        
-                        <!-- JiaThis Button END -->   
-						<style type="text/css">
-                        #ckepop .ckepopBottom{display:none;}
-                        #ckepop .centerBottom{display:none;}
-                        </style>
-
+                        			<!-- JiaThis Button END -->   
+									<style type="text/css">
+                        				#ckepop .ckepopBottom{display:none;}
+                        				#ckepop .centerBottom{display:none;}
+                        			</style>
+                            		<!-- ShareTo Button END -->
+                            		<a href="javascript:addfavorite()" class="a2"><span>收 藏</span></a>
+									
+									<script language="javascript" type="text/javascript">
+	                        			function addfavorite() {
+									   		if(document.all) {
+										  		window.external.addFavorite(window.location.href,document.title);
+									   		} else if(window.sidebar) {
+										  		window.sidebar.addPanel(document.title, window.location.href, "");
+									   		}
+										} 
+                            		</script>
                             
-                            <!-- ShareTo Button END -->
-                            <a href="javascript:addfavorite()" class="a2"><span>收 藏</span></a>
-							<script language="javascript" type="text/javascript">
-                        function addfavorite()
-								{
-								   if (document.all)
-								   {
-									  window.external.addFavorite(window.location.href,document.title);
-								   }
-								   else if (window.sidebar)
-								   {
-									  window.sidebar.addPanel(document.title, window.location.href, "");
-								   }
-								} 
-
-
-                            </script>
-                            
-                            <a href="http://app.yiqisoo.com/jiadiango/?action=twitter3c&op=detail&id=14245&anl=product_tixing" class="a3" target="_blank"><span>降价提醒</span></a>
-                        </div><!--/收藏分享降价提醒-->
-
-                        
-                        
-                    </div><!--/details_txt-->
+                            		<a href="http://app.yiqisoo.com/jiadiango/?action=twitter3c&op=detail&id=14245&anl=product_tixing" class="a3" target="_blank">
+                            			<span>降价提醒</span>
+                            		</a>
+                        		</div><!--/收藏分享降价提醒-->
+                    		</div><!--/details_txt-->
                 
-                                    <div class="businessman">
-                        <div class="t"></div>
-                        <div class="c">
-                            <h3>推荐商家</h3>
-                              <table cellpadding="0" cellspacing="0" border="0">
-                            	  
-                            	<tr >
-                                	<td width="86" valign="top"><a href="/index.php?action=redirect&anl=product_ck_tuijian&link=http://www.coo8.com/product/156647.html" target="_blank" class="black guangyiguang"  dataid="251356" classid="13" location="jian">库巴购物网</a><br/><span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span></td>
-                                    <td width="76" valign="top"><em class="en">¥3419.00</em><br/>免运费</td>
-                                    <td width="76" valign="top" style="padding-right:10px;">送积分<br>                                    </td>
-                                    <td width="52" valign="top">差评率<br/><em class="en">0.00%</em></td>
-                                </tr>
-                            	
-                      
-                            	<tr class="last">
-                                	<td width="86" valign="top"><a href="/index.php?action=redirect&anl=product_ck_tuijian&link=http://product.dangdang.com/product.aspx?product_id=1297486301" target="_blank" class="black guangyiguang"  dataid="251516" classid="13" location="jian">当当网</a><br/><span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em></span></td>
-                                    <td width="76" valign="top"><em class="en">¥4088.00</em><br/>普通快递送货上门:每张订</td>
-                                    <td width="76" valign="top" style="padding-right:10px;"><br>                                    </td>
-                                    <td width="52" valign="top">差评率<br/><em class="en">3.57%</em></td>
-                                </tr>
-                            	
-                                                 </table>
-
-                        </div>
-                        <div class="b"></div>
-                    </div><!--/推荐商家-->
-                                    </div><!--/clearfix-->
-                				<div class="review_rate clearfix">
-                	<div class="merchants_comments">
-                    	<em>各商家评论：</em>
-                        <span class="active good">好评率</span>	
-                        <span class="bad">差评率</span>	
-                    </div>
-
-
-
-
-                    <div class="box clearfix" id="bad_box" style="display:none;">
-                    	
-                    
-                    </div><!--/box-->
-
-                    
-                    <div class="box clearfix" id="good_box"  >
-                    	
-                    
-                    </div><!--/box-->
-
-
-                    
-                </div><!--/bad_review_rate-->
-                            </div><!--/details_right-->
-            
-        </div><!--/clearfix-->
- <script type="text/javascript" language="javascript">
-        	$(function(){
-					var bad_bignum=$("#bad_bignum").find("em").text();
-					var good_bignum=$("#good_bignum").find("em").text();
+                			<!--Recommend mall S-->
+                            <div class="businessman">
+                        		<div class="t"></div>
+                        		<div class="c">
+                            		<h3>推荐商家</h3>
+                              		<table cellpadding="0" cellspacing="0" border="0">
+		                            	<tr >
+		                                	<td width="86" valign="top"><a href="/index.php?action=redirect&anl=product_ck_tuijian&link=http://www.coo8.com/product/156647.html" target="_blank" class="black guangyiguang"  dataid="251356" classid="13" location="jian">库巴购物网</a><br/><span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span></td>
+		                                    <td width="76" valign="top"><em class="en">¥3419.00</em><br/>免运费</td>
+		                                    <td width="76" valign="top" style="padding-right:10px;">送积分<br>                                    </td>
+		                                    <td width="52" valign="top">差评率<br/><em class="en">0.00%</em></td>
+		                                </tr>
+		                            	<tr class="last">
+		                                	<td width="86" valign="top"><a href="/index.php?action=redirect&anl=product_ck_tuijian&link=http://product.dangdang.com/product.aspx?product_id=1297486301" target="_blank" class="black guangyiguang"  dataid="251516" classid="13" location="jian">当当网</a><br/><span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em></span></td>
+		                                    <td width="76" valign="top"><em class="en">¥4088.00</em><br/>普通快递送货上门:每张订</td>
+		                                    <td width="76" valign="top" style="padding-right:10px;"><br>                                    </td>
+		                                    <td width="52" valign="top">差评率<br/><em class="en">3.57%</em></td>
+		                                </tr>
+                                   	</table>
+                        		</div>
+                        		<div class="b"></div>
+                    		</div><!--/推荐商家-->
+                    		<!--Recommend mall E-->
+                      	</div><!--/clearfix-->
+                		
+                		<div class="review_rate clearfix">
+                			<div class="merchants_comments">
+                    			<em>各商家评论：</em>
+                        		<span class="active good">好评率</span>	
+                        		<span class="bad">差评率</span>	
+                    		</div>
+                    		<div class="box clearfix" id="bad_box" style="display:none;"></div><!--/box-->
+                    		<div class="box clearfix" id="good_box"></div><!--/box-->
+                		</div><!--/bad_review_rate-->
+                  	</div><!--/details_right-->
+        		</div><!--/clearfix-->
+ 				
+ 				<script type="text/javascript" language="javascript">
+        			$(function(){
+						var bad_bignum=$("#bad_bignum").find("em").text();
+						var good_bignum=$("#good_bignum").find("em").text();
 					
-					var good_every=70/good_bignum;
-					var bad_every=70/bad_bignum;
+						var good_every=70/good_bignum;
+						var bad_every=70/bad_bignum;
+				
+						/*
+						$("#bad_box li .num em").each(function(){
+							var num=$(this).text()*bad_every;
+							
+							$(this).parents("li").find(".bar").css({"height": num+1+"px"});
+							$(this).parents("li").find(".bar img").css({"height": num+"px"});
+							$(this).parents("li").find(".num").css({"bottom": num+"px"});
+							
+						});
+						*/
+						/*	
+						$("#good_box li .num em").each(function(){
+							var num=$(this).text()*good_every;
+							$(this).parents("li").find(".bar").css({"height": num+1+"px"});
+							$(this).parents("li").find(".bar img").css({"height": num+"px"});
+							$(this).parents("li").find(".num").css({"bottom": num+"px"});
 					
+						});
+						*/
 				
-				/*$("#bad_box li .num em").each(function(){
-					var num=$(this).text()*bad_every;
-					
-					$(this).parents("li").find(".bar").css({"height": num+1+"px"});
-					$(this).parents("li").find(".bar img").css({"height": num+"px"});
-					$(this).parents("li").find(".num").css({"bottom": num+"px"});
-					
-				});*/
-			/*	$("#good_box li .num em").each(function(){
-					var num=$(this).text()*good_every;
-					
-					$(this).parents("li").find(".bar").css({"height": num+1+"px"});
-					$(this).parents("li").find(".bar img").css({"height": num+"px"});
-					$(this).parents("li").find(".num").css({"bottom": num+"px"});
-					
-				});
-				*/
+						/*	
+						var good_pj=$("#good_pj").text()*70/100;
+						var bad_pj=$("#bad_pj").text()*70/100;
 				
-				
-			/*	var good_pj=$("#good_pj").text()*70/100;
-				var bad_pj=$("#bad_pj").text()*70/100;
-				
-				$("#good_line").css({"bottom":good_pj+"px"});
-				$("#bad_line").css({"bottom":bad_pj+"px"});
-				*/
-				$(".good").click(function(){
-					$(this).addClass("active");
-					$(".bad").removeClass("active");
-					$("#good_box").show();
-					$("#bad_box").hide();
-				});
-				$(".bad").click(function(){
-					$(this).addClass("active");
-					$(".good").removeClass("active");
-					$("#good_box").hide();
-					$("#bad_box").show();
-				});
-				
-				
-			})
-				
-        </script>          
+						$("#good_line").css({"bottom":good_pj+"px"});
+						$("#bad_line").css({"bottom":bad_pj+"px"});
+						*/
+						$(".good").click(function(){
+							$(this).addClass("active");
+							$(".bad").removeClass("active");
+							$("#good_box").show();
+							$("#bad_box").hide();
+						});
+						$(".bad").click(function(){
+							$(this).addClass("active");
+							$(".good").removeClass("active");
+							$("#good_box").hide();
+							$("#bad_box").show();
+						});
+					})
+        		</script>          
+    		</div>
+
+			<script type="text/javascript" language="javascript">
+			    //好评
+				$().ready(function(){
+					var md5_key_id=2497168;  
+					var goodcommrate=0.00;  
+					${JQUERY}ajax({ 
+						type:'POST',
+						//cache:false,
+						url:'http://'+window.location.host+'/index.php?action=snapshot3cnew',
+						data:{md5_key_id:md5_key_id,goodcommrate:goodcommrate,ajaxtag:'1'},
+						//发送请求前 
+						beforeSend:function(data){ 
+							$('#good_box').html('loading...'); 
+						},
+						//请求成功后 
+						success:function(data){ 
+							$('#good_box').html(data); 
+						},
+						//请求错误 
+						error:function(data){ 
+							$('#good_box').html('failed to load data.');
+						},
+						//请求完成 
+						complete:function(data){ 
+							//do none 
+						}
+					}); 
+				}) 
+				//差评
+				$().ready(function(){
+					var md5_key_id=2497168;  
+					var badcommrate=0.00;  
+					${JQUERY}ajax({ 
+						type:'POST',
+						//cache:false,
+						url:'http://'+window.location.host+'/index.php?action=snapshot3cnew',
+						data:{md5_key_id:md5_key_id,badcommrate:badcommrate,ajaxtag:'2'},
+						//发送请求前 
+						beforeSend:function(data){ 
+							$('#bad_box').html('loading...'); 
+						},
+						//请求成功后 
+						success:function(data){ 
+							$('#bad_box').html(data); 
+						},
+						//请求错误 
+						error:function(data){ 
+							$('#bad_box').html('failed to load data.');
+						},
+						//请求完成 
+						complete:function(data){ 
+							//do none 
+						}
+					}); 
+				}) 
+			</script>
+			<!--/详情页_头-->
+		  
+    		<div class="tabbar" id="tabbar">
+    			<div class="left">
+        			<span class="active">
+        				<a href="http://3c.yiqisoo.com/13/14245/overview/?anl=product_zongshu_overview" >商品概述</a>
+        			</span>
+        			<span>
+        				<a href="http://3c.yiqisoo.com/13/14245/price/?&anl=product_gongneng_bijia#tabbar" >商城比价<em class="en">(18)</em></a>
+        			</span>
+        		</div><!--/tabbar_left-->
+    			<div class="right">
+		      		<a href="http://3c.yiqisoo.com/13/14245/param/?&anl=product_zongshu_param#tabbar" >详细参数</a>
+		      		<i>|</i>
+		      		<a href="http://3c.yiqisoo.com/13/14245/pic/?&anl=product_zongshu_pic#tabbar" >图片</a>
+		      		<em class="en">(559)</em>
+		      		<i>|</i>
+		      		<a href="http://3c.yiqisoo.com/13/14245/evaluating/?&anl=product_zongshu_evaluating#tabbar" >专业评测</a>
+		      		<em class="en">(2)</em>	
+        		</div><!--/tabbar_right-->
+    		</div>
+    		<!--/tabbar-->
+    
+   			<h3 class="title_h3" style="height:24px; overflow:hidden;"><span class="imgico">商城报价</span></h3>
+ 	 		<div id="screening">
+        		<ul class="sorting_btns clearfix">
+        			<li class="merchant">商城</li>
+        			<li class="comment">
+        				<a href="javascript:void(0);" id="sort_comtot" class="down" title="点击按(评论数从多到少)">评论数</a>
+        			</li>
+        			<li class="favorable">支付方式/配送方式/服务保障/优惠信息</li>
+        			<li class="money">
+        				<a href="javascript:void(0);" id="sort_price" class="down" title="点击按(价格从低到高)">价格</a>
+        			</li>
+        			<li class="address">
+        				<h3>
+							收货地：杭州
+							<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/list/newhot.gif"/>
+						</h3>
+						#parse("address.vm")
+            		</li>
+        			<li class="curShop">
+        				<input type="checkbox" id="curShop">
+        				<label class="gray" for="curShop">现货商城</label>
+        			</li>
+    			</ul><!--/sorting_btns-->
+        		<a id="recovery" href="javascript:;"></a>
+    		</div>
       
-        
-
-        
-    </div>
-
-<script type="text/javascript" language="javascript">
-    //好评
-	$().ready(function(){
-		var md5_key_id=2497168;  
-		var goodcommrate=0.00;  
-		${JQUERY}ajax({ 
-			type:'POST',
-			//cache:false,
-			url:'http://'+window.location.host+'/index.php?action=snapshot3cnew',
-			data:{md5_key_id:md5_key_id,goodcommrate:goodcommrate,ajaxtag:'1'},
-			//发送请求前 
-			beforeSend:function(data){ 
-				$('#good_box').html('loading...'); 
-			},
-			//请求成功后 
-			success:function(data){ 
-				$('#good_box').html(data); 
-			},
-			//请求错误 
-			error:function(data){ 
-				$('#good_box').html('failed to load data.');
-			},
-			//请求完成 
-			complete:function(data){ 
-				//do none 
-			}
-		}); 
-	}) 
-	//差评
-	$().ready(function(){
-		var md5_key_id=2497168;  
-		var badcommrate=0.00;  
-		${JQUERY}ajax({ 
-			type:'POST',
-			//cache:false,
-			url:'http://'+window.location.host+'/index.php?action=snapshot3cnew',
-			data:{md5_key_id:md5_key_id,badcommrate:badcommrate,ajaxtag:'2'},
-			//发送请求前 
-			beforeSend:function(data){ 
-				$('#bad_box').html('loading...'); 
-			},
-			//请求成功后 
-			success:function(data){ 
-				$('#bad_box').html(data); 
-			},
-			//请求错误 
-			error:function(data){ 
-				$('#bad_box').html('failed to load data.');
-			},
-			//请求完成 
-			complete:function(data){ 
-				//do none 
-			}
-		}); 
-	}) 
-</script>
-<!--/详情页_头-->  
-    <div class="tabbar" id="tabbar">
-    	<div class="left">
-        	<span class="active"><a href="http://3c.yiqisoo.com/13/14245/overview/?anl=product_zongshu_overview" >商品概述</a></span><span ><a href="http://3c.yiqisoo.com/13/14245/price/?&anl=product_gongneng_bijia#tabbar" >商城比价<em class="en">(18)</em></a></span>
-        </div><!--/tabbar_left-->
-    	<div class="right">
-		        	            <a href="http://3c.yiqisoo.com/13/14245/param/?&anl=product_zongshu_param#tabbar" >详细参数</a><i>|</i><a href="http://3c.yiqisoo.com/13/14245/pic/?&anl=product_zongshu_pic#tabbar" >图片</a><em class="en">(559)</em><i>|</i><a href="http://3c.yiqisoo.com/13/14245/evaluating/?&anl=product_zongshu_evaluating#tabbar" >专业评测</a><em class="en">(2)</em>	
-        </div><!--/tabbar_right-->
-    </div><!--/详情页_头--><!--/详情页_头-->
-    
-    
-    <!--/tabbar-->
-    
-   <h3 class="title_h3" style="height:24px; overflow:hidden;"><span class="imgico">商城报价</span></h3>
-    
-    
-    
-    
-  <div id="screening">
-        <ul class="sorting_btns clearfix">
-            <li class="merchant">商城</li>
-            <li class="comment"><a href="javascript:void(0);" id="sort_comtot" class="down" title="点击按(评论数从多到少)">评论数</a></li>
-    
-            <li class="favorable">支付方式/配送方式/服务保障/优惠信息</li>
-            <li class="money"><a href="javascript:void(0);" id="sort_price" class="down" title="点击按(价格从低到高)">价格</a></li>
-            <li class="address">
-            	<h3>
-					收货地：杭州					<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/list/newhot.gif"/>
-				</h3>
-                <div class="addressShow" >
-                	<div class="topCity clearfix">
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=北京&anl=product_city" >北京</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=上海&anl=product_city" >上海</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=广州&anl=product_city" >广州</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=深圳&anl=product_city" >深圳</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=天津&anl=product_city" >天津</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=杭州&anl=product_city" class="active">杭州</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=成都&anl=product_city" >成都</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=大连&anl=product_city" >大连</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南京&anl=product_city" >南京</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=苏州&anl=product_city" >苏州</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=武汉&anl=product_city" >武汉</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=重庆&anl=product_city" >重庆</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=西安&anl=product_city" >西安</a>
-        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=厦门&anl=product_city" >厦门</a>  
-                    </div>
-                    
-                    <!--<div class="findCity">
-                    	<input type="text" class="txt" id="cityyunfei" value="杭州" onKeyPress="press_event(event)"><input type="button" id="citybutton" class="btn" value="" onMouseOver="this.className='btn2'" onMouseOut="this.className='btn'"/>
-                    </div>-->
-                    
-                    <div class="clearfix" id="cityList">
-                    	
-                                                                        <ul class="lisT clearfix" >
-                        	                            <li><a href="javascript:;" class="i ">安徽</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=合肥&anl=product_city" >合肥</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=芜湖&anl=product_city" >芜湖</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=蚌埠&anl=product_city" >蚌埠</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=淮南&anl=product_city" >淮南</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=马鞍山&anl=product_city" >马鞍山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=淮北&anl=product_city" >淮北</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=铜陵&anl=product_city" >铜陵</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=安庆&anl=product_city" >安庆</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黄山&anl=product_city" >黄山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=滁州&anl=product_city" >滁州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阜阳&anl=product_city" >阜阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宿州&anl=product_city" >宿州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=巢湖&anl=product_city" >巢湖</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=六安&anl=product_city" >六安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=亳州&anl=product_city" >亳州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=池州&anl=product_city" >池州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宣城&anl=product_city" >宣城</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">福建</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=福州&anl=product_city" >福州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=厦门&anl=product_city" >厦门</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=莆田&anl=product_city" >莆田</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=三明&anl=product_city" >三明</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=泉州&anl=product_city" >泉州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=漳州&anl=product_city" >漳州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南平&anl=product_city" >南平</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=龙岩&anl=product_city" >龙岩</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宁德&anl=product_city" >宁德</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">广东</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=广州&anl=product_city" >广州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=深圳&anl=product_city" >深圳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=韶关&anl=product_city" >韶关</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=珠海&anl=product_city" >珠海</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=汕头&anl=product_city" >汕头</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=佛山&anl=product_city" >佛山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=江门&anl=product_city" >江门</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=湛江&anl=product_city" >湛江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=茂名&anl=product_city" >茂名</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=肇庆&anl=product_city" >肇庆</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=惠州&anl=product_city" >惠州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=梅州&anl=product_city" >梅州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=汕尾&anl=product_city" >汕尾</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=河源&anl=product_city" >河源</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阳江&anl=product_city" >阳江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=清远&anl=product_city" >清远</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=东莞&anl=product_city" >东莞</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=中山&anl=product_city" >中山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=潮州&anl=product_city" >潮州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=揭阳&anl=product_city" >揭阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=云浮&anl=product_city" >云浮</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">广西</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南宁&anl=product_city" >南宁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=柳州&anl=product_city" >柳州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=桂林&anl=product_city" >桂林</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=梧州&anl=product_city" >梧州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=北海&anl=product_city" >北海</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=防城港&anl=product_city" >防城港</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=钦州&anl=product_city" >钦州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=贵港&anl=product_city" >贵港</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=玉林&anl=product_city" >玉林</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=百色&anl=product_city" >百色</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=贺州&anl=product_city" >贺州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=河池&anl=product_city" >河池</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=来宾&anl=product_city" >来宾</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=崇左&anl=product_city" >崇左</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">甘肃</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=兰州&anl=product_city" >兰州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=嘉峪关&anl=product_city" >嘉峪关</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=金昌&anl=product_city" >金昌</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=白银&anl=product_city" >白银</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=天水&anl=product_city" >天水</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=武威&anl=product_city" >武威</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=张掖&anl=product_city" >张掖</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=平凉&anl=product_city" >平凉</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=酒泉&anl=product_city" >酒泉</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=庆阳&anl=product_city" >庆阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=定西&anl=product_city" >定西</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=陇南&anl=product_city" >陇南</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=临夏州&anl=product_city" >临夏州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=甘南州&anl=product_city" >甘南州</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">贵州</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=贵阳&anl=product_city" >贵阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=六盘水&anl=product_city" >六盘水</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=遵义&anl=product_city" >遵义</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=安顺&anl=product_city" >安顺</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=铜仁&anl=product_city" >铜仁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黔西南州&anl=product_city" >黔西南州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=毕节&anl=product_city" >毕节</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黔东南州&anl=product_city" >黔东南州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黔南州&anl=product_city" >黔南州</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">湖南</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=长沙&anl=product_city" >长沙</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=株洲&anl=product_city" >株洲</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=湘潭&anl=product_city" >湘潭</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=衡阳&anl=product_city" >衡阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=邵阳&anl=product_city" >邵阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=岳阳&anl=product_city" >岳阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=常德&anl=product_city" >常德</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=张家界&anl=product_city" >张家界</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=益阳&anl=product_city" >益阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=郴州&anl=product_city" >郴州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=永州&anl=product_city" >永州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=怀化&anl=product_city" >怀化</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=娄底&anl=product_city" >娄底</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=湘西州&anl=product_city" >湘西州</a>
-                                                         </p>
-                            </li>
-                          </ul><!--/lisT-->
-                                                                                                <ul class="lisT clearfix" >
-                        	                            <li><a href="javascript:;" class="i ">海南</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=海口&anl=product_city" >海口</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=三亚&anl=product_city" >三亚</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=白沙黎族自治县&anl=product_city" >白沙黎族自治县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=昌江黎族自治县&anl=product_city" >昌江黎族自治县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=乐东黎族自治县&anl=product_city" >乐东黎族自治县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=陵水黎族自治县&anl=product_city" >陵水黎族自治县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=保亭黎族苗族自治县&anl=product_city" >保亭黎族苗族自治县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=琼中黎族苗族自治县&anl=product_city" >琼中黎族苗族自治县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=五指山&anl=product_city" >五指山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=琼海&anl=product_city" >琼海</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=儋州&anl=product_city" >儋州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=文昌&anl=product_city" >文昌</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=万宁&anl=product_city" >万宁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=东方&anl=product_city" >东方</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=定安县&anl=product_city" >定安县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=屯昌县&anl=product_city" >屯昌县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=澄迈县&anl=product_city" >澄迈县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=临高县&anl=product_city" >临高县</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=博鳌&anl=product_city" >博鳌</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">湖北</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=武汉&anl=product_city" >武汉</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黄石&anl=product_city" >黄石</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=十堰&anl=product_city" >十堰</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宜昌&anl=product_city" >宜昌</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=襄阳&anl=product_city" >襄阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=鄂州&anl=product_city" >鄂州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=荆门&anl=product_city" >荆门</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=孝感&anl=product_city" >孝感</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=荆州&anl=product_city" >荆州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黄冈&anl=product_city" >黄冈</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=咸宁&anl=product_city" >咸宁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=随州&anl=product_city" >随州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=恩施州&anl=product_city" >恩施州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=潜江&anl=product_city" >潜江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=天门&anl=product_city" >天门</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=仙桃&anl=product_city" >仙桃</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=神农架林区&anl=product_city" >神农架林区</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">河南</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=郑州&anl=product_city" >郑州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=开封&anl=product_city" >开封</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=洛阳&anl=product_city" >洛阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=平顶山&anl=product_city" >平顶山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=安阳&anl=product_city" >安阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=鹤壁&anl=product_city" >鹤壁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=新乡&anl=product_city" >新乡</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=焦作&anl=product_city" >焦作</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=濮阳&anl=product_city" >濮阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=许昌&anl=product_city" >许昌</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=济源&anl=product_city" >济源</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=漯河&anl=product_city" >漯河</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=三门峡&anl=product_city" >三门峡</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南阳&anl=product_city" >南阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=商丘&anl=product_city" >商丘</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=信阳&anl=product_city" >信阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=周口&anl=product_city" >周口</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=驻马店&anl=product_city" >驻马店</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">河北</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=石家庄&anl=product_city" >石家庄</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=唐山&anl=product_city" >唐山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=秦皇岛&anl=product_city" >秦皇岛</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=邯郸&anl=product_city" >邯郸</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=邢台&anl=product_city" >邢台</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=保定&anl=product_city" >保定</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=张家口&anl=product_city" >张家口</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=承德&anl=product_city" >承德</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=沧州&anl=product_city" >沧州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=廊坊&anl=product_city" >廊坊</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=衡水&anl=product_city" >衡水</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">江苏</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南京&anl=product_city" >南京</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=无锡&anl=product_city" >无锡</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=徐州&anl=product_city" >徐州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=常州&anl=product_city" >常州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=苏州&anl=product_city" >苏州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南通&anl=product_city" >南通</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=连云港&anl=product_city" >连云港</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=淮安&anl=product_city" >淮安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=盐城&anl=product_city" >盐城</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=扬州&anl=product_city" >扬州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=镇江&anl=product_city" >镇江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=泰州&anl=product_city" >泰州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宿迁&anl=product_city" >宿迁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=常熟&anl=product_city" >常熟</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=江阴&anl=product_city" >江阴</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=昆山&anl=product_city" >昆山</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">江西</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南昌&anl=product_city" >南昌</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=景德镇&anl=product_city" >景德镇</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=萍乡&anl=product_city" >萍乡</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=九江&anl=product_city" >九江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=新余&anl=product_city" >新余</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=鹰潭&anl=product_city" >鹰潭</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=赣州&anl=product_city" >赣州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=吉安&anl=product_city" >吉安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宜春&anl=product_city" >宜春</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=抚州&anl=product_city" >抚州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=上饶&anl=product_city" >上饶</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">吉林</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=长春&anl=product_city" >长春</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=吉林&anl=product_city" >吉林</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=四平&anl=product_city" >四平</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=辽源&anl=product_city" >辽源</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=通化&anl=product_city" >通化</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=白山&anl=product_city" >白山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=松原&anl=product_city" >松原</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=白城&anl=product_city" >白城</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=延边朝鲜族自治州&anl=product_city" >延边朝鲜族自治州</a>
-                                                         </p>
-                            </li>
-                          </ul><!--/lisT-->
-                                                                                                <ul class="lisT clearfix" >
-                        	                            <li><a href="javascript:;" class="i ">辽宁</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=沈阳&anl=product_city" >沈阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=大连&anl=product_city" >大连</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=鞍山&anl=product_city" >鞍山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=抚顺&anl=product_city" >抚顺</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=本溪&anl=product_city" >本溪</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=丹东&anl=product_city" >丹东</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=锦州&anl=product_city" >锦州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=营口&anl=product_city" >营口</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阜新&anl=product_city" >阜新</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=辽阳&anl=product_city" >辽阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=盘锦&anl=product_city" >盘锦</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=铁岭&anl=product_city" >铁岭</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=朝阳&anl=product_city" >朝阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=葫芦岛&anl=product_city" >葫芦岛</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">宁夏</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=银川&anl=product_city" >银川</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=石嘴山&anl=product_city" >石嘴山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=吴忠&anl=product_city" >吴忠</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=固原&anl=product_city" >固原</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">青海</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=西宁&anl=product_city" >西宁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=海东地区&anl=product_city" >海东地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=海北州&anl=product_city" >海北州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黄南州&anl=product_city" >黄南州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=海南州&anl=product_city" >海南州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=果洛州&anl=product_city" >果洛州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=玉树州&anl=product_city" >玉树州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=海西州&anl=product_city" >海西州</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">陕西</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=西安&anl=product_city" >西安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=铜川&anl=product_city" >铜川</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宝鸡&anl=product_city" >宝鸡</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=咸阳&anl=product_city" >咸阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=渭南&anl=product_city" >渭南</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=延安&anl=product_city" >延安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=汉中&anl=product_city" >汉中</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=榆林&anl=product_city" >榆林</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=安康&anl=product_city" >安康</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=商洛&anl=product_city" >商洛</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">四川</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=成都&anl=product_city" >成都</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=自贡&anl=product_city" >自贡</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=攀枝花&anl=product_city" >攀枝花</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=泸州&anl=product_city" >泸州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=德阳&anl=product_city" >德阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=绵阳&anl=product_city" >绵阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=广元&anl=product_city" >广元</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=遂宁&anl=product_city" >遂宁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=内江&anl=product_city" >内江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=乐山&anl=product_city" >乐山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=南充&anl=product_city" >南充</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=眉山&anl=product_city" >眉山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宜宾&anl=product_city" >宜宾</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=广安&anl=product_city" >广安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=达州&anl=product_city" >达州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=雅安&anl=product_city" >雅安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=巴中&anl=product_city" >巴中</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=资阳&anl=product_city" >资阳</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阿坝州&anl=product_city" >阿坝州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=甘孜州&anl=product_city" >甘孜州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=凉山州&anl=product_city" >凉山州</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">山东</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=济南&anl=product_city" >济南</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=青岛&anl=product_city" >青岛</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=淄博&anl=product_city" >淄博</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=枣庄&anl=product_city" >枣庄</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=东营&anl=product_city" >东营</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=烟台&anl=product_city" >烟台</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=潍坊&anl=product_city" >潍坊</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=济宁&anl=product_city" >济宁</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=泰安&anl=product_city" >泰安</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=威海&anl=product_city" >威海</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=日照&anl=product_city" >日照</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=莱芜&anl=product_city" >莱芜</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=临沂&anl=product_city" >临沂</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=德州&anl=product_city" >德州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=聊城&anl=product_city" >聊城</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=滨州&anl=product_city" >滨州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=菏泽&anl=product_city" >菏泽</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">山西</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=太原&anl=product_city" >太原</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=大同&anl=product_city" >大同</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阳泉&anl=product_city" >阳泉</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=长治&anl=product_city" >长治</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=晋城&anl=product_city" >晋城</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=朔州&anl=product_city" >朔州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=晋中&anl=product_city" >晋中</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=运城&anl=product_city" >运城</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=忻州&anl=product_city" >忻州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=临汾&anl=product_city" >临汾</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=吕梁&anl=product_city" >吕梁</a>
-                                                         </p>
-                            </li>
-                          </ul><!--/lisT-->
-                                                                                                <ul class="lisT clearfix" >
-                        	                            <li><a href="javascript:;" class="i ">新疆</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=乌鲁木齐&anl=product_city" >乌鲁木齐</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=克拉玛依&anl=product_city" >克拉玛依</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=吐鲁番地区&anl=product_city" >吐鲁番地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=哈密地区&anl=product_city" >哈密地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=昌吉州&anl=product_city" >昌吉州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=博尔塔拉州&anl=product_city" >博尔塔拉州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=巴音郭楞州&anl=product_city" >巴音郭楞州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阿克苏地区&anl=product_city" >阿克苏地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=克孜勒苏州&anl=product_city" >克孜勒苏州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=喀什地区&anl=product_city" >喀什地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=和田地区&anl=product_city" >和田地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=伊犁州&anl=product_city" >伊犁州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=塔城地区&anl=product_city" >塔城地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阿勒泰地区&anl=product_city" >阿勒泰地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=图木舒克&anl=product_city" >图木舒克</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=五家渠&anl=product_city" >五家渠</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阿拉尔&anl=product_city" >阿拉尔</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=石河子&anl=product_city" >石河子</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">西藏</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=拉萨&anl=product_city" >拉萨</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=昌都地区&anl=product_city" >昌都地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=山南地区&anl=product_city" >山南地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=日喀则地区&anl=product_city" >日喀则地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=那曲地区&anl=product_city" >那曲地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阿里地区&anl=product_city" >阿里地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=林芝地区&anl=product_city" >林芝地区</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">云南</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=昆明&anl=product_city" >昆明</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=曲靖&anl=product_city" >曲靖</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=玉溪&anl=product_city" >玉溪</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=保山&anl=product_city" >保山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=昭通&anl=product_city" >昭通</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=丽江&anl=product_city" >丽江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=楚雄州&anl=product_city" >楚雄州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=红河州&anl=product_city" >红河州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=文山州&anl=product_city" >文山州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=思茅地区&anl=product_city" >思茅地区</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=西双版纳州&anl=product_city" >西双版纳州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=大理州&anl=product_city" >大理州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=德宏州&anl=product_city" >德宏州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=怒江州&anl=product_city" >怒江州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=迪庆州&anl=product_city" >迪庆州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=临沧地区&anl=product_city" >临沧地区</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">浙江</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=杭州&anl=product_city" class="active">杭州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=宁波&anl=product_city" >宁波</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=温州&anl=product_city" >温州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=嘉兴&anl=product_city" >嘉兴</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=湖州&anl=product_city" >湖州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=绍兴&anl=product_city" >绍兴</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=金华&anl=product_city" >金华</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=衢州&anl=product_city" >衢州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=舟山&anl=product_city" >舟山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=台州&anl=product_city" >台州</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=丽水&anl=product_city" >丽水</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">黑龙江</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=哈尔滨&anl=product_city" >哈尔滨</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=齐齐哈尔&anl=product_city" >齐齐哈尔</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=鸡西&anl=product_city" >鸡西</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=鹤岗&anl=product_city" >鹤岗</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=双鸭山&anl=product_city" >双鸭山</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=大庆&anl=product_city" >大庆</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=伊春&anl=product_city" >伊春</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=佳木斯&anl=product_city" >佳木斯</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=七台河&anl=product_city" >七台河</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=牡丹江&anl=product_city" >牡丹江</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=黑河&anl=product_city" >黑河</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=绥化&anl=product_city" >绥化</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=大兴安岭&anl=product_city" >大兴安岭</a>
-                                                         </p>
-                            </li>
-                                                                              <li><a href="javascript:;" class="i ">内蒙古</a>
-                            <p class="clearfix" >
-                                                        <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=呼和浩特&anl=product_city" >呼和浩特</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=包头&anl=product_city" >包头</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=乌海&anl=product_city" >乌海</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=赤峰&anl=product_city" >赤峰</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=通辽&anl=product_city" >通辽</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=鄂尔多斯&anl=product_city" >鄂尔多斯</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=呼伦贝尔&anl=product_city" >呼伦贝尔</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=兴安盟兴&anl=product_city" >兴安盟兴</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=锡林郭勒盟&anl=product_city" >锡林郭勒盟</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=乌兰察布&anl=product_city" >乌兰察布</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=巴彦淖尔&anl=product_city" >巴彦淖尔</a>
-                                                         <a href="http://3c.yiqisoo.com/13/14245/overview/?anl=lb_pic_1&city=阿拉善盟&anl=product_city" >阿拉善盟</a>
-                                                         </p>
-                            </li>
-                          </ul><!--/lisT-->
-                                                                       
-
-                        
-                    </div>
-                    <div class="morek"><a href="http://www.yiqisoo.com/specials/daogou.html?anl=product_daogou" class="blue" target="_blank">了解更多</a></div>
-                </div>
-            	
-            </li>
-            <li class="curShop"><input type="checkbox" id="curShop"  > <label class="gray" for="curShop">现货商城</label></li>
-        </ul><!--/sorting_btns-->
-        <a id="recovery" href="javascript:;"></a>
-    </div>
-    
-       <script language="javascript" type="text/javascript">
-    	$(function(){
-			var timerhide=null;
-			var oCityList=$("#cityList ul");
-			$(".address").hover(function(){
-				clearTimeout(timerhide);
-				$(".addressShow").show();
-				oCityList.find('.i').each(function(i)
-				{
-					
-					if($(this).hasClass('active'))
-					{
-						$(this).removeClass('gray');
-						var h=$(this).next('p').outerHeight();
-						$(this).parents('ul:not(.sorting_btns)').css({"height":h+23+"px"});
-					}
-					
-					
-				});
-			},function(){
-				timerhide = setTimeout(function(){
-					oneShow();
-				},1000);
-				
-			});
-			
-			$(".address").click(function(event){
-				event.stopPropagation();       
-			});
-			
-			var iNow=0;
-			
-			
-			oCityList.each(function(i){
-				var oLi=$("#cityList ul").eq(i).find('li');
-				
-				
-				
-				oLi.find('.i').click(function(event){
-					
-					if(!$(this).hasClass('active'))
-					{
-						
-						oCityList.find('p').hide();
-						oCityList.css({"height":"23px"});
-						oCityList.find(".i").removeClass('active').addClass('gray');
-						$(this).removeClass('gray').addClass('active');
-						oLi.parent('ul').css({"height":$(this).next('p').outerHeight()+23+"px"});
-						$(this).next('p').slideDown(100);
-					}
-					
-				});
-				
-				
-			});
-			
-			
-			var iNow2=0;
-			var have=false;
-			
-			oCityList.find(".i").each(function(i){
-				if(oCityList.find('.i').eq(i).hasClass('active'))
-				{
-					have=true;
-					iNow2=oCityList.find(".i").index($(this));
-				}
-			});
-			
-			function oneShow()
-			{
-				$(".addressShow").hide();
-				oCityList.find(".i").removeClass('active gray');
-				oCityList.find("p").hide();
-				oCityList.css({"height":"23px"});
-				
-				if(have)
-				{
-					oCityList.find(".i").eq(iNow2).trigger('click');
-				}
-			}
-
-
-
-
-			
-			$(document).click(function(event){
-				oneShow();
-			});
-			
-			//滚动条
-			var oIe6True=${JQUERY}browser.msie && (${JQUERY}browser.version == "6.0") && !${JQUERY}support.style;
-			var iBoxLength=$("#quote_list .box").length;
-			var iBox2Length=$("#quote_list .box2").length;
-			
-			var oLastBox=$("#quote_list .box").last();
-			var oLastBox2=$("#quote_list .box2").last();
-			
-			var oQuoteList=$("#quote_list");
-			
-			var iZindex=9999;
-			if(iBoxLength+iBox2Length>4)
-			{
-				var oScreening=$("#screening");
-				var oOffset=oScreening.offset();
-				
-				var iWindowScroll=0;
-				
-				var oldTop=parseInt(oOffset.top);
-				
-				
-				
-				$(window).bind('scroll',moveBar);
-				$(window).bind('resize',moveBar);
-				
-				$("#recovery").click(function()
-				{
-					if (oIe6True)
-					{
-						oScreening.css({"position":"relative","left":"0px","z-index":iZindex}).animate({"top":"0px"},1);
-					}
-					else
-					{
-						oScreening.css({"position":"relative","left":"0px","top":"0px","z-index":iZindex});
-					}
-					$(this).hide();
-					$(window).unbind('scroll');
-					$(window).unbind('resize');
-				});
-				
-			}
-			
-			function moveBar(){
-					var oMain=$("#main").offset();
-					var oldLeft=parseInt(oMain.left);
-					iWindowScroll=parseInt($(window).scrollTop());
-					
-					var iBoxOffset=0;
-					
-					
-					
-					
-					if(iBox2Length)
-					{
-						iBoxOffset=oLastBox2.offset().top;
-					}
-					else
-					{
-						iBoxOffset=oLastBox.offset().top;
-					}
-					
-					
-					if(iWindowScroll>oldTop)
-					{
-						
-						if(iWindowScroll>iBoxOffset)
-						{
-							oQuoteList.css({"margin-top":"0px"});
-							oScreening.hide().css({"position":"relative","left":"0px","top":"0px","z-index":iZindex}).show();
-							$("#recovery").hide();
-						}
-						else
-						{
-							if (oIe6True)
-							{
-								oScreening.css({"position":"absolute","left":oMain.left+"px","top":iWindowScroll+"px","z-index":iZindex});
-							}
-							else
-							{
-								oScreening.css({"position":"fixed","left":oMain.left+"px","top":"0px","z-index":iZindex});
-							}
-							oQuoteList.css({"margin-top":"35px"});
-							$("#recovery").show();
-						}
-						
-						
-					}
-					else
-					{
-						oQuoteList.css({"margin-top":"0px"});
-						oScreening.hide().css({"position":"relative","left":"0px","top":"0px","z-index":iZindex}).show();
-						$("#recovery").hide();
-					}
-					
-				
-					
-					
-					
-				}				
-
-		});
-    </script>
-    
-    
-    
-    <div id="quote_list">
+    		<div id="quote_list">
+     	        
      	        <div class="box" comtot="40" price="3249.00" id="box_1">
-            <dl class="clearfix">
-                <dt class="one">
-                      <img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="tuijian">                    <a title="库巴购物网"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log1.jpg" width="60" height="30"/></a>
+            		<dl class="clearfix">
+                		<dt class="one">
+                      		<img src="/assets/images/transparent.gif" class="tuijian">
+                      		<a title="库巴购物网">
+                      			<img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/images/logos/log1.jpg" width="60" height="30"/>
+                      		</a>
                     
-                     <p class="f14 red ff1"><em class="en">4.70</em>分</p>                            
-                     <p class="ff1"><span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span></p>
-                    
-                    <span class="hide_details ff2" style="margin:5px 0px 0px 15px;">
-                        <span class="btns">
-                            收&nbsp;&nbsp;起
-                        </span>
-                       
-                    </span>
-                </dt>
-                <dd>
-                                         <ul class="clearfix bgnone" style="display:block;">
-                        <li class="w0">
-                        	<h3><a target="_blank" title="三星（SAMSUNG）WCDMA/GSM手机 Galaxy Note GT-I9220（炭质蓝）" href="/index.php?action=redirect&anl=product_ck_gg_1&link=http://www.coo8.com/product/156647.html" dataid="251356" class="guangyiguang"  classid="13" location="title">三星（SAMSUNG）WCDMA/GSM手机 Galaxy Note GT-I9220（炭质蓝）</a></h3>
-                            <p class="f14 red"><em class="en">4.70</em>分</p>                              <p><span class="rating"><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratefull"></em><em class="ico_ratepart"></em></span></p>
-                        </li>
+                     		<p class="f14 red ff1"><em class="en">4.70</em>分</p>                            
+                     		<p class="ff1">
+                     			<span class="rating">
+                     				<em class="ico_ratefull"></em>
+                     				<em class="ico_ratefull"></em>
+                     				<em class="ico_ratefull"></em>
+                     				<em class="ico_ratefull"></em>
+                     				<em class="ico_ratepart"></em>
+                     			</span>
+                     		</p>
+                    		<span class="hide_details ff2" style="margin:5px 0px 0px 15px;">
+		                        <span class="btns">
+		                            收&nbsp;&nbsp;起
+		                        </span>
+                    		</span>
+               			 </dt>
+                		<dd>
+                        	<ul class="clearfix bgnone" style="display:block;">
+                        		<li class="w0">
+                        			<h3>
+                        				<a target="_blank" title="三星（SAMSUNG）WCDMA/GSM手机 Galaxy Note GT-I9220（炭质蓝）" href="/index.php?action=redirect&anl=product_ck_gg_1&link=http://www.coo8.com/product/156647.html" dataid="251356" class="guangyiguang"  classid="13" location="title">
+                        					三星（SAMSUNG）WCDMA/GSM手机 Galaxy Note GT-I9220（炭质蓝）
+                        				</a>
+                        			</h3>
+                            		<p class="f14 red"><em class="en">4.70</em>分</p>
+                            		<p>
+                            			<span class="rating">
+                            				<em class="ico_ratefull"></em>
+                            				<em class="ico_ratefull"></em>
+                            				<em class="ico_ratefull"></em>
+                            				<em class="ico_ratefull"></em>
+                            				<em class="ico_ratepart"></em>
+                            			</span>
+                            		</p>
+                        		</li>
                         
-                        <li class="w1">
-      
-                           	<div class="h100">
-                                                             <p>差评：<em class="en">0%</em></p>
-                            <p class="gray">中评：<em class="en">0%</em></p>
-                            <p class="red">好评：<em class="en">100%</em></p>
-                            <p class="gray"><a href="http://3c.yiqisoo.com/13/14245/comment/?&sourceid=1&anl=product_comment_souceid_1#tabbar">(<em class="en">40</em>条评论)</a></p>
-							                                
-                                
-                            </div>
+                        		<li class="w1">
+                           			<div class="h100">
+                                   		<p>差评：<em class="en">0%</em></p>
+                            			<p class="gray">中评：<em class="en">0%</em></p>
+                            			<p class="red">好评：<em class="en">100%</em></p>
+                            			<p class="gray">
+                            				<a href="http://3c.yiqisoo.com/13/14245/comment/?&sourceid=1&anl=product_comment_souceid_1#tabbar">
+                            					(<em class="en">40</em>条评论)
+                            				</a>
+                            			</p>
+                            		</div>
                             
-                                                         <p class="gray hzc"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="hao"/>
-                            低于平均差评率</p>            
-                        </li>
-                        <li class="w2">
-                                                 	<div class="h100 tag">
-                            	                                <p class="red clearfix">
-                                    
-                                   	                                    <span>到付</span>
-                                                                       <span>POS</span>
-                                                                       <span>支付宝</span>
-                                                                       <span>财付通</span>
-                                                                       <span>快钱</span>
-                                                                       <span>易宝</span>
-                                                                   </p>  
-                                     
-                                                                                        
-                                <p class="blue clearfix">
-                 					                                    <span>自提</span>
-                                                                       <span>自有递</span>
-                                                                       <span>第三方递</span>
-                                                                   </p>
+                                    <p class="gray hzc">
+                                    	<img src="/assets/images/transparent.gif" class="hao"/>
+                            			低于平均差评率
+                            		</p>            
+                        		</li>
+                        		<li class="w2">
+                                	<div class="h100 tag">
+                            	   		<p class="red clearfix">
+                                   	    	<span>到付</span>
+                                            <span>POS</span>
+                                            <span>支付宝</span>
+                                            <span>财付通</span>
+                                            <span>快钱</span>
+                                            <span>易宝</span>
+                                    	</p>  
+                                		<p class="blue clearfix">
+                 					    	<span>自提</span>
+                                            <span>自有递</span>
+                                           	<span>第三方递</span>
+                                        </p>
+                                		<p class="gray clearfix">
+                                			<span>正品</span>
+									        <span><em>退</em><sup>7</sup><em>换</em><sup>15</sup></span>
+                                   			<span>联保</span>
+                                   			<span>发票</span>
+                                   			<span>三包</span>
+                                   			<span>延保</span>
+                                       	</p>
                                                                       
-                                <p class="gray clearfix">
-                                																				<span>正品</span>
-									                                    
-                                   																			<span><em>退</em><sup>7</sup><em>换</em><sup>15</sup></span>
-									                                    
-                                   																			<span>联保</span>
-									                                    
-                                   																			<span>发票</span>
-									                                    
-                                   																			<span>三包</span>
-									                                    
-                                   																			<span>延保</span>
-									                                    
-                                                                   </p>
+                                		<p class="blue2 clearfix">
+                                  	   		<span>送积分</span>
+                                        </p>
+                            		</div>
+                            		<p><a href="javascript:;" class="moreico tagBtn">更多</a></p>                            
+                            		
+                            		<div class="tagShow">
+                            			<a href="javascript:;" class="close"></a>
+                                		
+                                		<div class="clearfix">
+                                    		<p class="grayss">支付方式：</p>
+                                    		<p class="tag red clearfix">
+                                            	<span>到付</span>
+                                                <span>POS</span>
+                                                <span>支付宝</span>
+                                               	<span>财付通</span>
+                                                <span>快钱</span>
+                                                <span>易宝</span>
+                                                <span>网银支</span>
+                                                <span>银联支</span>
+                                                <span>手机支</span>
+                                               	<span>分期</span>
+                                                <span>银行汇</span>
+                                           	</p>
+                                		</div>
                                                                       
-                                <p class="blue2 clearfix">
-                                  	                                    <span>送积分</span>
-                                                                   </p>
-                                                             
-                            </div>
-                            <p><a href="javascript:;" class="moreico tagBtn">更多</a></p>                            
-                            <div class="tagShow">
-                            	<a href="javascript:;" class="close"></a>
-                            	    
-                                <div class="clearfix">
-                                    <p class="grayss">支付方式：</p>
-                                    <p class="tag red clearfix">
-                                                                          <span>到付</span>
-                                                                       <span>POS</span>
-                                                                       <span>支付宝</span>
-                                                                       <span>财付通</span>
-                                                                       <span>快钱</span>
-                                                                       <span>易宝</span>
-                                                                       <span>网银支</span>
-                                                                       <span>银联支</span>
-                                                                       <span>手机支</span>
-                                                                       <span>分期</span>
-                                                                       <span>银行汇</span>
-                                                                       </p>
-                                </div>
+                            			<div class="clearfix">
+                                    		<p class="grayss">物流信息：</p>
+                                    		<p class="tag blue clearfix">
+                                    			<span>自提</span>
+                                                <span>自有递</span>
+                                                <span>第三方递</span>
+                                           	</p>
+                                		</div>
                                                                       
-                            	<div class="clearfix">
-                                    <p class="grayss">物流信息：</p>
-                                    <p class="tag blue clearfix">
-                                    		                                    <span>自提</span>
-                                                                       <span>自有递</span>
-                                                                       <span>第三方递</span>
-                                                                       </p>
-                                </div>
+                            			<div class="clearfix">
+                                    		<p class="grayss">服务保障：</p>
+											<p class="tag gray clearfix">
+                                            	<span>正品</span>
+           										<span><em>退</em><sup>7</sup><em>换</em><sup>15</sup></span>
+           										<span>联保</span>
+           										<span>发票</span>
+           										<span>三包</span>
+           										<span>延保</span>
+           										<span>价格保护</span>
+                                           	</p>
+                                		</div>
                                                                       
-                            	<div class="clearfix">
-                                    <p class="grayss">服务保障：</p>
-									<p class="tag gray clearfix">
-                                                                        										<span>正品</span>
-									                                                                       										<span><em>退</em><sup>7</sup><em>换</em><sup>15</sup></span>
-									                                                                       										<span>联保</span>
-									                                                                       										<span>发票</span>
-									                                                                       										<span>三包</span>
-									                                                                       										<span>延保</span>
-									                                                                       										<span>价格保护</span>
-									                                                                       </p>
-                                </div>
-                                                                      
-                            	<div class="clearfix">
-                                    <p class="grayss">优惠信息：</p>
-                                    <p class="tag blue2 clearfix" style="padding:0px; border:none;">
-                                                                           <span>送积分</span>
-                                                                       </p>
-                                </div>
-                                                              </div><!--/tagShow-->
-                        </li>
-                      <li class="w3">
-                      <em class="price">¥3249.00</em>
-              <img class="zs_down" src="http://img01.yiqisoo.com/yiqisoo/dandelion/common/images/transparent.gif" align="absmiddle">
-              </li>
-                        <li class="w4">
-                           
-                                <p><em class="gray">运费：</em>免运费</p>
-                                <p><em class="gray">预计送货时间：</em>10月20日</p>
-                                <p><em class="gray">库存：</em>有货</p>
-						
-                        </li>
-                        <li class="w5">
-                             <a href="/index.php?action=redirect&anl=product_ck_gg_1&link=http://www.coo8.com/product/156647.html" target="_blank" dataid="251356" class="guangyiguang"  classid="13" location="guang"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="gotobuy"/></a>
-                        </li>
-                       
-                    </ul>
-                                        
-                </dd>
-            </dl>
-            <div class="show_details ">
+                            			<div class="clearfix">
+                                    		<p class="grayss">优惠信息：</p>
+                                    		<p class="tag blue2 clearfix" style="padding:0px; border:none;">
+                                            	<span>送积分</span>
+                                            </p>
+                                		</div>
+                                 	</div><!--/tagShow-->
+                        		</li>
+                      
+                      			<li class="w3">
+                      				<em class="price">¥3249.00</em>
+             			 			<img class="zs_down" src="http://img01.yiqisoo.com/yiqisoo/dandelion/common/images/transparent.gif" align="absmiddle">
+              					</li>
+                        		<li class="w4">
+                                	<p><em class="gray">运费：</em>免运费</p>
+                                	<p><em class="gray">预计送货时间：</em>10月20日</p>
+                                	<p><em class="gray">库存：</em>有货</p>
+                        		</li>
+                        		<li class="w5">
+                             		<a href="/index.php?action=redirect&anl=product_ck_gg_1&link=http://www.coo8.com/product/156647.html" target="_blank" dataid="251356" class="guangyiguang"  classid="13" location="guang"><img src="http://img01.yiqisooimg.com/yiqisoo/dandelion/common/images/transparent.gif" class="gotobuy"/></a>
+                        		</li>
+                    		</ul>
+                		</dd>
+            		</dl>
+            		
+            		<div class="show_details ">
 			                <span class="showOther" sourceid='1' count='1'>
-                    <span>展开更多</span>
-                </span>
-                <span class="hide_details ff2">
-                    <span class="btns">
-                        收&nbsp;&nbsp;起
-                    </span>
-                </span>
-                             
-            </div>
-        </div>
+                    			<span>展开更多</span>
+                			</span>
+                			<span class="hide_details ff2">
+                    			<span class="btns">
+                        			收&nbsp;&nbsp;起
+                    			</span>
+                			</span>
+            		</div>
+        		</div>
 
 
 

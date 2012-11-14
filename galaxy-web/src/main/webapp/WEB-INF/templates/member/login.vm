@@ -10,9 +10,11 @@
 		<meta name="keywords" content="购物搜索,比较购物,网上购物,购物查价,商品比价,商品导购,购物比价,一起搜,垂直搜索" />
 		<meta name="description" content="一起搜是一个中立的、公正的电商导购平台，是一个开放的购物类垂直搜索引擎。提供各网上商城的商品评论、库存、运费、物流、价格等信息的比较，帮助消费者在网购前进行理性决策。" />
 		
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=1024">
-        <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+		
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/index.css">
@@ -34,121 +36,115 @@
 		#parse("topbar.vm")
 		#parse("header.vm")
 		
-		<div>
+		<div class="part clearfix">
 			<div id="page_signin">
-                <div class="container">
-                	<div class="content">
-                    	<div class="row">
-                        	<div class="span16">
-                            	<div id="signin">
-                                	<div class="title">已经注册? 请登录:</div>
-                                    	<form id="login_form" action="/user_action.jhtml?_operation_=_login_" method="post">
-                                            <fieldset>
-                                            	
-                                            	#if(${loginErrorMsg})
-	                                                <div class="clearfix">
-	                                                	<div class="alert alert-error">
-	                                                		$!{loginErrorMsg}
-	                                                	</div>
-	                                                </div>
-                                                #end
-                                                
-                                            	<div class="clearfix">
-                                                	<label for="iusername"><span>用户名：</span></label>
-                                                   	<div class="input">
-                                                    	<input tabindex="1" id="login_username" name="name" label="Username" value="$!{user.name}" type="text">
-                                                    </div>
-                                              	</div>
-                                                <div class="clearfix">
-                                                	<label for="ipassword"><span>密码：</span></label>
-                                                    <div class="input">
-                                                    	<input tabindex="2" id="login_password" name="password" label="Password" value="" type="password" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="actions">
-                                                	<input tabindex="3" class="btn primary large" type="submit" value="登录">
-                                                    <p class="reset"><a tabindex="4" href="/signin/reset" title="找回用户名或密码">找回用户名或密码</a></p>
-                                                </div>
-                                                
-                                                <div class="login_methods">
-                                                	<a href="/users/signsina/" class="login_bg weibo_login">微博登录</a>
-                                                   	<a href="/user/signqq/" class="login_bg qq_login">QQ登录</a>
-                                                   	<a href="/user/signtaobao/" class="login_bg tb_login">淘宝登录</a>
-                                                   	<a href="/users/signdouban/" class="login_bg douban_login">用豆瓣帐号登录</a>
-                                                   	<a href="/user/signrenren/" class="login_bg rr_login">用人人网登录</a>
-                                                </div>
-                                       		</fieldset>
-                                     	</form>
-                                 	</div>
-                                <div id="signup">
-                                	<div class="title">免费注册帐号!</div>
-                                    	<form id="register_form" action="/user_action.jhtml?_operation_=_register_" method="post" class="form-stacked">
-                                        	<fieldset>
-                                        	
-                                        		#if(${registerErrorMsg})
-	                                                <div class="clearfix">
-	                                                	<div class="alert alert-error">
-	                                                		$!{registerErrorMsg}
-	                                                	</div>
-	                                                </div>
-                                                #end
-                                                
-                                            	<div class="clearfix">
-                                                	<label for="isignup_username">用户名：</label>
-	                                                <div class="input">
-	                                                	<input id="isignup_username" tabindex="5" name="name" label="Username" value="$!{user.name}" type="text">
-	                                                    <span class="help-block">May contain letters, digits, dashes and underscores, and should be between 2 and 20 characters long.</span>
-	                                                </div>
-	                                            </div>
-                                                <div class="clearfix">
-                                                	<label for="isignup_email">邮箱：</label>
-                                                    <div class="input">
-                                                    	<input id="isignup_email" tabindex="6" name="email" label="Email address" value="$!{user.email}" type="text">
-                                                        <span class="help-block"><strong>Type carefully.</strong> You will be sent a confirmation email.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="clearfix">
-                                                	<label for="isignup_password">密码：</label>
-                                                    <div class="input">
-                                                    	<input id="isignup_password" tabindex="7" name="password" label="Password" value="" type="password">
-                                                        <span class="help-block">The longer the better. Include numbers for protein.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="clearfix">
-                                                	<label for="isignup_confirm_password">确认密码：</label>
-                                                    <div class="input">
-                                                    	<input id="isignup_confirm_password" tabindex="7" name="confirm_password" label="Repassword" value="" type="password">
-                                                        <span class="help-block">The longer the better. Include numbers for protein.</span>
-                                                    </div>
-                                                </div>
-                                                <!--
-                                                <div class="clearfix">
-                                                	<p class="clickedit">By clicking on the "Create your account" button below, you certify that you have read and agree to our <a href="/terms" title="Terms of use" target="_blank">terms of use</a> and <a href="/privacy" title="Privacy policy" target="_blank">privacy policy</a>.</p>
-                                                </div>
-                                                <div class="clearfix">
-                                                    <div class="input">
-                                                    	<ul class="inputs-list">
-                                                        	<li><label><input id="isignup_subscribe" tabindex="8" type="checkbox" name="subscribe" label="Subscribe" value="1" checked="checked"><span>Sign me up for the newsletter (provided by MailChimp)</span></label></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                -->
-                                                <div class="actions">
-                                                	<input tabindex="9" class="btn success large" type="submit" value="注册">
-                                                </div>
-                                         	</fieldset>
-                                         	<input name="from" value="0" type="hidden">
-                                    	</form>
+            	<div>
+                	<div id="signin">
+                    	<div class="title">已经注册? 请登录:</div>
+                        	<form id="login_form" action="/user_action.jhtml?_operation_=_login_" method="post">
+                                <fieldset>
+                                	
+                                	#if(${loginErrorMsg})
+                                        <div class="clearfix">
+                                        	<div class="alert alert-error">
+                                        		$!{loginErrorMsg}
+                                        	</div>
+                                        </div>
+                                    #end
+                                    
+                                	<div class="clearfix">
+                                    	<label for="iusername"><span>用户名：</span></label>
+                                       	<div class="input">
+                                        	<input tabindex="1" id="login_username" name="name" label="Username" value="$!{user.name}" type="text">
+                                        </div>
                                   	</div>
-                                 	<script>$("#iusername").focus();</script>
-                              	</div>
-                           	</div>
-                       	</div>
+                                    <div class="clearfix">
+                                    	<label for="ipassword"><span>密码：</span></label>
+                                        <div class="input">
+                                        	<input tabindex="2" id="login_password" name="password" label="Password" value="" type="password" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="actions">
+                                    	<input tabindex="3" class="btn primary large" type="submit" value="登录">
+                                        <p class="reset"><a tabindex="4" href="/signin/reset" title="找回用户名或密码">找回用户名或密码</a></p>
+                                    </div>
+                                    
+                                    <div class="login_methods">
+                                    	<a href="/users/signsina/" class="login_bg weibo_login">微博登录</a>
+                                       	<a href="/user/signqq/" class="login_bg qq_login">QQ登录</a>
+                                       	<a href="/user/signtaobao/" class="login_bg tb_login">淘宝登录</a>
+                                       	<a href="/users/signdouban/" class="login_bg douban_login">用豆瓣帐号登录</a>
+                                       	<a href="/user/signrenren/" class="login_bg rr_login">用人人网登录</a>
+                                    </div>
+                                    
+                           		</fieldset>
+                         	</form>
+                     	</div>
+                    <div id="signup">
+                    	<div class="title">免费注册帐号!</div>
+                        	<form id="register_form" action="/user_action.jhtml?_operation_=_register_" method="post" class="form-stacked">
+                            	<fieldset>
+                            	
+                            		#if(${registerErrorMsg})
+                                        <div class="clearfix">
+                                        	<div class="alert alert-error">
+                                        		$!{registerErrorMsg}
+                                        	</div>
+                                        </div>
+                                    #end
+                                    
+                                	<div class="clearfix">
+                                    	<label for="isignup_username">用户名：</label>
+                                        <div class="input">
+                                        	<input id="isignup_username" tabindex="5" name="name" label="Username" value="$!{user.name}" type="text">
+                                            <span class="help-block">May contain letters, digits, dashes and underscores, and should be between 2 and 20 characters long.</span>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                    	<label for="isignup_email">邮箱：</label>
+                                        <div class="input">
+                                        	<input id="isignup_email" tabindex="6" name="email" label="Email address" value="$!{user.email}" type="text">
+                                            <span class="help-block"><strong>Type carefully.</strong> You will be sent a confirmation email.</span>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                    	<label for="isignup_password">密码：</label>
+                                        <div class="input">
+                                        	<input id="isignup_password" tabindex="7" name="password" label="Password" value="" type="password">
+                                            <span class="help-block">The longer the better. Include numbers for protein.</span>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                    	<label for="isignup_confirm_password">确认密码：</label>
+                                        <div class="input">
+                                        	<input id="isignup_confirm_password" tabindex="7" name="confirm_password" label="Repassword" value="" type="password">
+                                            <span class="help-block">The longer the better. Include numbers for protein.</span>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="clearfix">
+                                    	<p class="clickedit">By clicking on the "Create your account" button below, you certify that you have read and agree to our <a href="/terms" title="Terms of use" target="_blank">terms of use</a> and <a href="/privacy" title="Privacy policy" target="_blank">privacy policy</a>.</p>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="input">
+                                        	<ul class="inputs-list">
+                                            	<li><label><input id="isignup_subscribe" tabindex="8" type="checkbox" name="subscribe" label="Subscribe" value="1" checked="checked"><span>Sign me up for the newsletter (provided by MailChimp)</span></label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    -->
+                                    <div class="actions">
+                                    	<input tabindex="9" class="btn success large" type="submit" value="注册">
+                                    </div>
+                             	</fieldset>
+                             	<input name="from" value="0" type="hidden">
+                        	</form>
+                      	</div>
+                     	<script>$("#iusername").focus();</script>
                   	</div>
-                </div>
+               	</div>
 			</div>
-			
 		</div><!--/part-->
 		
 		#parse("footer.vm")

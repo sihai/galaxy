@@ -76,7 +76,7 @@
 				<prop key="/topcallback.jhtml">topCallback</prop>
 				<prop key="/user_action.jhtml">userAction</prop>
 				<prop key="/search.jhtml">search</prop>
-				<prop key="/detail.jhtml">search</prop>
+				<prop key="/detail.jhtml">detail</prop>
 				<prop key="/query.jhtml">query</prop>
 				<prop key="/goto.jhtml">goto</prop>
 				<prop key="/websitemap.jhtml">webSiteMap</prop>
